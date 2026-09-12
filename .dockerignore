@@ -1,0 +1,9 @@
+.git
+.next
+node_modules
+.env
+download
+upload
+examples
+tests
+*.log
