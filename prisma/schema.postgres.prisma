@@ -1,0 +1,262 @@
+// KhanhOS AI — Database Schema (PostgreSQL — PRODUCTION)
+// -----------------------------------------------------------------
+// Đây là schema dùng cho production (Vercel + Supabase/Neon/Vercel Postgres).
+// Sandbox/dev dùng schema.prisma (SQLite) — cùng model, chỉ khác provider.
+//
+// CÁCH CHUYỂN SANG POSTGRESQL:
+//   1. Đặt DATABASE_URL=postgresql://... trong .env
+//   2. Chạy:  ./scripts/switch-to-postgres.sh
+//      (script sao chép file này đè schema.prisma + prisma generate)
+//   3. Chạy:  bunx prisma migrate dev --name init
+//   Xem README mục "Database" để biết chi tiết deploy Vercel.
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// ─────────────────────────────────────────────
+// USERS — tài khoản người dùng
+// ─────────────────────────────────────────────
+model User {
+  id           String   @id @default(cuid())
+  email        String   @unique
+  name         String
+  passwordHash String // scrypt: salt$hash — KHÔNG BAO GIỜ lưu plaintext
+  role         String   @default("user") // "user" | "owner"
+  plan         String   @default("free") // "free" | "plus" | "vip" | "max"
+  planUpdatedAt DateTime?
+  avatarSeed   String? // seed để sinh avatar deterministic
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+
+  sessions            Session[]
+  conversations       Conversation[]
+  settings            UserSettings?
+  passwordResetTokens PasswordResetToken[]
+  planRequests        PlanRequest[]
+
+  @@index([email])
+}
+
+// ─────────────────────────────────────────────
+// SESSIONS — phiên đăng nhập (server-side session)
+// ─────────────────────────────────────────────
+model Session {
+  id         String   @id // = HMAC-SHA256(token, AUTH_SECRET) — token gốc chỉ nằm trong httpOnly cookie
+  userId     String
+  expiresAt  DateTime
+  createdAt  DateTime @default(now())
+  userAgent  String?
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+  @@index([expiresAt])
+}
+
+// ─────────────────────────────────────────────
+// CONVERSATIONS — hội thoại
+// ─────────────────────────────────────────────
+model Conversation {
+  id        String   @id @default(cuid())
+  userId    String
+  title     String   @default("Cuộc trò chuyện mới")
+  modelId   String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  user     User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  messages Message[]
+
+  @@index([userId, updatedAt])
+}
+
+// ─────────────────────────────────────────────
+// MESSAGES — tin nhắn trong hội thoại
+// role: USER | ASSISTANT | SYSTEM
+// ─────────────────────────────────────────────
+model Message {
+  id             String   @id @default(cuid())
+  conversationId String
+  role           String
+  content        String
+  modelId        String? // model sinh ra message (với ASSISTANT)
+  tokens         Int? // ước lượng token phản hồi — cộng dồn quota tháng
+  attachments    String? // JSON: [{name, size, type, textContent?}]
+  sources        String? // JSON: nguồn web search [{title, url, snippet}]
+  createdAt      DateTime @default(now())
+
+  conversation Conversation @relation(fields: [conversationId], references: [id], onDelete: Cascade)
+
+  @@index([conversationId, createdAt])
+}
+
+// ─────────────────────────────────────────────
+// USER_SETTINGS — cài đặt người dùng (1-1 với User)
+// ─────────────────────────────────────────────
+model UserSettings {
+  userId            String  @id
+  defaultModelId    String?
+  webSearchEnabled  Boolean @default(false)
+  reducedMotionPref String? // "system" | "on" | "off"
+  theme             String? // "dark" | "light" | "system"
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+// ─────────────────────────────────────────────
+// PASSWORD_RESET_TOKENS — token đặt lại mật khẩu
+// Random, có hạn, dùng 1 lần (hash HMAC-SHA256, không lưu token gốc)
+// ─────────────────────────────────────────────
+model PasswordResetToken {
+  id        String    @id // = HMAC-SHA256(token, AUTH_SECRET)
+  userId    String
+  expiresAt DateTime
+  usedAt    DateTime?
+  createdAt DateTime  @default(now())
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+  @@index([expiresAt])
+}
+
+// ─────────────────────────────────────────────
+// TRIAL_BOOKINGS — đăng ký buổi tập thử (form công khai, không cần tài khoản)
+// ─────────────────────────────────────────────
+model TrialBooking {
+  id            String   @id @default(cuid())
+  name          String
+  phone         String
+  goal          String // "muscle" | "fatloss" | "fitness"
+  preferredTime String // "morning" | "noon" | "afternoon" | "evening"
+  note          String?
+  createdAt     DateTime @default(now())
+
+  @@index([createdAt])
+}
+
+// ─────────────────────────────────────────────
+// PLAN_REQUESTS — yêu cầu nâng cấp gói (Free/Plus/VIP/Max)
+// ─────────────────────────────────────────────
+model PlanRequest {
+  id           String    @id @default(cuid())
+  userId       String
+  plan         String // "plus" | "vip" | "max"
+  phone        String
+  momoNumber   String? // số MoMo tài khoản thanh toán
+  contactEmail String
+  note         String?
+  status       String    @default("pending")
+  createdAt    DateTime  @default(now())
+  decidedAt    DateTime?
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([status, createdAt])
+  @@index([userId])
+}
+
+// ─────────────────────────────────────────────
+// AI_MEMORIES / AI_TOOL_EXECUTIONS — giống schema.prisma (xem bản SQLite)
+// ─────────────────────────────────────────────
+model AiMemory {
+  id         String   @id @default(cuid())
+  userId     String
+  kind       String   @default("long_term")
+  key        String
+  value      String
+  importance Int      @default(3)
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+
+  @@index([userId, kind])
+  @@index([userId, updatedAt])
+}
+
+model AiToolExecution {
+  id             String   @id @default(cuid())
+  userId         String?
+  conversationId String?
+  tool           String
+  input          String?
+  output         String?
+  status         String   @default("ok")
+  error          String?
+  durationMs     Int?
+  createdAt      DateTime @default(now())
+
+  @@index([conversationId, createdAt])
+  @@index([userId, createdAt])
+  @@index([tool])
+}
+
+model KnowledgeDocument {
+  id             String   @id @default(cuid())
+  userId         String
+  title          String
+  source         String?
+  content        String
+  charCount      Int
+  chunkCount     Int
+  embeddingModel String
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+
+  chunks KnowledgeChunk[]
+
+  @@index([userId, updatedAt])
+}
+
+model KnowledgeChunk {
+  id         String   @id @default(cuid())
+  documentId String
+  docIndex   Int
+  content    String
+  embedding  String
+  dim        Int
+  norm       Float?
+  createdAt  DateTime @default(now())
+
+  document KnowledgeDocument @relation(fields: [documentId], references: [id], onDelete: Cascade)
+
+  @@index([documentId])
+}
+
+model AiFeedback {
+  id             String   @id @default(cuid())
+  userId         String
+  messageId      String?
+  conversationId String?
+  rating         String
+  comment        String?
+  question       String
+  answer         String
+  source         String
+  createdAt      DateTime @default(now())
+
+  @@index([userId, createdAt])
+  @@index([rating, createdAt])
+}
+
+model TrainingJob {
+  id        String   @id @default(cuid())
+  userId    String
+  name      String
+  kind      String
+  baseModel String
+  status    String   @default("created")
+  config    String
+  result    String?
+  error     String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([userId, createdAt])
+  @@index([status, createdAt])
+}

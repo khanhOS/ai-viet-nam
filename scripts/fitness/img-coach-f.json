@@ -1,0 +1,51 @@
+{
+  "success": true,
+  "query": "portrait female personal trainer confident black white studio",
+  "count": 6,
+  "ranked": false,
+  "captioned_count": 0,
+  "results": [
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/ccbcab1da15b.png",
+      "caption": "",
+      "source": "Alchemy PT",
+      "original_width": "2640px",
+      "original_height": "1452px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/c132b1c323d0.jpg",
+      "caption": "",
+      "source": "Alamy",
+      "original_width": "866px",
+      "original_height": "1390px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/0f7f34576054.jpg",
+      "caption": "",
+      "source": "Teen Vogue",
+      "original_width": "1600px",
+      "original_height": "2000px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/bd2652600a0a.jpg",
+      "caption": "",
+      "source": "WSJ",
+      "original_width": "1278px",
+      "original_height": "1278px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/82c502acee0f.jpg",
+      "caption": "",
+      "source": "Alchemy PT",
+      "original_width": "2449px",
+      "original_height": "1633px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/7311036e3dfa.jpg",
+      "caption": "",
+      "source": "YAY Images",
+      "original_width": "1600px",
+      "original_height": "1067px"
+    }
+  ]
+}

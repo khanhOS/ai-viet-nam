@@ -1,0 +1,9 @@
+{
+  "facts": [
+    { "key": "project:name", "value": "KhanhOS AI — trợ lý AI cục bộ, tự vận hành, không gọi API AI bên ngoài.", "importance": 5 },
+    { "key": "project:stack", "value": "Next.js 16 + TypeScript + Tailwind + Prisma (SQLite), chat streaming SSE qua cookie phiên đăng nhập.", "importance": 4 },
+    { "key": "project:engine", "value": "Hệ chat có 2 lớp: (1) Bộ máy tri thức cục bộ data/chatbot — 100+ intents, trả lời tức thì; (2) Model AI cục bộ (Ollama local) — suy luận tự do cho câu hỏi ngoài tri thức.", "importance": 5 },
+    { "key": "project:credits", "value": "Đơn vị mức dùng gọi là TÍN DỤNG. Gói Free/Plus/VIP/Max: 25k/85k/256k/500k tín dụng mỗi tháng.", "importance": 4 },
+    { "key": "project:owner", "value": "Chủ sở hữu quản lý bằng lệnh trong chat: /give <gói> <email hoặc ID>, /user, /pending, /approve, /deny — chỉ owner dùng được.", "importance": 4 }
+  ]
+}

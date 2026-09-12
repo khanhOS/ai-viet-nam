@@ -1,0 +1,90 @@
+{
+  "programming_help": {
+    "vi": [
+      "Lộ trình ngắn cho người mới:\n1. Chọn 1 ngôn ngữ và bám lấy nó — Python (dễ, đa dụng) hoặc JavaScript (làm web ngay được)\n2. Học nền tảng: biến, vòng lặp, hàm, cấu trúc dữ liệu\n3. Làm dự án nhỏ thật (calculator, todo list) thay vì chỉ đọc lý thuyết\n4. Học Git để lưu code + GitHub để lưu trữ\n5. Sau nền tảng mới chọc sang mảng: web, AI, mobile...\nQuan trọng nhất: code mỗi ngày, sai nhiều, sửa nhiều.",
+      "Lập trình = dạy máy làm việc bằng ngôn ngữ chính xác. Bắt đầu: Python nếu muốn dễ, JavaScript nếu muốn làm web. Học 20% syntax + 80% luyện tay qua dự án nhỏ. Khó nhất không phải ngôn ngữ — là tư duy chia bài toán thành bước nhỏ."
+    ]
+  },
+  "javascript": {
+    "vi": [
+      "JavaScript là ngôn ngữ của web: trình duyệt chạy nó để trang tương tác (nút bấm, hiệu ứng, gọi dữ liệu). Từ khi có Node.js, JS chạy được cả backend. Cùng HTML + CSS, JS tạo nên mọi website bạn dùng.",
+      "JS = ngôn ngữ duy nhất trình duyệt hiểu sẵn. Frontend: nó biến HTML tĩnh thành trang sống động. Backend (qua Node.js): viết server, API. Có thể làm cả mobile (React Native) và desktop (Electron) — một ngôn ngữ xài khắp nơi.",
+      "JavaScript là ngôn ngữ lập trình chạy được cả ở trình duyệt lẫn server (Node.js). Dễ bắt đầu, hệ sinh thái khổng lồ — nhưng cũng lỏng lẻo kiểu (\"==\" vs \"===\") nên code lớn thường chuyển sang TypeScript."
+    ],
+    "en": [
+      "JavaScript is the programming language of the web: browsers run it to make pages interactive, and with Node.js it runs on servers too."
+    ]
+  },
+  "typescript": {
+    "vi": [
+      "TypeScript = JavaScript + kiểu dữ liệu tĩnh: khai báo biến là string/number/interface gì đó, trình biên dịch bắt lỗi trước khi chạy. Code dài, làm nhóm, dự án lớn thì TS giảm bug rõ rệt. Chính web này viết bằng TS.",
+      "TS là JS có \"kiểu\": biến, tham số, kết quả hàm đều được khai báo kiểu. Lợi ích: lỗi hiện lúc code (thay vì lúc chạy), gợi ý editor thông minh hơn, refactor an toàn. Biên dịch ra JS thuần nên chạy được mọi chỗ JS chạy."
+    ]
+  },
+  "python": {
+    "vi": [
+      "Python là ngôn ngữ dễ đọc, dễ học, cú pháp gần tiếng Anh. Dùng khắp nơi: AI/machine learning (PyTorch, transformers), khoa học dữ liệu (pandas), tự động hóa, backend web (Django/FastAPI), dạy học. Chậm hơn C++ nhưng phát triển nhanh bù lại.",
+      "Python = ngôn ngữ \"dẻo\" nhất hiện nay: viết tool 10 dòng xong việc, rồi cũng là ngôn ngữ chính của AI. Nếu mới bắt đầu lập trình hoặc muốn vào AI thì Python là lựa chọn mặc định."
+    ]
+  },
+  "html": {
+    "vi": [
+      "HTML (HyperText Markup Language) là bộ khung xương của trang web: các thẻ như <p>, <img>, <button> mô tả nội dung và cấu trúc (tiêu đề, đoạn, bảng, form). HTML không phải ngôn ngữ lập trình — nó không có logic, chỉ khai báo cấu trúc. CSS làm đẹp + JavaScript làm sống động.",
+      "HTML là \"bản thiết kế cấu trúc\" của web: nói với trình duyệt \"đây là tiêu đề, đây là ảnh, đây là nút\". Mỗi trang web bạn mở đều bắt đầu từ 1 file HTML. Học web thì HTML là bài số 1."
+    ]
+  },
+  "css": {
+    "vi": [
+      "CSS (Cascading Style Sheets) là ngôn ngữ trình bày của web: màu, font, khoảng cách, bố cục, animation. Không có CSS thì mọi trang web chỉ là văn bản trắng đen xếp dọc. Ngày nay có Tailwind, grid, flexbox giúp dựng layout đẹp nhanh.",
+      "CSS trả lời câu hỏi \"trông thế nào\": HTML định nghĩa nội dung — CSS định nghĩa dáng điệu: màu chữ, nền, kích thước, responsive theo màn hình điện thoại/máy tính. Flexbox + Grid là 2 kỹ thuật layout hiện đại nhất."
+    ]
+  },
+  "react": {
+    "vi": [
+      "React là thư viện JavaScript của Meta để dựng giao diện bằng các component tái sử dụng: mỗi mảnh UI là 1 hàm trả về JSX. Khi dữ liệu đổi, React tự cập nhật phần DOM cần thiết (virtual DOM). Là nền của Next.js, React Native.",
+      "React đổi cách viết frontend: thay vì sửa DOM thủ công, bạn khai báo \"UI = f(state)\" — đổi state, UI tự đổi. Component (nút, card, modal) gói sẵn markup + logic + style để ghép thành trang. Hệ sinh thái lớn nhất frontend hiện nay."
+    ]
+  },
+  "nextjs": {
+    "vi": [
+      "Next.js là framework trên nền React (của Vercel) lo phần React chưa lo: routing theo file, render server-side (SSR), sinh trang tĩnh (SSG), API routes, tối ưu ảnh/font tự động. Deploy lên Vercel gần như 1 click. Web KhanhOS này đang dùng Next.js.",
+      "Next.js = React đầy đủ phụ tùng: React cho bạn viên gạch, Next cho bạn cả công trình — route, SSR/SSG (tốt SEO), API route viết backend ngay trong dự án, production build tối ưu sẵn. Lựa chọn mặc định cho web React production hiện nay."
+    ]
+  },
+  "nodejs": {
+    "vi": [
+      "Node.js là runtime cho JavaScript chạy NGOÀI trình duyệt (dựa trên engine V8 của Chrome): viết server, API, tool dòng lệnh, script tự động hóa bằng JS. Node đi kèm npm — kho package lớn nhất thế giới. Cùng JS cho cả frontend + backend = chỉ học 1 ngôn ngữ.",
+      "Node.js biến JS thành ngôn ngữ server: giao tiếp database, đọc ghi file, chạy nền. Event loop đơn luồng + async khiến nó rất khỏe với ứng dụng I/O nhiều (chat, API). Express/Fastify là framework phổ biến trên đó."
+    ]
+  },
+  "api_development": {
+    "vi": [
+      "Viết REST API cơ bản:\n1. Chọn stack (Node + Express, Python + FastAPI...)\n2. Định nghĩa route: GET /users (list), POST /users (tạo), GET /users/:id, PUT/PATCH (sửa), DELETE (xoá)\n3. Validate input (zod, pydantic) — không bao giờ tin client\n4. Xử lý + trả JSON kèm status code đúng (200, 201, 400, 404)\n5. Bảo mật: rate limit, auth (session/JWT)\nTest bằng curl/Postman trước khi nối frontend.",
+      "API tốt = đường dẫn rõ nghĩa + method đúng ngữ cảnh (GET đọc, POST tạo) + status code thật (không ai nó 200 rồi nhét error vào body) + validate input. Framework gợi ý: FastAPI (Python) hoặc Express/Fastify (Node) — cả hai đều có sẵn middleware."
+    ]
+  },
+  "backend": {
+    "vi": [
+      "Backend là phần chạy ở SERVER của ứng dụng — nơi người dùng không thấy: xử lý logic, đọc/ghi database, xác thực, gọi dịch vụ ngoài, trả kết quả cho frontend qua API. Ví dụ: khi bấm \"đăng nhập\", frontend gửi request → backend kiểm tra mật khẩu → trả session.",
+      "Backend = phòng máy của web: nhận request, quyết định, quản lý dữ liệu. Gồm: API (cửa giao tiếp), logic nghiệp vụ (não), database (kho), auth (bảo vệ). Ngôn ngữ: Node.js, Python, Go, Java... Web này backend là Next.js API routes + Prisma + SQLite."
+    ]
+  },
+  "frontend": {
+    "vi": [
+      "Frontend là phần người dùng NHÌN THẤY và bấm được: bố cục, nút, hiệu ứng, responsive. Bộ ba nền tảng: HTML (cấu trúc) + CSS (trình bày) + JavaScript (tương tác). Framework hiện đại: React, Vue, Svelte — dựng component tái sử dụng.",
+      "Frontend làm việc ở trình duyệt: vẽ UI, bắt sự kiện (click, gõ phím), gọi API lấy dữ liệu, hiển thị. Kỹ năng cốt lõi: layout responsive (mobile trước), quản lý state, và accessibility cho mọi người dùng được."
+    ]
+  },
+  "git": {
+    "vi": [
+      "Git là hệ thống quản lý phiên bản phân tán: ghi lại toàn bộ lịch sử sửa file, quay về bất cứ thời điểm nào, làm việc nhóm trên nhánh (branch) không dẫm chân nhau. GitHub là dịch vụ lưu repo Git trên cloud + thêm review code, CI/CD. Git là tool, GitHub là nơi host.",
+      "Luồng Git hằng ngày: clone (lấy code về) → branch mới (việc riêng) → commit (chốt mốc) → push (đẩy lên) → pull request (xin duyệt) → merge. Lệnh cứu nguy: git stash (cất đang làm dở), git log (xem lịch sử), git checkout -- file (hoàn tác)."
+    ]
+  },
+  "env_vars": {
+    "vi": [
+      "Biến môi trường (environment variable) là cấu hình nằm NGOÀI code: chuỗi kết nối database, API key, cổng dịch vụ — đọc lúc chạy qua process.env. Giá trị khác nhau cho môi trường khác nhau (dev/production) mà không sửa code. Lưu trong file .env (KHÔNG commit lên Git — thêm vào .gitignore).",
+      "Env vars tách \"mật\" khỏi code: key nằm ở .env của từng máy/server, code chỉ đọc process.env.KEY. Deploy đổi cấu hình = đổi biến, không đụng code. Lưu ý bảo mật: key trong .env tuyệt đối không commit, không gửi xuống client (browser)."
+    ]
+  }
+}

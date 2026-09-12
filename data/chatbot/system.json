@@ -1,0 +1,48 @@
+{
+  "engine": {
+    "name": "khanhos-local-rule",
+    "version": "1.0.0",
+    "default_threshold": 0.6,
+    "max_message_chars": 8000,
+    "match_max_chars": 1200
+  },
+  "scoring": {
+    "exact_pattern": 100,
+    "pattern_contain": 90,
+    "pattern_contain_partial": 70,
+    "short_pattern": 55,
+    "faq_pattern": 85,
+    "keyword_single": 10,
+    "keyword_phrase": 20,
+    "keyword_fuzzy": 8,
+    "keyword_cap": 60,
+    "alias": 15,
+    "alias_cap": 30,
+    "topic_match": 15,
+    "related_intent": 10,
+    "followup": 25
+  },
+  "context": {
+    "window": 8,
+    "max_entries": 500,
+    "ttl_ms": 21600000
+  },
+  "fallback": {
+    "responses": [
+      "Câu này nằm ngoài tri thức cục bộ của mình — nhưng mình không đoán bừa để tránh nói sai bạn.",
+      "Mục này chưa có trong dữ liệu local của mình, nên mình không tự chế câu trả lời."
+    ],
+    "responses_en": [
+      "This one is beyond my local knowledge — I would rather not guess and mislead you."
+    ],
+    "suggestion_header": "Một số chủ đề mình trả lời được:",
+    "max_suggestions": 3
+  },
+  "about": "KhanhOS AI là web chat AI chạy hoàn toàn cục bộ: tài khoản, hội thoại và cả bộ máy trả lời đều nằm trong ứng dụng, không gọi API AI bên ngoài.",
+  "model_info": {
+    "id": "khanhos-core",
+    "name": "KhanhOS Core",
+    "description": "Bộ máy tri thức cục bộ (intent + knowledge từ file JSON) — trả lời từ dữ liệu local, không gửi dữ liệu đi đâu.",
+    "badge": "Cục bộ"
+  }
+}

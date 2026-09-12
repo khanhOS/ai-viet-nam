@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "Dưới đây là toàn bộ nội dung văn bản trong ảnh:\n\n**Nút ở góc trên bên phải:**\n```\nnội tiếng việt\n```\n\n**Nội dung tin nhắn chính:**\n```\nMinh chưa có kiến thức local cho câu hỏi này — mình không đoán bừa đâu.\n\n(Mình đang chạy chế độ tri thức cục bộ — chưa có model AI cụ bộ nào đang chạy. Chay bash scripts/setup-ollama.sh trên máy chủ để bắt suy luận model thật, sau đó mình trả lời thôi mỗi câu hỏi ngoại tri thức)\n```",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1789099615,
+  "id": "2026091112065168eff0fdcd6646d2",
+  "model": "glm-5v-turbo",
+  "object": "chat.completion",
+  "request_id": "2026091112065168eff0fdcd6646d2",
+  "usage": {
+    "completion_tokens": 122,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 290,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 412
+  }
+}

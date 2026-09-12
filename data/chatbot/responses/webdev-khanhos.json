@@ -1,0 +1,82 @@
+{
+  "what_is_website": {
+    "vi": [
+      "Website là tập trang văn bản/mã chạy trên trình duyệt: bạn gõ domain → server gửi HTML/CSS/JS → trình duyệt vẽ ra giao diện. Web động thêm backend (xử lý, database) đằng sau. Một web chat AI gồm: frontend (chat UI), backend (API + auth), database (lưu hội thoại).",
+      "Website = frontend (phần trình duyệt vẽ) + backend (phần server xử lý) + database (nơi lưu). Tĩnh chỉ cần HTML/CSS/JS; động cần thêm server code. Web này là web động full-stack: Next.js + Prisma + SQLite."
+    ]
+  },
+  "static_vs_dynamic": {
+    "vi": [
+      "Web TĨNH: các trang HTML cố định sẵn, ai xem cũng thấy như nhau, không cần database — landing page, blog thuần, tài liệu. Nhanh, rẻ, host miễn phí được (GitHub Pages).\nWeb ĐỘNG: server sinh nội dung theo từng người/hoạt cảnh — cần backend + database: đăng nhập, chat, giỏ hàng. KhanhOS là web động (tài khoản + lưu hội thoại).",
+      "Phân biệt nhanh: nội dung có ĐỔI theo người dùng/ thời gian thực không? Có → động (cần backend). Không → tĩnh (đủ HTML). Web tĩnh deploy lên CDN là gần như tức thì; web động cần server chạy code."
+    ]
+  },
+  "hosting": {
+    "vi": [
+      "Hosting là nơi MẶT ĐỊNH chạy web của bạn 24/7 để ai cũng truy cập được: server (thuê hoặc miễn phí) giữ code + trả request. Các loại: shared hosting (rẻ, chậm), VPS (riêng một phần máy), serverless (trả theo lượt dùng), platform (Vercel/Netlify lo hết).",
+      "Không có hosting = web chỉ chạy trên máy bạn. Chọn nhanh: web tĩnh/Next.js → Vercel; web backend Node/Python → Vercel/Railway/Render; cần toàn quyền → VPS. Miễn phí đủ cho dự án nhỏ: Vercel + Neon/Supabase (Postgres)."
+    ]
+  },
+  "domain": {
+    "vi": [
+      "Domain (tên miền) là địa chỉ dễ nhớ của web: khanhos.ai thay vì 123.45.67.89. DNS là hệ thống dịch domain → IP. Mua ở Namecheap/Cloudflare/PAVN... (~200-800k/năm cho .com/.vn). Subdomain là tên phụ: app.example.com.",
+      "Đường đi khi gõ domain: trình duyệt hỏi DNS server \"IP của tên này?\" → nhận IP → kết nối server đó → server trả web. Domain mua 1 năm renewal 1 năm; trỏ về đâu = đổi record DNS (A/CNAME)."
+    ]
+  },
+  "deployment": {
+    "vi": [
+      "Deploy là đưa web từ máy bạn lên server chạy thật cho người khác dùng: build production → đẩy lên host → gắn domain. Với Next.js: `bun run build` → output tối ưu → Vercel import repo là tự động deploy mỗi lần git push.",
+      "Flow deploy chuẩn: code xong → build production (khác dev: tối ưu, minify) → chạy migration database nếu có → đẩy lên host → kiểm tra bằng domain thật. Biến môi trường phải set lại ở host (không copy .env lên). Deploy xong nhớ test luồng chính."
+    ]
+  },
+  "what_is_khanhos": {
+    "vi": [
+      "KhanhOS AI là web chat AI chạy 100% cục bộ: đăng ký/đăng nhập có session riêng, hội thoại lưu database, và bộ máy trả lời là engine tri thức cục bộ (intent + knowledge từ file JSON) — KHÔNG gọi API AI bên ngoài, không gửi dữ liệu chat đi đâu.",
+      "KhanhOS AI = dự án web full-stack: Next.js 16 (frontend + API routes) + Prisma + SQLite + auth session + hệ thống gói Free/Plus/VIP/Max. Điểm đặc biệt: chatbot hoạt động không cần API key nào — tất cả tri thức nằm trong ứng dụng."
+    ]
+  },
+  "khanhos_features": {
+    "vi": [
+      "KhanhOS AI có:\n- Chat AI cục bộ — intent + tri thức local, không API ngoài\n- Tài khoản: đăng ký/đăng nhập, session an toàn (httpOnly), đổi/đặt lại mật khẩu\n- Hội thoại: lưu database, đổi tên, xoá, tạo lại phản hồi\n- Gói dịch vụ: Free/Plus/VIP/Max (hạn mức tín dụng/tháng), nâng cấp qua MoMo/chuyển khoản\n- Chủ sở hữu: duyệt yêu cầu nâng cấp, quản trị tri thức bot\n- Giao diện sáng/tối, hiệu ứng, responsive mobile"
+    ]
+  },
+  "khanhos_models": {
+    "vi": [
+      "KhanhOS đang dùng bộ máy tri thức cục bộ \"KhanhOS Core\" — KHÔNG phải model ngôn ngữ lớn bên ngoài, không API key. Cơ chế: phân tích câu hỏi (intent + từ khóa + ngữ cảnh) rồi trả lời từ kho tri thức JSON trong dự án. Kiến trúc có lớp trừu tượng ChatEngine nên sau này cắm model local thật (Ollama, llama.cpp) được mà không đổi giao diện.",
+      "Bot này là rule engine + knowledge base local: không gọi OpenAI/Gemini/OpenRouter gì hết. Câu nào không có trong dữ liệu thì nó nói thẳng là không biết — không bịa."
+    ]
+  },
+  "khanhos_plans": {
+    "vi": [
+      "Gói KhanhOS AI (hạn mức tín dụng/tháng):\n- Free: 25.000 tín dụng — đủ chat cơ bản\n- Plus: 85.000 (55.000đ/tháng)\n- VIP: 256.000 (99.000đ/tháng)\n- Max: 500.000 (159.000đ/tháng)\nNâng cấp: mở menu ≡ → \"Gói & Nâng cấp\" → chọn gói → điền SĐT + số MoMo + Gmail → chuyển khoản theo hướng dẫn → chủ sở hữu duyệt là kích hoạt ngay.",
+      "4 gói: Free (miễn phí, 25k tín dụng), Plus 55kđ (85k), VIP 99kđ (256k), Max 159kđ (500k). Tín dụng làm mới mỗi mùng 1. Chủ sở hữu thì vô hạn mức dùng. Thanh toán MoMo/chuyển khoản — duyệt thủ công nên vài phút là xong."
+    ]
+  },
+  "khanhos_account": {
+    "vi": [
+      "Đăng ký KhanhOS: bấm \"Đăng ký\" (góc phải) → tên + email + mật khẩu (tối thiểu 4 ký tự) → xong vào chat luôn. Quên mật khẩu: \"Đăng nhập\" → \"Quên mật khẩu?\" → nhập email nhận link đặt lại. Mật khẩu lưu dạng hash scrypt + salt — không ai đọc được kể cả quản trị DB.",
+      "Web này cần tài khoản để chat (lưu hội thoại theo tài khoản). Đăng xuất ở menu tài khoản góc phải. Session là cookie httpOnly có thời hạn — an toàn hơn token localStorage."
+    ]
+  },
+  "khanhos_owner": {
+    "vi": [
+      "Chủ sở hữu (owner) của KhanhOS AI là Khanh — email chủ ghi trong cấu hình hệ thống (biến OWNER_EMAIL). Tài khoản owner có: mức dùng VÔ HẠN, duyệt yêu cầu nâng cấp gói, và quản trị tri thức của bot (thêm/sửa intent, knowledge qua giao diện riêng).",
+      "Owner = người sở hữu web này. Khác user thường ở: không giới hạn mức dùng, thấy nút duyệt gói trong modal Gói & Nâng cấp, và có mục Quản trị tri thức cho bot. Role gán theo email cấu hình — đăng ký bằng email đó tự động nhận owner."
+    ]
+  },
+  "khanhos_privacy": {
+    "vi": [
+      "Dữ liệu của bạn trong KhanhOS: tài khoản + hội thoại lưu trong database của chính ứng dụng (SQLite). Bộ máy chat cục bộ KHÔNG gửi câu hỏi của bạn ra dịch vụ AI bên ngoài. Không phân tích người dùng, không bán dữ liệu, không cookie quảng cáo.",
+      "Riêng tư trên web này: chat xử lý ngay trong server của web — không qua API OpenAI/Gemini/... nên nội dung hội thoại không rời hệ thống. Mật khẩu hash scrypt. Muốn xoá dữ liệu: xoá từng hội thoại trong sidebar, hoặc liên hệ chủ sở hữu."
+    ]
+  },
+  "vercel": {
+    "vi": [
+      "Vercel là nền tảng hosting sinh ra cho Next.js — push code lên Git là tự động build + deploy, có domain miễn phí và CDN toàn cầu. Trang KhanhOS này cũng theo hướng deploy kiểu đó.",
+      "Vercel = deploy Next.js 1-cú-click: nối Git repo, nó tự build mỗi lần push, chạy trên edge toàn cầu. Free tier đủ dùng cho dự án nhỏ."
+    ],
+    "en": [
+      "Vercel is the hosting platform built for Next.js: connect Git, it builds and deploys on every push, with global CDN and a free tier."
+    ]
+  }
+}

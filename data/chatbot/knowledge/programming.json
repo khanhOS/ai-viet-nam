@@ -1,0 +1,320 @@
+[
+  {
+    "id": "database",
+    "topic": "database",
+    "title": "Database — Cơ sở dữ liệu",
+    "keywords": ["database", "cơ sở dữ liệu", "db"],
+    "aliases": ["database", "cơ sở dữ liệu"],
+    "content": {
+      "definition": "Database là hệ thống lưu trữ và quản lý dữ liệu có tổ chức: bảng - dòng - cột, có ràng buộc, index và ngôn ngữ truy vấn, cho nhiều ứng dụng đọc ghi đồng thời.",
+      "simple_explanation": "Database là \"kho có kỷ luật\": thứ gì vào cũng đúng vị trí schema quy định, tìm thứ gì cũng có index chỉ đường. Khác với để file JSON lung tung: web nhiều người dùng ghi cùng lúc vẫn không hỗ loạn.",
+      "examples": [
+        "Lưu tài khoản + mật khẩu hash của user",
+        "Lưu lịch sử hội thoại chat",
+        "Lưu đơn hàng + tồn kho của shop online",
+        "Web KhanhOS dùng SQLite lưu users/conversations/messages"
+      ],
+      "related_topics": ["SQLite", "PostgreSQL", "Prisma", "Backend"]
+    },
+    "related_intents": ["what_is_database", "prisma", "sqlite"]
+  },
+  {
+    "id": "sqlite",
+    "topic": "database",
+    "title": "SQLite",
+    "keywords": ["sqlite"],
+    "aliases": ["sqlite", "sqlite3"],
+    "content": {
+      "definition": "SQLite là database quan hệ nhúng: toàn bộ nằm trong một file duy nhất, không cần server riêng hay cài đặt — ứng dụng đọc ghi file trực tiếp.",
+      "simple_explanation": "SQLite = database bỏ túi: chép file .db đi đâu là mang theo cả kho dữ liệu. Vừa cho app nhỏ/vừa, vừa cho prototype, vừa cho thiết bị nhúng. Hạn chế: nhiều người GHI đồng thời thì yếu.",
+      "examples": [
+        "App di động lưu cài đặt offline",
+        "Dev local thay vì cài server database",
+        "db/custom.db của KhanhOS",
+        "Điện thoại, SmartTV, trình duyệt đều dùng SQLite"
+      ],
+      "related_topics": ["PostgreSQL", "Prisma", "Database"]
+    },
+    "related_intents": ["sqlite", "what_is_database"]
+  },
+  {
+    "id": "postgresql",
+    "topic": "database",
+    "title": "PostgreSQL",
+    "keywords": ["postgres", "postgresql", "psql"],
+    "aliases": ["postgres", "postgresql", "psql"],
+    "content": {
+      "definition": "PostgreSQL là hệ quản trị cơ sở dữ liệu quan hệ mã nguồn mở chuẩn mực: SQL đầy đủ, mở rộng được (extension), hỗ trợ JSON và vector — chạy kiến trúc client-server riêng.",
+      "simple_explanation": "Postgres là \"xe tải hàng đầu\" của database: đáng tin, chuẩn, miễn phí. Khi web nhiều người dùng thật sự, nhiều ghi đồng thời — đó là lúc chuyển từ SQLite sang Postgres.",
+      "examples": [
+        "pg_dump / pg_restore — backup chuẩn",
+        "pgvector — lưu embedding tìm kiếm ngữ nghĩa",
+        "Neon/Supabase — Postgres cloud miễn phí cho dự án nhỏ",
+        "Vercel Postgres cho app Next.js"
+      ],
+      "related_topics": ["Database", "SQLite", "Prisma"]
+    },
+    "related_intents": ["postgresql", "mysql"]
+  },
+  {
+    "id": "mongodb",
+    "topic": "database",
+    "title": "MongoDB",
+    "keywords": ["mongodb", "mongo", "nosql"],
+    "aliases": ["mongodb", "mongo", "nosql"],
+    "content": {
+      "definition": "MongoDB là database NoSQL document: lưu dữ liệu dạng document JSON-like không cần schema cứng, hợp dữ liệu biến động và prototype nhanh.",
+      "simple_explanation": "SQL chia dữ liệu thành nhiều bảng nối quan hệ; MongoDB nhét cả \"văn bản\" vào một bản ghi. Thêm field mới không phải migrate — nhưng dữ liệu quan hệ chặt vẫn nên dùng SQL.",
+      "examples": [
+        "Lưu log/sự kiện cấu trúc lỏng",
+        "Prototype app thay đổi schema liên tục",
+        "Content đa dạng của CMS"
+      ],
+      "related_topics": ["Database", "PostgreSQL"]
+    },
+    "related_intents": ["mongodb", "what_is_database"]
+  },
+  {
+    "id": "prisma",
+    "topic": "database",
+    "title": "Prisma ORM",
+    "keywords": ["prisma", "orm"],
+    "aliases": ["prisma", "orm"],
+    "content": {
+      "definition": "Prisma là ORM TypeScript: khai báo schema trong file schema.prisma, tự sinh client type-safe, thao tác database bằng lệnh code thay vì viết SQL tay.",
+      "simple_explanation": "ORM là phiên dịch: code của bạn (user.save()) được dịch thành SQL. Prisma mạnh ở type: sai query thấy đỏ ngay trong editor, không đợi chạy mới lỗi.",
+      "examples": [
+        "db push — đẩy schema lên SQLite/Postgres",
+        "db.user.findMany() thay vì SELECT * FROM",
+        "KhanhOS dùng Prisma + SQLite"
+      ],
+      "related_topics": ["Database", "TypeScript", "Node.js"]
+    },
+    "related_intents": ["prisma", "what_is_database"]
+  },
+  {
+    "id": "authentication",
+    "topic": "auth",
+    "title": "Authentication — Xác thực",
+    "keywords": ["authentication", "xác thực", "auth"],
+    "aliases": ["authentication", "auth"],
+    "content": {
+      "definition": "Authentication là xác minh danh tính người dùng (\"bạn là ai\"): kiểm tra mật khẩu/OTP/OAuth rồi cấp chứng minh (session cookie hoặc token) cho các request sau.",
+      "simple_explanation": "Vé vào hội: đưa thư mời (mật khẩu) cho bảo vệ (server), đúng thì được đeo bracelet (session) — đi đâu chỉ cần khoe bracelet, khỏi đưa thư lại.",
+      "examples": [
+        "Đăng nhập email + mật khẩu",
+        "Đăng nhập Google (OAuth)",
+        "Mã OTP ngân hàng",
+        "Web KhanhOS dùng session cookie httpOnly"
+      ],
+      "related_topics": ["Session", "JWT", "Authorization"]
+    },
+    "related_intents": ["authentication", "session_login"]
+  },
+  {
+    "id": "session",
+    "topic": "auth",
+    "title": "Session — Phiên đăng nhập",
+    "keywords": ["session", "cookie", "phiên"],
+    "aliases": ["session", "cookie"],
+    "content": {
+      "definition": "Session là trạng thái đăng nhập lưu phía server: sau khi xác thực, server sinh token ngẫu nhiên, lưu bản hash ở DB và gửi bản gốc về cookie httpOnly của trình duyệt.",
+      "simple_explanation": "Đăng nhập xong, trình duyệt đeo một \"vòng tay\" (cookie) mà chỉ server đọc được (httpOnly — JS không nhặt được). Mỗi request mang theo vòng, server tra cứu ai đeo vòng này. Logout = cắt vòng.",
+      "examples": [
+        "Cookie httpOnly + SameSite chống XSS/CSRF",
+        "Lưu token dạng hash SHA-256 — lộ DB cũng khó fake",
+        "Hết hạn session tự đăng xuất"
+      ],
+      "related_topics": ["Authentication", "JWT", "Cookie"]
+    },
+    "related_intents": ["session_login", "jwt"]
+  },
+  {
+    "id": "jwt",
+    "topic": "auth",
+    "title": "JWT — JSON Web Token",
+    "keywords": ["jwt", "json web token"],
+    "aliases": ["jwt"],
+    "content": {
+      "definition": "JWT là chuỗi token tự chứa thông tin (payload) có chữ ký số: server ký, client giữ và đính kèm mỗi request; server xác minh chữ ký mà không cần tra DB.",
+      "simple_explanation": "Session như gửi đồ giữ ở quầy (server tra DB); JWT như chứng minh thư có dấu (tự chứa, ai cũng kiểm được). Thuận cho mobile/API; nhược: khó thu hồi ngay — phải đợi hết hạn hoặc dùng blacklist.",
+      "examples": [
+        "Đăng nhập mobile app nhận JWT",
+        "Microservice xác minh token không cần shared DB",
+        "Hạn ngắn + refresh token là pattern chuẩn"
+      ],
+      "related_topics": ["Authentication", "Session"]
+    },
+    "related_intents": ["jwt", "session_login"]
+  },
+  {
+    "id": "javascript",
+    "topic": "programming",
+    "title": "JavaScript",
+    "keywords": ["javascript", "js"],
+    "aliases": ["js", "javascript"],
+    "content": {
+      "definition": "JavaScript là ngôn ngữ lập trình của web: trình duyệt chạy nó để trang tương tác; với Node.js nó chạy được cả server, tool và app.",
+      "simple_explanation": "JS là ngôn ngữ duy nhất trình duyệt hiểu sẵn — nên mọi trang web động đều có nó. Học JS là mở được 3 cửa: web frontend, backend (Node), mobile (React Native).",
+      "examples": [
+        "Nút bấm hiện popup",
+        "Gọi API lấy tin mới không cần load lại trang",
+        "Server Node.js + Express",
+        "Chrome DevTools console"
+      ],
+      "related_topics": ["TypeScript", "React", "Node.js", "HTML/CSS"]
+    },
+    "related_intents": ["javascript", "typescript"]
+  },
+  {
+    "id": "typescript",
+    "topic": "programming",
+    "title": "TypeScript",
+    "keywords": ["typescript", "ts"],
+    "aliases": ["ts", "typescript"],
+    "content": {
+      "definition": "TypeScript = JavaScript cộng hệ thống kiểu tĩnh: khai báo dạng dữ liệu, trình biên dịch bắt lỗi trước khi chạy; biên dịch ra JS thuần nên chạy được mọi nơi JS chạy.",
+      "simple_explanation": "JS viết nhanh nhưng lỗi hiện lúc chạy; TS báo lỗi ngay lúc gõ — như gõ sai chính tả có gạch đỏ. Dự án to, làm nhóm thì TS là cứu tinh.",
+      "examples": [
+        "interface User { id: string; email: string }",
+        "Autocomplete chính xác nhờ kiểu",
+        "Next.js, Prisma... đều TypeScript-first"
+      ],
+      "related_topics": ["JavaScript", "Next.js"]
+    },
+    "related_intents": ["typescript", "javascript"]
+  },
+  {
+    "id": "python",
+    "topic": "programming",
+    "title": "Python",
+    "keywords": ["python"],
+    "aliases": ["python", "py"],
+    "content": {
+      "definition": "Python là ngôn ngữ thông dịch, cú pháp gần tiếng Anh, dễ học — thống trị các mảng AI/ML, khoa học dữ liệu, tự động hoá và backend web.",
+      "simple_explanation": "Python viết nhanh: cùng việc đó thường ngắn hơn ngôn ngữ khác 2-3 lần. Chậm hơn C++ về tốc độ thô nhưng tốc độ PHÁT TRIỂN nhanh bù lại. Ngôn ngữ số 1 của AI.",
+      "examples": [
+        "PyTorch/transformers — train model",
+        "pandas — phân tích dữ liệu",
+        "FastAPI/Django — web backend",
+        "Script tự động hoá Excel"
+      ],
+      "related_topics": ["AI", "FastAPI", "Data Science"]
+    },
+    "related_intents": ["python", "programming_help"]
+  },
+  {
+    "id": "react",
+    "topic": "programming",
+    "title": "React",
+    "keywords": ["react", "reactjs", "component"],
+    "aliases": ["react", "reactjs"],
+    "content": {
+      "definition": "React là thư viện JavaScript (của Meta) xây giao diện bằng component tái sử dụng: UI = hàm của state, React tự cập nhật DOM chỗ cần khi dữ liệu đổi.",
+      "simple_explanation": "Thay vì sửa trang web thủ công từng chỗ, React để bạn khai báo \"giao diện trông thế nào theo dữ liệu\" rồi nó lo phần vẽ lại. Ghép Lego component: nút, card, modal.",
+      "examples": [
+        "useState/useEffect — hooks cơ bản",
+        "Component <ChatBox /> dùng lại nhiều trang",
+        "React Native — mobile cùng tư duy",
+        "Next.js xây trên React"
+      ],
+      "related_topics": ["Next.js", "JavaScript", "Frontend"]
+    },
+    "related_intents": ["react", "nextjs"]
+  },
+  {
+    "id": "nextjs",
+    "topic": "programming",
+    "title": "Next.js",
+    "keywords": ["nextjs", "next.js", "ssr"],
+    "aliases": ["nextjs", "next.js"],
+    "content": {
+      "definition": "Next.js là full-stack framework trên React (Vercel): routing theo file, SSR/SSG, API routes, tối ưu ảnh/font tự động — chuẩn cho web React production.",
+      "simple_explanation": "React cho viên gạch, Next cho cả công trình: route tạo bằng cách tạo file, backend viết ngay trong dự án (api routes), deploy Vercel gần như một nút. KhanhOS AI đang chạy Next.js 16.",
+      "examples": [
+        "app/page.tsx tự thành route /",
+        "app/api/chat/route.ts — backend endpoint",
+        "Server Components + streaming SSR",
+        "Deploy git push lên Vercel"
+      ],
+      "related_topics": ["React", "Vercel", "TypeScript"]
+    },
+    "related_intents": ["nextjs", "react", "deployment"]
+  },
+  {
+    "id": "nodejs",
+    "topic": "programming",
+    "title": "Node.js",
+    "keywords": ["nodejs", "node", "npm"],
+    "aliases": ["nodejs", "node"],
+    "content": {
+      "definition": "Node.js là runtime JavaScript ngoài trình duyệt (dựa engine V8): viết server, API, tool dòng lệnh; npm đi kèm là kho package lớn nhất thế giới.",
+      "simple_explanation": "Node biến JS thành ngôn ngữ server: đọc ghi file, mở cổng mạng, chạy nền 24/7. Event loop đơn luồng + async khiến nó khoẻ với chat, API — nhiều kết nối cùng lúc.",
+      "examples": [
+        "express / fastify — web server",
+        "npm install react — kho package triệu sao",
+        "Tool CLI: ESLint, Prisma CLI",
+        "Next.js chạy trên Node"
+      ],
+      "related_topics": ["JavaScript", "Express", "NPM"]
+    },
+    "related_intents": ["nodejs", "api_development"]
+  },
+  {
+    "id": "backend",
+    "topic": "programming",
+    "title": "Backend",
+    "keywords": ["backend", "server side"],
+    "aliases": ["backend"],
+    "content": {
+      "definition": "Backend là phần ứng dụng chạy trên server: xử lý logic, đọc ghi database, xác thực, gọi dịch vụ ngoài và trả kết quả cho frontend qua API.",
+      "simple_explanation": "Bếp của nhà hàng: khách (frontend) gọi món (request), bếp nấu (xử lý + dữ liệu), nhân viên mang ra (response). Khách không cần biết bếp nấu thế nào — chỉ cần menu (API) rõ ràng.",
+      "examples": [
+        "API /api/login kiểm tra mật khẩu",
+        "Lưu hội thoại vào database",
+        "Rate limit chống spam",
+        "KhanhOS: Next.js API routes + Prisma"
+      ],
+      "related_topics": ["Frontend", "Database", "API"]
+    },
+    "related_intents": ["backend", "frontend"]
+  },
+  {
+    "id": "frontend",
+    "topic": "programming",
+    "title": "Frontend",
+    "keywords": ["frontend", "giao diện", "client side"],
+    "aliases": ["frontend"],
+    "content": {
+      "definition": "Frontend là phần ứng dụng chạy trong trình duyệt: vẽ giao diện, bắt tương tác, gọi API và hiển thị dữ liệu cho người dùng.",
+      "simple_explanation": "Mọi thứ bạn NHÌN THẤY và BẤM được: bố cục, nút, hiệu ứng. Bộ ba nền tảng: HTML (khung) + CSS (trang điểm) + JavaScript (sự sống).",
+      "examples": [
+        "Chat box gửi tin nhắn khi gõ Enter",
+        "Responsive hiển thị khác trên mobile",
+        "Dark mode toggle",
+        "React/Vue/Svelte là framework frontend"
+      ],
+      "related_topics": ["HTML", "CSS", "JavaScript", "React"]
+    },
+    "related_intents": ["frontend", "backend"]
+  },
+  {
+    "id": "git",
+    "topic": "programming",
+    "title": "Git & GitHub",
+    "keywords": ["git", "github", "commit", "branch"],
+    "aliases": ["git", "github"],
+    "content": {
+      "definition": "Git là hệ thống quản lý phiên bản phân tán: ghi lịch sử mọi thay đổi, hỗ trợ làm việc trên nhánh song song; GitHub là dịch vụ lưu trữ repo Git cộng review code, CI/CD.",
+      "simple_explanation": "Git là máy thời gian + bản nháp vô hạn cho code: commit là \"chốt mốc\", branch là \"thử nghiệm song song không phá bản chính\", merge là gộp về. GitHub chứa tất cả online + cho cộng tác.",
+      "examples": [
+        "git clone → code → git add/commit → git push",
+        "Pull request: xin duyệt trước khi merge",
+        "git checkout -- file: hoàn tác chưa commit",
+        ".gitignore: bỏ qua .env, node_modules"
+      ],
+      "related_topics": ["Deployment", "Version Control"]
+    },
+    "related_intents": ["git", "deployment"]
+  }
+]

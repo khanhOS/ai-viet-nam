@@ -1,0 +1,976 @@
+[
+  {
+    "id": "what_is_ai",
+    "description": "AI là gì",
+    "topic": "ai",
+    "patterns": [
+      "ai là gì",
+      "ai la gi",
+      "ai là cái gì",
+      "ai nghĩa là gì",
+      "giải thích ai",
+      "trí tuệ nhân tạo là gì",
+      "trí tuệ nhân tạo là cái gì",
+      "giải thích trí tuệ nhân tạo",
+      "ai dùng để làm gì",
+      "ai dùng để làm gì nữa đi",
+      "ai là sao",
+      "ai là gì vậy",
+      "what is ai",
+      "what does ai mean",
+      "explain ai",
+      "ai là gì vậy bro",
+      "cho biết ai là gì",
+      "ai hoạt động thế nào",
+      "kể về ai đi"
+    ],
+    "keywords": [
+      "ai",
+      "trí tuệ nhân tạo",
+      "artificial intelligence"
+    ],
+    "aliases": [
+      "trí tuệ nhân tạo",
+      "artificial intelligence"
+    ],
+    "examples": [
+      "AI là gì?",
+      "ai la gi",
+      "trí tuệ nhân tạo là gì?",
+      "cho mình biết AI là gì",
+      "what is AI",
+      "AI dùng để làm gì?",
+      "giải thích trí tuệ nhân tạo đi"
+    ],
+    "related_intents": [
+      "what_is_llm",
+      "what_is_local_ai",
+      "how_ai_works",
+      "what_is_machine_learning"
+    ],
+    "response_id": "what_is_ai",
+    "knowledge_ref": "ai",
+    "confidence_threshold": 0.5
+  },
+  {
+    "id": "what_is_llm",
+    "description": "LLM là gì",
+    "topic": "ai",
+    "patterns": [
+      "llm là gì",
+      "llm la gi",
+      "llm là viết tắt của gì",
+      "large language model là gì",
+      "mô hình ngôn ngữ lớn là gì",
+      "what is llm",
+      "what is a large language model",
+      "giải thích llm",
+      "llm hoạt động thế nào",
+      "llm nghĩa là gì",
+      "llm",
+      "mô hình ngôn ngữ lớn"
+    ],
+    "keywords": [
+      "llm",
+      "mô hình ngôn ngữ",
+      "large language model"
+    ],
+    "aliases": [
+      "llm",
+      "large language model"
+    ],
+    "examples": [
+      "LLM là gì?",
+      "llm la gi",
+      "what is LLM",
+      "mô hình ngôn ngữ lớn là gì"
+    ],
+    "related_intents": [
+      "what_is_ai",
+      "how_llm_works",
+      "what_is_token",
+      "what_is_model"
+    ],
+    "response_id": "what_is_llm",
+    "knowledge_ref": "llm",
+    "confidence_threshold": 0.5
+  },
+  {
+    "id": "what_is_local_ai",
+    "description": "AI cục bộ / local AI là gì",
+    "topic": "local_ai",
+    "patterns": [
+      "local ai là gì",
+      "ai local là gì",
+      "ai cục bộ là gì",
+      "local ai là sao",
+      "what is local ai",
+      "ai chạy trên máy là gì",
+      "on-device ai là gì",
+      "ai offline là gì",
+      "giải thích local ai",
+      "ai local nghĩa là gì",
+      "local ai",
+      "ai local",
+      "ai cục bộ"
+    ],
+    "keywords": [
+      "local ai",
+      "ai cục bộ",
+      "ai local",
+      "offline ai",
+      "on-device"
+    ],
+    "aliases": [
+      "local ai",
+      "ai local"
+    ],
+    "examples": [
+      "Local AI là gì?",
+      "ai cục bộ là gì",
+      "what is local AI",
+      "AI local là sao"
+    ],
+    "related_intents": [
+      "local_ai_without_api",
+      "ollama",
+      "llama_cpp",
+      "local_ai_vs_api"
+    ],
+    "response_id": "what_is_local_ai",
+    "knowledge_ref": "local_ai",
+    "confidence_threshold": 0.5
+  },
+  {
+    "id": "what_is_api",
+    "description": "API là gì",
+    "topic": "ai",
+    "patterns": [
+      "api là gì",
+      "api la gi",
+      "api là cái gì",
+      "api nghĩa là gì",
+      "giải thích api",
+      "what is api",
+      "what does api mean",
+      "api dùng để làm gì",
+      "api là viết tắt của gì",
+      "kể về api đi"
+    ],
+    "keywords": [
+      "api",
+      "giao diện lập trình"
+    ],
+    "aliases": [
+      "api"
+    ],
+    "examples": [
+      "API là gì?",
+      "api la gi",
+      "what is API",
+      "API dùng để làm gì?"
+    ],
+    "related_intents": [
+      "local_ai_without_api",
+      "api_development",
+      "what_is_model"
+    ],
+    "response_id": "what_is_api",
+    "knowledge_ref": "api",
+    "confidence_threshold": 0.5
+  },
+  {
+    "id": "what_is_model",
+    "description": "Model AI là gì",
+    "topic": "ai",
+    "patterns": [
+      "model ai là gì",
+      "model là gì",
+      "mô hình ai là gì",
+      "ai model là gì",
+      "what is an ai model",
+      "giải thích model ai",
+      "model nghĩa là gì",
+      "mô hình là gì trong ai",
+      "model trong ai là sao"
+    ],
+    "keywords": [
+      "model",
+      "mô hình",
+      "ai model"
+    ],
+    "aliases": [
+      "model",
+      "mô hình"
+    ],
+    "examples": [
+      "Model AI là gì?",
+      "mô hình AI là gì",
+      "what is an AI model"
+    ],
+    "related_intents": [
+      "what_is_llm",
+      "what_is_ai",
+      "local_model"
+    ],
+    "response_id": "what_is_model",
+    "knowledge_ref": "model",
+    "confidence_threshold": 0.5
+  },
+  {
+    "id": "what_is_token",
+    "description": "Token (đơn vị văn bản) là gì",
+    "topic": "ai",
+    "patterns": [
+      "token là gì",
+      "token la gi",
+      "token nghĩa là gì",
+      "what is a token",
+      "token trong ai là gì",
+      "token là sao",
+      "token là cái gì",
+      "đếm token là gì",
+      "token là đơn vị gì"
+    ],
+    "keywords": [
+      "token",
+      "đơn vị văn bản"
+    ],
+    "aliases": [
+      "token"
+    ],
+    "examples": [
+      "Token là gì?",
+      "token la gi",
+      "what is a token",
+      "token trong AI là gì"
+    ],
+    "related_intents": [
+      "what_is_llm",
+      "what_is_context"
+    ],
+    "response_id": "what_is_token",
+    "knowledge_ref": "token",
+    "confidence_threshold": 0.5
+  },
+  {
+    "id": "what_is_prompt",
+    "description": "Prompt là gì",
+    "topic": "ai",
+    "patterns": [
+      "prompt là gì",
+      "prompt la gi",
+      "prompt nghĩa là gì",
+      "what is a prompt",
+      "viết prompt là gì",
+      "prompt trong ai là gì",
+      "giải thích prompt",
+      "prompt tốt là gì",
+      "kỹ thuật prompt là gì"
+    ],
+    "keywords": [
+      "prompt",
+      "viết prompt"
+    ],
+    "aliases": [
+      "prompt"
+    ],
+    "examples": [
+      "Prompt là gì?",
+      "prompt la gi",
+      "what is a prompt",
+      "giải thích prompt đi"
+    ],
+    "related_intents": [
+      "what_is_context",
+      "how_llm_works"
+    ],
+    "response_id": "what_is_prompt",
+    "knowledge_ref": "prompt",
+    "confidence_threshold": 0.5
+  },
+  {
+    "id": "what_is_context",
+    "description": "Context window là gì",
+    "topic": "ai",
+    "patterns": [
+      "context là gì",
+      "context window là gì",
+      "ngữ cảnh là gì trong ai",
+      "cửa sổ ngữ cảnh là gì",
+      "what is context window",
+      "context trong ai là gì",
+      "giải thích context window",
+      "context length là gì"
+    ],
+    "keywords": [
+      "context",
+      "ngữ cảnh",
+      "context window",
+      "cửa sổ ngữ cảnh",
+      "window"
+    ],
+    "aliases": [
+      "context",
+      "context window"
+    ],
+    "examples": [
+      "Context là gì?",
+      "context window là gì",
+      "what is context window"
+    ],
+    "related_intents": [
+      "what_is_token",
+      "what_is_prompt"
+    ],
+    "response_id": "what_is_context",
+    "knowledge_ref": "context_window",
+    "confidence_threshold": 0.5
+  },
+  {
+    "id": "what_is_embedding",
+    "description": "Embedding / vector là gì",
+    "topic": "ai",
+    "patterns": [
+      "embedding là gì",
+      "embedding la gi",
+      "vector là gì trong ai",
+      "biểu diễn vector là gì",
+      "what is embedding",
+      "what is an embedding",
+      "giải thích embedding",
+      "word embedding là gì",
+      "vector hóa văn bản là gì"
+    ],
+    "keywords": [
+      "embedding",
+      "vector",
+      "biểu diễn vector"
+    ],
+    "aliases": [
+      "embedding"
+    ],
+    "examples": [
+      "Embedding là gì?",
+      "embedding la gi",
+      "what is embedding",
+      "vector trong AI là gì"
+    ],
+    "related_intents": [
+      "what_is_rag",
+      "what_is_neural_network"
+    ],
+    "response_id": "what_is_embedding",
+    "knowledge_ref": "embedding",
+    "confidence_threshold": 0.5
+  },
+  {
+    "id": "what_is_rag",
+    "description": "RAG là gì",
+    "topic": "ai",
+    "patterns": [
+      "rag là gì",
+      "rag la gi",
+      "retrieval augmented generation là gì",
+      "what is rag",
+      "giải thích rag",
+      "rag là sao",
+      "kỹ thuật rag là gì",
+      "rag dùng để làm gì"
+    ],
+    "keywords": [
+      "rag",
+      "retrieval augmented generation"
+    ],
+    "aliases": [
+      "rag"
+    ],
+    "examples": [
+      "RAG là gì?",
+      "rag la gi",
+      "what is RAG",
+      "giải thích RAG đi"
+    ],
+    "related_intents": [
+      "what_is_embedding",
+      "what_is_llm"
+    ],
+    "response_id": "what_is_rag",
+    "knowledge_ref": "rag",
+    "confidence_threshold": 0.5
+  },
+  {
+    "id": "what_is_fine_tuning",
+    "description": "Fine-tuning là gì",
+    "topic": "ai",
+    "patterns": [
+      "fine-tuning là gì",
+      "fine tuning là gì",
+      "finetune là gì",
+      "what is fine tuning",
+      "huấn luyện tinh chỉnh là gì",
+      "giải thích fine tuning",
+      "tinh chỉnh model là gì",
+      "train thêm model là gì"
+    ],
+    "keywords": [
+      "fine-tuning",
+      "fine tuning",
+      "tinh chỉnh",
+      "huấn luyện tinh chỉnh"
+    ],
+    "aliases": [
+      "fine-tuning",
+      "finetune"
+    ],
+    "examples": [
+      "Fine-tuning là gì?",
+      "what is fine tuning",
+      "tinh chỉnh model là gì"
+    ],
+    "related_intents": [
+      "what_is_model",
+      "how_ai_works",
+      "what_is_neural_network"
+    ],
+    "response_id": "what_is_fine_tuning",
+    "knowledge_ref": "fine_tuning",
+    "confidence_threshold": 0.5
+  },
+  {
+    "id": "what_is_inference",
+    "description": "Inference là gì",
+    "topic": "ai",
+    "patterns": [
+      "inference là gì",
+      "suy luận là gì trong ai",
+      "what is inference",
+      "giải thích inference",
+      "inference là sao",
+      "model inference là gì",
+      "chạy suy luận là gì"
+    ],
+    "keywords": [
+      "inference",
+      "suy luận"
+    ],
+    "aliases": [
+      "inference"
+    ],
+    "examples": [
+      "Inference là gì?",
+      "what is inference",
+      "suy luận trong AI là gì"
+    ],
+    "related_intents": [
+      "what_is_model",
+      "gpu_inference",
+      "local_ai_setup"
+    ],
+    "response_id": "what_is_inference",
+    "knowledge_ref": "inference",
+    "confidence_threshold": 0.5
+  },
+  {
+    "id": "what_is_neural_network",
+    "description": "Mạng nơ-ron là gì",
+    "topic": "ai",
+    "patterns": [
+      "mạng nơ-ron là gì",
+      "mạng neuron là gì",
+      "neural network là gì",
+      "what is a neural network",
+      "giải thích mạng nơ-ron",
+      "nơ-ron nhân tạo là gì",
+      "mạng neural là gì",
+      "deep learning là gì",
+      "học sâu là gì"
+    ],
+    "keywords": [
+      "mạng nơ-ron",
+      "neural network",
+      "deep learning",
+      "học sâu",
+      "nơ-ron"
+    ],
+    "aliases": [
+      "neural network",
+      "mạng nơ-ron",
+      "deep learning"
+    ],
+    "examples": [
+      "Mạng nơ-ron là gì?",
+      "neural network là gì",
+      "deep learning là gì"
+    ],
+    "related_intents": [
+      "what_is_ai",
+      "what_is_llm"
+    ],
+    "response_id": "what_is_neural_network",
+    "knowledge_ref": "neural_network",
+    "confidence_threshold": 0.5
+  },
+  {
+    "id": "how_ai_works",
+    "description": "AI hoạt động như thế nào",
+    "topic": "ai",
+    "patterns": [
+      "ai hoạt động như thế nào",
+      "ai hoạt động ra sao",
+      "ai chạy thế nào",
+      "how does ai work",
+      "how do ai systems work",
+      "ai xử lý dữ liệu thế nào",
+      "ai học thế nào",
+      "cơ chế hoạt động của ai",
+      "ai suy nghĩ thế nào"
+    ],
+    "keywords": [
+      "hoạt động",
+      "cơ chế"
+    ],
+    "aliases": [
+      "how ai works"
+    ],
+    "examples": [
+      "AI hoạt động như thế nào?",
+      "how does AI work",
+      "AI học thế nào?"
+    ],
+    "related_intents": [
+      "what_is_ai",
+      "how_llm_works",
+      "what_is_machine_learning"
+    ],
+    "response_id": "how_ai_works",
+    "knowledge_ref": "ai",
+    "confidence_threshold": 0.55
+  },
+  {
+    "id": "how_llm_works",
+    "description": "LLM hoạt động thế nào",
+    "topic": "ai",
+    "patterns": [
+      "llm hoạt động thế nào",
+      "llm hoạt động như thế nào",
+      "how does an llm work",
+      "llm học từ đâu",
+      "llm sinh văn bản thế nào",
+      "llm dự đoán từ thế nào",
+      "chatgpt hoạt động thế nào",
+      "model ngôn ngữ chạy thế nào"
+    ],
+    "keywords": [
+      "llm",
+      "hoạt động"
+    ],
+    "aliases": [],
+    "examples": [
+      "LLM hoạt động thế nào?",
+      "how does an LLM work",
+      "LLM sinh văn bản ra sao?"
+    ],
+    "related_intents": [
+      "what_is_llm",
+      "how_ai_works",
+      "what_is_token"
+    ],
+    "response_id": "how_llm_works",
+    "knowledge_ref": "llm",
+    "confidence_threshold": 0.55
+  },
+  {
+    "id": "ai_hallucination",
+    "description": "AI bịa / hallucination là gì",
+    "topic": "ai",
+    "patterns": [
+      "hallucination là gì",
+      "ai bịa là sao",
+      "ai nói sai là sao",
+      "what is hallucination in ai",
+      "llm bịa chuyện là gì",
+      "ai ảo giác là gì",
+      "sao ai hay bịa",
+      "tại sao ai bịa ra thông tin",
+      "ai nói láo là sao"
+    ],
+    "keywords": [
+      "hallucination",
+      "bịa",
+      "ảo giác"
+    ],
+    "aliases": [
+      "hallucination"
+    ],
+    "examples": [
+      "Hallucination là gì?",
+      "sao AI hay bịa?",
+      "AI bịa chuyện là sao"
+    ],
+    "related_intents": [
+      "what_is_llm"
+    ],
+    "response_id": "ai_hallucination",
+    "knowledge_ref": "hallucination",
+    "confidence_threshold": 0.5
+  },
+  {
+    "id": "what_is_machine_learning",
+    "description": "Machine Learning là gì",
+    "topic": "ai",
+    "patterns": [
+      "machine learning là gì",
+      "machine learning la gi",
+      "ml là gì",
+      "ml la gi",
+      "học máy là gì",
+      "hoc may la gi",
+      "what is machine learning",
+      "giải thích machine learning",
+      "machine learning là sao",
+      "machine learning dùng để làm gì",
+      "machine learning và ai khác gì"
+    ],
+    "keywords": [
+      "machine learning",
+      "học máy",
+      "ml"
+    ],
+    "aliases": [
+      "machine learning",
+      "học máy"
+    ],
+    "examples": [
+      "Machine learning là gì?",
+      "ml la gi",
+      "học máy là gì?"
+    ],
+    "related_intents": [
+      "what_is_ai",
+      "what_is_neural_network",
+      "how_ai_works"
+    ],
+    "response_id": "what_is_machine_learning",
+    "knowledge_ref": "machine_learning",
+    "confidence_threshold": 0.5
+  },
+  {
+    "id": "local_ai_without_api",
+    "description": "Chạy AI không cần API ngoài",
+    "topic": "local_ai",
+    "patterns": [
+      "chạy ai không cần api",
+      "chay ai khong can api",
+      "local ai có cần api không",
+      "local ai co can api khong",
+      "ai local có cần api không",
+      "chạy ai local có cần api không",
+      "làm ai không cần api",
+      "can ai run without api",
+      "chạy ai không cần key",
+      "ai offline có cần api không",
+      "chạy ai có cần internet không"
+    ],
+    "keywords": [
+      "không cần api",
+      "local ai",
+      "api"
+    ],
+    "aliases": [
+      "no api",
+      "không api"
+    ],
+    "examples": [
+      "Chạy AI không cần API được không?",
+      "local AI có cần api ko"
+    ],
+    "related_intents": [
+      "what_is_local_ai",
+      "local_ai_setup",
+      "ollama"
+    ],
+    "response_id": "local_ai_without_api",
+    "knowledge_ref": "local_ai",
+    "confidence_threshold": 0.5
+  },
+  {
+    "id": "local_ai_setup",
+    "description": "Cách chạy AI trên máy mình",
+    "topic": "local_ai",
+    "patterns": [
+      "cách chạy ai local",
+      "cach chay ai local",
+      "làm sao chạy ai local",
+      "lam sao chay ai local",
+      "setup ai local",
+      "how to run local ai",
+      "cài ai trên máy",
+      "cai ai tren may",
+      "hướng dẫn chạy ai local",
+      "chạy ai trên máy tính",
+      "chay ai tren may tinh"
+    ],
+    "keywords": [
+      "chạy ai local",
+      "setup ai",
+      "local ai"
+    ],
+    "aliases": [
+      "local ai setup"
+    ],
+    "examples": [
+      "Làm sao chạy AI local?",
+      "setup ai local như thế nào?"
+    ],
+    "related_intents": [
+      "what_is_local_ai",
+      "ollama",
+      "ram_requirements",
+      "llama_cpp"
+    ],
+    "response_id": "local_ai_setup",
+    "knowledge_ref": "local_ai",
+    "confidence_threshold": 0.5
+  },
+  {
+    "id": "ram_requirements",
+    "description": "Chạy AI local cần bao nhiêu RAM",
+    "topic": "local_ai",
+    "patterns": [
+      "chạy ai cần ram bao nhiêu",
+      "chay ai can ram bao nhieu",
+      "llm ram requirements",
+      "máy 8gb chạy ai được không",
+      "may 8gb chay ai duoc khong",
+      "chạy llm cần bao nhiêu ram",
+      "ram for llm",
+      "máy yếu chạy ai được không",
+      "chạy ai cần cấu hình gì",
+      "chay ai can ram"
+    ],
+    "keywords": [
+      "ram",
+      "cấu hình",
+      "8gb"
+    ],
+    "aliases": [
+      "ram requirements"
+    ],
+    "examples": [
+      "Chạy AI cần RAM bao nhiêu?",
+      "máy 8gb chạy AI được không?"
+    ],
+    "related_intents": [
+      "local_ai_setup",
+      "ollama",
+      "quantization",
+      "gpu_inference"
+    ],
+    "response_id": "ram_requirements",
+    "knowledge_ref": "local_ai",
+    "confidence_threshold": 0.5
+  },
+  {
+    "id": "ollama",
+    "description": "Ollama là gì",
+    "topic": "local_ai",
+    "patterns": [
+      "ollama là gì",
+      "ollama la gi",
+      "what is ollama",
+      "ollama dùng để làm gì",
+      "ollama dung de lam gi",
+      "cài ollama",
+      "cai ollama",
+      "ollama chạy thế nào",
+      "giải thích ollama",
+      "ollama là sao"
+    ],
+    "keywords": [
+      "ollama"
+    ],
+    "aliases": [
+      "ollama"
+    ],
+    "examples": [
+      "Ollama là gì?",
+      "ollama la gi",
+      "cài Ollama thế nào?"
+    ],
+    "related_intents": [
+      "what_is_local_ai",
+      "llama_cpp",
+      "local_ai_setup"
+    ],
+    "response_id": "ollama",
+    "knowledge_ref": "ollama",
+    "confidence_threshold": 0.5
+  },
+  {
+    "id": "llama_cpp",
+    "description": "llama.cpp là gì",
+    "topic": "local_ai",
+    "patterns": [
+      "llama.cpp là gì",
+      "llama cpp la gi",
+      "llama cpp là gì",
+      "what is llama.cpp",
+      "what is llama cpp",
+      "llama.cpp dùng để làm gì",
+      "giải thích llama cpp",
+      "llama.cpp là sao"
+    ],
+    "keywords": [
+      "llama cpp",
+      "llama.cpp"
+    ],
+    "aliases": [
+      "llama.cpp",
+      "llama cpp"
+    ],
+    "examples": [
+      "llama.cpp là gì?",
+      "what is llama.cpp"
+    ],
+    "related_intents": [
+      "ollama",
+      "quantization",
+      "local_ai_setup"
+    ],
+    "response_id": "llama_cpp",
+    "knowledge_ref": "llama_cpp",
+    "confidence_threshold": 0.5
+  },
+  {
+    "id": "local_model",
+    "description": "Local model / model chạy trên máy",
+    "topic": "local_ai",
+    "patterns": [
+      "local model là gì",
+      "local model la gi",
+      "mô hình local là gì",
+      "what is a local model",
+      "model chạy trên máy là gì",
+      "chạy model local"
+    ],
+    "keywords": [
+      "local model",
+      "mô hình local"
+    ],
+    "aliases": [
+      "local model"
+    ],
+    "examples": [
+      "Local model là gì?"
+    ],
+    "related_intents": [
+      "what_is_local_ai",
+      "ollama",
+      "what_is_model"
+    ],
+    "response_id": "local_model",
+    "knowledge_ref": "local_ai",
+    "confidence_threshold": 0.5
+  },
+  {
+    "id": "quantization",
+    "description": "Quantization (nén model) là gì",
+    "topic": "local_ai",
+    "patterns": [
+      "quantization là gì",
+      "quantization la gi",
+      "lượng tử hoá model là gì",
+      "what is quantization",
+      "q4 q8 là gì",
+      "gguf là gì",
+      "gguf la gi",
+      "model quantized là gì"
+    ],
+    "keywords": [
+      "quantization",
+      "gguf",
+      "q4"
+    ],
+    "aliases": [
+      "quantization",
+      "gguf"
+    ],
+    "examples": [
+      "Quantization là gì?",
+      "gguf là gì?"
+    ],
+    "related_intents": [
+      "llama_cpp",
+      "ram_requirements",
+      "ollama"
+    ],
+    "response_id": "quantization",
+    "knowledge_ref": "quantization",
+    "confidence_threshold": 0.5
+  },
+  {
+    "id": "gpu_inference",
+    "description": "Chạy AI bằng GPU / VRAM",
+    "topic": "local_ai",
+    "patterns": [
+      "gpu inference là gì",
+      "chạy llm bằng gpu",
+      "chạy ai bằng gpu",
+      "gpu dùng để chạy ai à",
+      "inference trên gpu",
+      "cpu hay gpu chạy ai tốt hơn",
+      "vram cần bao nhiêu",
+      "chạy ai bằng vram"
+    ],
+    "keywords": [
+      "gpu",
+      "vram",
+      "inference"
+    ],
+    "aliases": [
+      "gpu inference"
+    ],
+    "examples": [
+      "Chạy LLM bằng GPU thế nào?",
+      "CPU hay GPU chạy AI tốt hơn?"
+    ],
+    "related_intents": [
+      "ram_requirements",
+      "quantization",
+      "what_is_inference"
+    ],
+    "response_id": "gpu_inference",
+    "knowledge_ref": "local_ai",
+    "confidence_threshold": 0.5
+  },
+  {
+    "id": "local_ai_vs_api",
+    "description": "Local AI vs gọi API — nên chọn gì",
+    "topic": "local_ai",
+    "patterns": [
+      "local ai vs api",
+      "local ai khác api thế nào",
+      "chạy local hay dùng api",
+      "local ai hay api tốt hơn",
+      "local ai vs cloud ai",
+      "nên chạy local hay gọi api"
+    ],
+    "keywords": [
+      "local ai",
+      "api"
+    ],
+    "aliases": [],
+    "examples": [
+      "Local AI khác API thế nào?"
+    ],
+    "related_intents": [
+      "local_ai_without_api",
+      "what_is_local_ai",
+      "what_is_api"
+    ],
+    "response_id": "local_ai_vs_api",
+    "knowledge_ref": "local_ai",
+    "confidence_threshold": 0.5
+  }
+]

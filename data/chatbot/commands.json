@@ -1,0 +1,61 @@
+{
+  "/help": {
+    "description": "Xem tất cả lệnh + cách hỏi"
+  },
+  "/about": {
+    "description": "Giới thiệu KhanhOS AI",
+    "response": "KhanhOS AI là web chat chạy hoàn toàn cục bộ: đăng ký/đăng nhập, lưu hội thoại, và bộ máy trả lời dựa trên intent + tri thức local (file JSON) — không gọi API AI bên ngoài."
+  },
+  "/status": {
+    "description": "Trạng thái bộ máy + số liệu dữ liệu local"
+  },
+  "/models": {
+    "description": "Bộ máy đang dùng"
+  },
+  "/settings": {
+    "description": "Mở Cài đặt (menu ≡ → Cài đặt)",
+    "response": "Cài đặt nằm ở menu ≡ (góc trái) → Cài đặt: đổi chủ đề sáng/tối, giảm hiệu ứng, chọn model mặc định. Tài khoản & gói dịch vụ ở Menu tài khoản (góc phải)."
+  },
+  "/version": {
+    "description": "Phiên bản bộ máy",
+    "response": "Bộ máy tri thức cục bộ khanhos-local-rule v1.0.0 — KhanhOS AI."
+  },
+  "/knowledge": {
+    "description": "Liệt kê chủ đề trong tri thức local"
+  },
+  "/usage": {
+    "description": "Xem mức dùng tín dụng của bạn trong tháng"
+  },
+  "/clear": {
+    "description": "Xoá sạch tin nhắn của cuộc hội thoại hiện tại",
+    "action": "clear_chat"
+  },
+  "/reset": {
+    "description": "Xoá tin nhắn + xoá trí nhớ hội thoại của bot",
+    "action": "reset_chat"
+  },
+  "/give": {
+    "description": "Gán gói cho user: /give <free|plus|vip|max> <email hoặc ID>",
+    "usage": "/give <gói> <email hoặc ID>",
+    "owner_only": true
+  },
+  "/user": {
+    "description": "Xem thông tin user (gói, mức dùng): /user <email hoặc ID>",
+    "usage": "/user <email hoặc ID>",
+    "owner_only": true
+  },
+  "/pending": {
+    "description": "Danh sách yêu cầu nâng cấp đang chờ duyệt",
+    "owner_only": true
+  },
+  "/approve": {
+    "description": "Duyệt yêu cầu nâng cấp: /approve <id>",
+    "usage": "/approve <id>",
+    "owner_only": true
+  },
+  "/deny": {
+    "description": "Từ chối yêu cầu nâng cấp: /deny <id>",
+    "usage": "/deny <id>",
+    "owner_only": true
+  }
+}

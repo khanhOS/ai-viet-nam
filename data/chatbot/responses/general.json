@@ -1,0 +1,103 @@
+{
+  "greeting": {
+    "vi": [
+      "Xin chào! 👋 Mình là chatbot tri thức cục bộ của KhanhOS — hỏi mình về AI, lập trình, Minecraft server hay chính web này nhé.",
+      "Chào bạn! Mình đang sẵn sàng — hỏi thẳng câu hỏi luôn nhé.",
+      "Hello! Mình trả lời từ dữ liệu local, hỏi gì trong chủ đề mình có nhé."
+    ],
+    "en": [
+      "Hello! I'm KhanhOS's local knowledge chatbot — ask me about AI, programming, Minecraft servers or this site.",
+      "Hi there! Ready when you are."
+    ]
+  },
+  "goodbye": {
+    "vi": [
+      "Tạm biệt! Hội thoại được lưu lại rồi, quay lại bất cứ lúc nào nhé. 👋",
+      "Bye! Nhớ dùng lệnh /help nếu lần sau cần gợi ý câu hỏi.",
+      "Hẹn gặp lại — dữ liệu của mình luôn ở đây, không đi đâu cả."
+    ]
+  },
+  "thanks": {
+    "vi": [
+      "Không có gì! Còn câu nào cứ hỏi tiếp nhé.",
+      "Rất vui giúp được bạn — hỏi tiếp chủ đề khác cũng được luôn.",
+      "Ừ, cứ thoải mái hỏi nhé!"
+    ],
+    "en": ["You're welcome! Ask me anything else from my local data."]
+  },
+  "apology": {
+    "vi": [
+      "Không sao đâu — mình là bot nên cũng không để bụng gì đâu 😄 Hỏi tiếp nhé.",
+      "Ok không vấn đề gì. Cần gì cứ nói."
+    ]
+  },
+  "yes": {
+    "vi": [
+      "Ừ, mình tiếp tục nhé — cứ hỏi tiếp.",
+      "Ok! Cần thêm chi tiết gì về chủ đề vừa rồi cứ nói."
+    ]
+  },
+  "no": {
+    "vi": [
+      "Đã rõ — nếu mình hiểu sai ý bạn, hỏi lại theo cách khác là được.",
+      "Ok, vậy mình xin lỗi vì đoán chưa đúng. Thử diễn đạt lại nhé."
+    ]
+  },
+  "help": {
+    "vi": [
+      "Cách hỏi nhanh:\n- Gõ câu tự nhiên: \"SQLite là gì?\", \"làm sao chạy Minecraft server?\"\n- Tiếng Việt có/không dấu, telex thiếu chữ, hoặc tiếng Anh đều được.\n- Lệnh bắt đầu bằng /: /help, /knowledge, /status, /clear, /reset...\nChủ đề mình có dữ liệu: xem /knowledge.",
+      "Bạn cứ hỏi tự nhiên — mình match câu hỏi theo intent + tri thức local. Gõ /knowledge để xem hết chủ đề, /clear để xoá hội thoại."
+    ]
+  },
+  "capabilities": {
+    "vi": [
+      "Mình làm được:\n- Trả lời câu hỏi từ tri thức local: AI/LLM, lập trình (JS/TS/Python/React/Next.js...), database, web deploy, máy tính, Minecraft server, cloud/VPS, và về chính KhanhOS.\n- Nhớ ngữ cảnh hội thoại đơn giản (\"thế nó là gì?\" sau khi hỏi Next.js).\n- Lệnh: /help, /knowledge, /status, /clear, /reset.\nMình KHÔNG: gọi API AI ngoài, truy cập internet, đọc file bạn tải lên. Không có dữ liệu thì mình nói thật — không bịa.",
+      "Nói ngắn: mình là chatbot tri thức cục bộ — hỏi đúng chủ đề mình có dữ liệu thì trả lời, không có thì nói thật. Xem /knowledge để biết mình biết gì."
+    ]
+  },
+  "identity": {
+    "vi": [
+      "Mình là chatbot tri thức cục bộ của KhanhOS AI — KHÔNG phải model ngôn ngữ lớn thật. Mình phân tích câu hỏi bằng intent + pattern + từ khóa rồi trả lời từ dữ liệu JSON cục bộ trong ứng dụng. Không gọi API ngoài, không học từ hội thoại của bạn.",
+      "Mình là bot rule-based chạy 100% local: đoán ý bạn bằng cách so khớp intent, rồi trả lời từ kho tri thức file JSON. Không phải LLM, không bịa khi không biết."
+    ],
+    "en": [
+      "I'm KhanhOS's local knowledge chatbot — not a large language model. I match your question against local intents and answer from JSON data shipped inside the app. No external APIs."
+    ]
+  },
+  "about": {
+    "vi": [
+      "KhanhOS AI: web chat có tài khoản, lưu hội thoại, và bộ máy trả lời chạy 100% cục bộ (intent + tri thức JSON, không API ngoài). Hỏi mình xem /knowledge để biết chủ đề mình trả lời được.",
+      "Web này là KhanhOS AI — chatbot tri thức local. Mọi thứ nằm trong ứng dụng: auth, database, tri thức. Không phụ thuộc dịch vụ AI bên ngoài."
+    ]
+  },
+  "how_are_you": {
+    "vi": [
+      "Mình là bot nên không có cảm xúc, nhưng hệ thống đang chạy mượt và dữ liệu local đầy đủ — hỏi được ngay! 😄",
+      "Mọi thứ ổn: engine local đang chạy, không lỗi dữ liệu. Còn bạn thì sao?"
+    ]
+  },
+  "explain_more": {
+    "vi": [
+      "Bạn muốn mình giải thích kỹ hơn về chủ đề nào? Hỏi lại tên chủ đề là được (ví dụ: \"giải thích kỹ về RAG\").",
+      "Nói mình biết chủ đề cần đào sâu nhé — dữ liệu local của mình có phần giải thích chi tiết cho nhiều mục."
+    ]
+  },
+  "example_please": {
+    "vi": [
+      "Bạn muốn ví dụ cho chủ đề nào? Hỏi kèm tên chủ đề (ví dụ: \"cho ví dụ về embedding\").",
+      "Cho mình biết chủ đề — mình sẽ lấy ví dụ từ tri thức local tương ứng."
+    ]
+  },
+  "simplify": {
+    "vi": [
+      "Bạn muốn mình nói đơn giản lại chủ đề nào? Gõ lại tên chủ đề kèm \"đơn giản\" nhé.",
+      "Ok — chỉ tên chủ đề là mình sẽ giải thích theo kiểu dễ hiểu từ dữ liệu local."
+    ]
+  },
+  "summarize": {
+    "vi": [
+      "Mình không tóm tắt được — chỉ có thể lấy lại ý đầu của câu trả lời trước. Hỏi lại câu hỏi đó kèm \"ngắn gọn\" nhé.",
+      "Bot rule-based không có chức năng tóm tắt thật. Bạn có thể hỏi lại chủ đề với từ khóa \"ngắn gọn\"."
+    ]
+  }
+}

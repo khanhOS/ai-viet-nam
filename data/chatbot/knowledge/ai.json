@@ -1,0 +1,626 @@
+[
+  {
+    "id": "ai",
+    "topic": "ai",
+    "title": "AI — Trí tuệ nhân tạo",
+    "keywords": [
+      "ai",
+      "trí tuệ nhân tạo",
+      "artificial intelligence"
+    ],
+    "aliases": [
+      "ai",
+      "artificial intelligence"
+    ],
+    "content": {
+      "definition": "AI (Artificial Intelligence) là lĩnh vực xây dựng hệ thống máy tính thực hiện những nhiệm vụ thường cần trí tuệ con người: hiểu ngôn ngữ, nhận dạng hình ảnh, suy luận, dự đoán và hỗ trợ ra quyết định.",
+      "simple_explanation": "Hãy nghĩ AI như phần mềm tự học từ ví dụ thay vì được lập trình từng quy tắc. Cho nó nhìn 1 triệu tấm ảnh mèo, nó tự rút ra \"mèo trông thế nào\" — không ai viết luật \"có tai nhọn, ria\" cho nó.",
+      "examples": [
+        "Bộ lọc spam trong email",
+        "Gợi ý video trên TikTok/YouTube",
+        "Nhận diện khuôn mặt mở khoá điện thoại",
+        "Chatbot trả lời khách hàng"
+      ],
+      "related_topics": [
+        "LLM",
+        "Machine Learning",
+        "Neural Network",
+        "Local AI"
+      ]
+    },
+    "related_intents": [
+      "what_is_llm",
+      "how_ai_works",
+      "what_is_neural_network"
+    ]
+  },
+  {
+    "id": "llm",
+    "topic": "ai",
+    "title": "LLM — Mô hình ngôn ngữ lớn",
+    "keywords": [
+      "llm",
+      "mô hình ngôn ngữ",
+      "large language model"
+    ],
+    "aliases": [
+      "llm",
+      "large language model"
+    ],
+    "content": {
+      "definition": "LLM (Large Language Model) là model AI được huấn luyện trên kho văn bản khổng lồ để hiểu và sinh ngôn ngữ tự nhiên bằng cách dự đoán token tiếp theo trong ngữ cảnh.",
+      "simple_explanation": "LLM như một \"chuyên gia nối chữ\" đã đọc gần như cả internet: cho nó nửa câu, nó biết xác suất chữ tiếp theo cao nhất. Lặp lại hàng nghìn lần cái đó — thành bài luận, code, câu trả lời.",
+      "examples": [
+        "ChatGPT, Claude, Gemini — chatbot đại chúng",
+        "Copilot gợi ý code trong editor",
+        "Dịch tự động chất lượng cao",
+        "Tóm tắt văn bản dài"
+      ],
+      "related_topics": [
+        "AI",
+        "Token",
+        "Prompt",
+        "Fine-tuning"
+      ]
+    },
+    "related_intents": [
+      "what_is_ai",
+      "what_is_token",
+      "how_llm_works"
+    ]
+  },
+  {
+    "id": "local_ai",
+    "topic": "local_ai",
+    "title": "Local AI — AI cục bộ",
+    "keywords": [
+      "local ai",
+      "ai cục bộ",
+      "ai local",
+      "offline ai"
+    ],
+    "aliases": [
+      "local ai",
+      "ai local",
+      "on-device ai"
+    ],
+    "content": {
+      "definition": "Local AI là AI chạy trực tiếp trên thiết bị hoặc server do bạn kiểm soát: model và dữ liệu nằm trong hạ tầng của bạn, không gửi câu hỏi ra dịch vụ bên ngoài.",
+      "simple_explanation": "AI kiểu \"mua về nhà\" thay vì \"thuê ngoài\": tải model về máy, chạy bằng CPU/GPU của mình. Riêng tư tuyệt đối (chữ không rời máy), không phí theo lượt, chạy offline được — đổi lại giới hạn bởi phần cứng.",
+      "examples": [
+        "Ollama chạy Llama trên laptop",
+        "Web KhanhOS AI — chatbot tri thức 100% cục bộ",
+        "Stable Diffusion vẽ tranh trên máy cá nhân",
+        "Whisper transcribe offline không cần internet"
+      ],
+      "related_topics": [
+        "Ollama",
+        "llama.cpp",
+        "Quantization",
+        "RAG"
+      ]
+    },
+    "related_intents": [
+      "local_ai_without_api",
+      "ollama",
+      "llama_cpp"
+    ]
+  },
+  {
+    "id": "api",
+    "topic": "ai",
+    "title": "API — Giao diện lập trình",
+    "keywords": [
+      "api",
+      "giao diện lập trình",
+      "application programming interface"
+    ],
+    "aliases": [
+      "api"
+    ],
+    "content": {
+      "definition": "API (Application Programming Interface) là bộ quy ước cho phép hai phần mềm giao tiếp: ứng dụng gửi request theo định dạng quy ước, dịch vụ trả về kết quả có cấu trúc.",
+      "simple_explanation": "API như menu nhà hàng: bạn không cần vào bếp, chỉ cần gọi món đúng tên trên menu thì bếp (server) mang đồ ra. App thời tiết không tự đo nhiệt độ — nó gọi API của trạm khí tượng.",
+      "examples": [
+        "App thời tiết gọi API lấy dự báo",
+        "Website thanh toán qua API của VNPay/MoMo",
+        "ChatGPT API cho app tự gửi câu hỏi",
+        "Login qua Google (OAuth API)"
+      ],
+      "related_topics": [
+        "REST API",
+        "Backend",
+        "Local AI"
+      ]
+    },
+    "related_intents": [
+      "what_is_api",
+      "api_development",
+      "local_ai_without_api"
+    ]
+  },
+  {
+    "id": "model",
+    "topic": "ai",
+    "title": "Model — Mô hình AI",
+    "keywords": [
+      "model",
+      "mô hình",
+      "ai model"
+    ],
+    "aliases": [
+      "model",
+      "ai model"
+    ],
+    "content": {
+      "definition": "Model AI là sản phẩm của quá trình huấn luyện: một tập tham số toán học khổng lồ đúc kết mẫu hình từ dữ liệu, dùng để dự đoán trên dữ liệu mới.",
+      "simple_explanation": "Model giống \"bộ não đã đi học\": không ai viết từng quy tắc cho nó, mà nó tự điều chỉnh hàng triệu tham số qua việc xem ví dụ. Model ChatGPT và model vẽ ảnh Stable Diffusion là 2 model khác việc.",
+      "examples": [
+        "GPT-4o — model chat của OpenAI",
+        "Llama 3 — model mở chạy local được",
+        "Stable Diffusion — model sinh ảnh",
+        "Whisper — model chuyển giọng nói thành chữ"
+      ],
+      "related_topics": [
+        "LLM",
+        "Fine-tuning",
+        "Quantization",
+        "Inference"
+      ]
+    },
+    "related_intents": [
+      "what_is_model",
+      "what_is_llm"
+    ]
+  },
+  {
+    "id": "token",
+    "topic": "ai",
+    "title": "Token — Đơn vị văn bản của AI",
+    "keywords": [
+      "token",
+      "đơn vị văn bản"
+    ],
+    "aliases": [
+      "token"
+    ],
+    "content": {
+      "definition": "Token là đơn vị văn bản nhỏ nhất mà model AI xử lý: thường ~4 ký tự hoặc khoảng nửa từ. Model không đọc nguyên câu mà đọc chuỗi token — chi phí và giới hạn của API thường tính bằng token.",
+      "simple_explanation": "Token là \"viên gạch\" chữ với AI: từ \"unbelievable\" tách thành 3-4 viên gạch; \"a\" là 1 viên. Câu 1.000 chữ ≈ 1.300-1.500 token. Hỏi càng dài + trả lời càng dài = tốn token càng nhiều.",
+      "examples": [
+        "\"Xin chào\" ≈ 2-3 token",
+        "1 trang A4 ≈ 500-800 token",
+        "Context window 8k token ≈ 6.000 từ tiếng Anh",
+        "Giá API thường $0.5-$15 / 1 triệu token"
+      ],
+      "related_topics": [
+        "LLM",
+        "Context Window",
+        "Prompt"
+      ]
+    },
+    "related_intents": [
+      "what_is_token",
+      "what_is_context"
+    ]
+  },
+  {
+    "id": "prompt",
+    "topic": "ai",
+    "title": "Prompt — Câu lệnh cho AI",
+    "keywords": [
+      "prompt",
+      "viết prompt"
+    ],
+    "aliases": [
+      "prompt"
+    ],
+    "content": {
+      "definition": "Prompt là đoạn văn bản đầu vào bạn đưa cho AI để đặt câu hỏi hoặc ra lệnh — cách viết prompt quyết định phần lớn chất lượng đầu ra.",
+      "simple_explanation": "Prompt tốt như giao việc cho nhân viên mới: nói rõ VAI TRÒ + BỐI CẢNH + VIỆC CẦN LÀM + ĐỊNH DẠNG. \"Viết gì đó về chó\" ra rác; \"Viết 3 dòng giới thiệu chó Corgi cho người mới nuôi, giọng vui\" ra đúng ý.",
+      "examples": [
+        "\"Bạn là trợ lý tiếng Việt. Tóm tắt đoạn sau thành 3 gạch đầu dòng: ...\"",
+        "\"Viết hàm JS lọc số chẵn, có comment tiếng Việt\"",
+        "\"Giải thích RAG cho người không biết kỹ thuật\""
+      ],
+      "related_topics": [
+        "LLM",
+        "Context Window",
+        "Token"
+      ]
+    },
+    "related_intents": [
+      "what_is_prompt",
+      "what_is_context"
+    ]
+  },
+  {
+    "id": "context_window",
+    "topic": "ai",
+    "title": "Context Window — Cửa sổ ngữ cảnh",
+    "keywords": [
+      "context",
+      "ngữ cảnh",
+      "context window",
+      "cửa sổ ngữ cảnh"
+    ],
+    "aliases": [
+      "context",
+      "context window"
+    ],
+    "content": {
+      "definition": "Context window là lượng token tối đa model đọc được trong một lượt — gồm system prompt, lịch sử hội thoại, dữ liệu kèm theo và cả câu trả lời đang sinh.",
+      "simple_explanation": "Đó là \"bàn làm việc\" của model: chất quá nhiều giấy lên bàn (token) thì giấy cũ rơi xuống sàn (bị cắt). Chat dài mà model quên đầu câu chuyện = context đầy, phần cũ đã văng ra ngoài.",
+      "examples": [
+        "Model 8k context ≈ một bài luận ngắn",
+        "Model 128k ≈ cả một cuốn sách nhỏ",
+        "Hội thoại dài tự động tóm lược để vừa context"
+      ],
+      "related_topics": [
+        "Token",
+        "Prompt",
+        "RAG"
+      ]
+    },
+    "related_intents": [
+      "what_is_context",
+      "what_is_token"
+    ]
+  },
+  {
+    "id": "embedding",
+    "topic": "ai",
+    "title": "Embedding — Vector ngữ nghĩa",
+    "keywords": [
+      "embedding",
+      "vector",
+      "biểu diễn vector"
+    ],
+    "aliases": [
+      "embedding"
+    ],
+    "content": {
+      "definition": "Embedding là kỹ thuật biến văn bản (từ/câu/đoạn) thành dãy số (vector) sao cho nội dung gần nghĩa thì vector gần nhau trong không gian — nền tảng của tìm kiếm ngữ nghĩa.",
+      "simple_explanation": "Mỗi đoạn chữ được chấm toạ độ như trên bản đồ: \"con chó\" và \"chú cún\" đứng cạnh nhau, \"con chó\" và \"cái bàn\" cách xa. Tìm kiếm kiểu này khớp Ý NGHĨA chứ không chỉ khớp CHỮ — \"cách nấu phở\" vẫn tìm ra \"hướng dẫn nấu bún phở\".",
+      "examples": [
+        "Tìm \"sách về vũ trụ\" ra cả \"cosmos\" (khác chữ, cùng nghĩa)",
+        "Gợi ý bài viết cùng chủ đề",
+        "Phát hiện câu trùng lặp dù viết khác",
+        "Nền tảng của RAG"
+      ],
+      "related_topics": [
+        "RAG",
+        "Vector Database",
+        "LLM"
+      ]
+    },
+    "related_intents": [
+      "what_is_embedding",
+      "what_is_rag"
+    ]
+  },
+  {
+    "id": "rag",
+    "topic": "ai",
+    "title": "RAG — Tìm kiếm + Sinh văn bản",
+    "keywords": [
+      "rag",
+      "retrieval augmented generation"
+    ],
+    "aliases": [
+      "rag"
+    ],
+    "content": {
+      "definition": "RAG (Retrieval-Augmented Generation) là kiến trúc: trước khi trả lời, hệ thống tìm tài liệu liên quan trong kho của bạn, đưa vào context cho model, rồi model sinh câu trả lời dựa trên đúng tài liệu đó.",
+      "simple_explanation": "RAG như cho sinh viên làm bài thi MỞ SÁCH: model vẫn là \"bộ não\" sinh văn bản, nhưng bắt nó chỉ trả lời dựa trên giáo trình bạn đưa. Kết quả: đúng dữ liệu nội bộ + truy được nguồn + giảm bịa bừa.",
+      "examples": [
+        "Chatbot trả lời theo Handbook nội bộ công ty",
+        "Hỏi về chính sách nghỉ phép — bot trích đúng điều khoản",
+        "Tra cứu tài liệu kỹ thuật riêng tư không đưa lên internet"
+      ],
+      "related_topics": [
+        "Embedding",
+        "Vector Database",
+        "LLM"
+      ]
+    },
+    "related_intents": [
+      "what_is_rag",
+      "what_is_embedding"
+    ]
+  },
+  {
+    "id": "fine_tuning",
+    "topic": "ai",
+    "title": "Fine-tuning — Tinh chỉnh model",
+    "keywords": [
+      "fine-tuning",
+      "fine tuning",
+      "tinh chỉnh",
+      "huấn luyện tinh chỉnh"
+    ],
+    "aliases": [
+      "fine-tuning",
+      "finetune"
+    ],
+    "content": {
+      "definition": "Fine-tuning là tiếp tục huấn luyện một model có sẵn trên dữ liệu riêng để nó chuyên sâu về lĩnh vực, giọng điệu hoặc tác vụ cụ thể của bạn.",
+      "simple_explanation": "Model gốc như sinh viên tốt nghiệp phổ thông (biết chung chung mọi thứ); fine-tune là gửi đi học chứng chỉ chuyên môn — vẫn dùng nền tảng cũ nhưng giỏi hẳn việc riêng của bạn.",
+      "examples": [
+        "Model nói giọng thương hiệu riêng (kiểu Trẻ)",
+        "Model chuyên code ngôn ngữ nội bộ",
+        "Chatbot y tế trả lời theo tài liệu bệnh viện"
+      ],
+      "related_topics": [
+        "Model",
+        "Training Data",
+        "Embedding"
+      ]
+    },
+    "related_intents": [
+      "what_is_fine_tuning",
+      "what_is_model"
+    ]
+  },
+  {
+    "id": "inference",
+    "topic": "ai",
+    "title": "Inference — Suy luận",
+    "keywords": [
+      "inference",
+      "suy luận"
+    ],
+    "aliases": [
+      "inference"
+    ],
+    "content": {
+      "definition": "Inference là giai đoạn sử dụng model đã huấn luyện để sinh kết quả từ input mới — mỗi câu hỏi bạn gửi cho chatbot là một lần inference.",
+      "simple_explanation": "Training là \"đi học\", inference là \"làm thi\". Chạy chatbot tốn tiền ở khâu inference (GPU tính từng câu trả lời) — vì thế giá API tính theo token và server AI cần GPU mạnh.",
+      "examples": [
+        "Gõ câu hỏi → ChatGPT sinh câu trả lời",
+        "Model phân loại email spam từng mail đến",
+        "Server GPU chạy inference cho nghìn request/giây"
+      ],
+      "related_topics": [
+        "Model",
+        "GPU",
+        "Local AI"
+      ]
+    },
+    "related_intents": [
+      "what_is_inference",
+      "gpu"
+    ]
+  },
+  {
+    "id": "neural_network",
+    "topic": "ai",
+    "title": "Neural Network — Mạng nơ-ron",
+    "keywords": [
+      "mạng nơ-ron",
+      "neural network",
+      "deep learning",
+      "học sâu"
+    ],
+    "aliases": [
+      "neural network",
+      "mạng nơ-ron",
+      "deep learning"
+    ],
+    "content": {
+      "definition": "Mạng nơ-ron là model toán học gồm các tầng nút (neuron) truyền tín hiệu qua trọng số; học = tự điều chỉnh hàng triệu trọng số theo dữ liệu. Nhiều tầng = deep learning.",
+      "simple_explanation": "Tưởng tượng dây chuyền chuyên gia xếp hàng: mỗi người nhìn số liệu, chấm điểm, chuyền cho người sau. Ban đầu chấm bừa; sai ở đâu thì điều chỉnh người liên quan. Lặp lại triệu lần — dây chuyền chấm cực chuẩn.",
+      "examples": [
+        "CNN — chuyên nhận ảnh",
+        "Transformer — nền của mọi LLM hiện đại",
+        "Mạng sinh ảnh Stable Diffusion"
+      ],
+      "related_topics": [
+        "AI",
+        "LLM",
+        "Deep Learning"
+      ]
+    },
+    "related_intents": [
+      "what_is_neural_network",
+      "what_is_ai"
+    ]
+  },
+  {
+    "id": "hallucination",
+    "topic": "ai",
+    "title": "Hallucination — AI bịa",
+    "keywords": [
+      "hallucination",
+      "bịa",
+      "ảo giác"
+    ],
+    "aliases": [
+      "hallucination"
+    ],
+    "content": {
+      "definition": "Hallucination là hiện tượng AI sinh thông tin sai nhưng trình bày rất tự tin — do bản chất model là dự đoán văn bản hợp lý về mặt xác suất, không phải tra cứu sự thật.",
+      "simple_explanation": "AI là máy \"nói cho hay\" chứ không phải máy \"nói cho đúng\": khi thiếu dữ liệu, nó vẫn bịa ra câu nghe mượt. Cách phòng: bắt dẫn nguồn, đối chiếu, dùng RAG để buộc nó trả lời theo tài liệu.",
+      "examples": [
+        "Bịa sách/người/tên hàm không tồn tại",
+        "Sai số liệu nhưng nói chắc như đinh",
+        "Chấm hàm API không có trong thư viện"
+      ],
+      "related_topics": [
+        "RAG",
+        "LLM",
+        "Prompt"
+      ]
+    },
+    "related_intents": [
+      "ai_hallucination",
+      "what_is_rag"
+    ]
+  },
+  {
+    "id": "ollama",
+    "topic": "local_ai",
+    "title": "Ollama — Chạy LLM cục bộ",
+    "keywords": [
+      "ollama"
+    ],
+    "aliases": [
+      "ollama"
+    ],
+    "content": {
+      "definition": "Ollama là công cụ mã nguồn mở quản lý và chạy LLM cục bộ: một lệnh `ollama run <model>` là chạy được model trên máy, không cần API key hay internet.",
+      "simple_explanation": "Ollama như \"App Store cho AI local\": kéo model về (pull), chạy (run), xoá (rm) — mọi phần nặng (tối ưu, load RAM) nó lo. Cài trên Windows/macOS/Linux vài phút.",
+      "examples": [
+        "`ollama pull llama3.2:3b` — model 2GB cho máy 8GB RAM",
+        "`ollama run qwen2.5:7b` — chat ngay trong terminal",
+        "API localhost:11434 để app khác gọi"
+      ],
+      "related_topics": [
+        "llama.cpp",
+        "Quantization",
+        "Local AI"
+      ]
+    },
+    "related_intents": [
+      "ollama",
+      "local_ai_setup",
+      "llama_cpp"
+    ]
+  },
+  {
+    "id": "llama_cpp",
+    "topic": "local_ai",
+    "title": "llama.cpp — Engine inference C++",
+    "keywords": [
+      "llama.cpp",
+      "llama cpp",
+      "gguf"
+    ],
+    "aliases": [
+      "llama.cpp",
+      "llamacpp"
+    ],
+    "content": {
+      "definition": "llama.cpp là engine inference C++ hiệu năng cao cho LLM chạy trên máy thường (kể cả không GPU) nhờ tính toán lượng tử hoá; sinh file model chuẩn .gguf.",
+      "simple_explanation": "llama.cpp là \"động cơ\" của làng AI cục bộ: ép model to vừa RAM máy nhỏ. Ollama và phần lớn tool local đều xây trên lưng nó. Ai muốn tinh chỉnh từng thông số thì dùng trực tiếp.",
+      "examples": [
+        "Chạy model 7B trên laptop 8GB RAM",
+        "Server OpenAI-compatible nội bộ (llama-server)",
+        "Chuyển model gốc sang .gguf quantize Q4"
+      ],
+      "related_topics": [
+        "Ollama",
+        "Quantization",
+        "Local AI"
+      ]
+    },
+    "related_intents": [
+      "llama_cpp",
+      "quantization",
+      "ollama"
+    ]
+  },
+  {
+    "id": "quantization",
+    "topic": "local_ai",
+    "title": "Quantization — Nén model",
+    "keywords": [
+      "quantization",
+      "lượng tử hoá",
+      "gguf",
+      "q4"
+    ],
+    "aliases": [
+      "quantization",
+      "gguf"
+    ],
+    "content": {
+      "definition": "Quantization nén model từ 16-bit xuống 8/4-bit: giảm mạnh RAM và dung lượng để model chạy trên máy thường, đổi lại chất lượng tụt nhẹ.",
+      "simple_explanation": "Giống nén ảnh JPEG: giảm độ chi tiết số học để file nhỏ hơn nhiều, nhìn vẫn ổn. Q8 gần nguyên bản, Q4 là cân bằng phổ biến nhất, Q2 là nén liều.",
+      "examples": [
+        "Model 7B FP16 ~14GB → Q4 chỉ ~4GB",
+        "Q4_K_M — mức nén được khuyên dùng phổ biến",
+        "RAM cần ≈ 60% dung lượng file model"
+      ],
+      "related_topics": [
+        "llama.cpp",
+        "Ollama",
+        "Local AI"
+      ]
+    },
+    "related_intents": [
+      "quantization",
+      "ram_requirements"
+    ]
+  },
+  {
+    "id": "khanhos",
+    "topic": "khanhos",
+    "title": "KhanhOS AI",
+    "keywords": [
+      "khanhos",
+      "khanh os",
+      "khanhos ai"
+    ],
+    "aliases": [
+      "khanhos",
+      "khanhos ai",
+      "khanh os"
+    ],
+    "content": {
+      "definition": "KhanhOS AI là web chat AI chạy 100% cục bộ: Next.js 16 + TypeScript + Prisma + SQLite, auth session riêng, hội thoại lưu database, và bộ máy trả lời là engine tri thức cục bộ (intent + knowledge JSON) không gọi API AI bên ngoài.",
+      "simple_explanation": "Là web chat mà \"AI\" trong đó là tri thức đóng gói sẵn trong app: bot hiểu câu hỏi bằng cách match intent + từ khóa + ngữ cảnh, rồi trả lời từ kho JSON cục bộ. Không có dữ liệu thì nói thật — không bịa.",
+      "examples": [
+        "Đăng ký → chat → hội thoại tự lưu theo tài khoản",
+        "Gói Free/Plus/VIP/Max với hạn mức tín dụng/tháng",
+        "Chủ sở hữu duyệt nâng cấp + quản trị tri thức bot",
+        "Lệnh /help /knowledge /status /clear"
+      ],
+      "related_topics": [
+        "Next.js",
+        "SQLite",
+        "Authentication",
+        "Local AI"
+      ]
+    },
+    "related_intents": [
+      "what_is_khanhos",
+      "khanhos_features",
+      "khanhos_models"
+    ]
+  },
+  {
+    "id": "machine_learning",
+    "topic": "ai",
+    "title": "Machine Learning — Học máy",
+    "keywords": [
+      "machine learning",
+      "học máy",
+      "ml"
+    ],
+    "aliases": [
+      "machine learning",
+      "học máy"
+    ],
+    "content": {
+      "definition": "Machine Learning là nhánh AI mà hệ thống tự học quy luật từ dữ liệu thay vì được lập trình từng quy tắc thủ công.",
+      "simple_explanation": "Thay vì viết 'nếu email có từ X thì là spam', bạn đưa hàng nghìn email đã gán nhãn cho máy tự học dấu hiệu spam.",
+      "examples": [
+        "Bộ lọc spam email",
+        "Gợi ý video",
+        "Dự đoán giá nhà",
+        "Nhận diện ảnh"
+      ],
+      "related_topics": [
+        "AI",
+        "Neural Network",
+        "LLM"
+      ]
+    },
+    "related_intents": [
+      "what_is_ai",
+      "how_ai_works",
+      "what_is_neural_network"
+    ]
+  }
+]

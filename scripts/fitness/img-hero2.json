@@ -1,0 +1,51 @@
+{
+  "success": true,
+  "query": "black and white photo man lifting heavy barbell deadlift dark gym no watermark",
+  "count": 6,
+  "ranked": false,
+  "captioned_count": 0,
+  "results": [
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/2021b3e801bb.jpg",
+      "caption": "",
+      "source": "Media.io",
+      "original_width": "928px",
+      "original_height": "1152px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/7a5769ef5e8f.jpg",
+      "caption": "",
+      "source": "Yelp",
+      "original_width": "1000px",
+      "original_height": "1000px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/aedc1bd2a3f2.jpg",
+      "caption": "",
+      "source": "LightX",
+      "original_width": "1360px",
+      "original_height": "768px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/1dc208d5b1d5.jpg",
+      "caption": "",
+      "source": "Media.io",
+      "original_width": "928px",
+      "original_height": "1152px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/8f316ba75c19.jpg",
+      "caption": "",
+      "source": "Mixkit",
+      "original_width": "720px",
+      "original_height": "1280px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/d2d42918e8d8.jpg",
+      "caption": "",
+      "source": "Photo Retouching Services",
+      "original_width": "1332px",
+      "original_height": "850px"
+    }
+  ]
+}

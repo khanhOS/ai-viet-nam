@@ -1,0 +1,276 @@
+// KhanhOS AI — Database Schema (SQLite — sandbox/dev)
+// Production dùng PostgreSQL: xem prisma/schema.postgres.prisma
+// + ./scripts/switch-to-postgres.sh + README mục "Database".
+// Code Prisma client GIỐNG HỆT cho cả hai provider.
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+// ─────────────────────────────────────────────
+// USERS — tài khoản người dùng
+// ─────────────────────────────────────────────
+model User {
+  id           String   @id @default(cuid())
+  email        String   @unique
+  name         String
+  passwordHash String // scrypt: salt$hash — KHÔNG BAO GIỜ lưu plaintext
+  role         String   @default("user") // "user" | "owner"
+  plan         String   @default("free") // "free" | "plus" | "vip" | "max" (xem src/lib/plans.ts)
+  planUpdatedAt DateTime? // lần cuối đổi gói (duyệt nâng cấp)
+  avatarSeed   String? // seed để sinh avatar deterministic
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+
+  sessions            Session[]
+  conversations       Conversation[]
+  settings            UserSettings?
+  passwordResetTokens PasswordResetToken[]
+  planRequests        PlanRequest[]
+}
+
+// ─────────────────────────────────────────────
+// SESSIONS — phiên đăng nhập (server-side session)
+// ─────────────────────────────────────────────
+model Session {
+  id         String   @id // = SHA-256(token) — token gốc chỉ nằm trong httpOnly cookie
+  userId     String
+  expiresAt  DateTime
+  createdAt  DateTime @default(now())
+  userAgent  String?
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+  @@index([expiresAt])
+}
+
+// ─────────────────────────────────────────────
+// CONVERSATIONS — hội thoại
+// ─────────────────────────────────────────────
+model Conversation {
+  id        String   @id @default(cuid())
+  userId    String
+  title     String   @default("Cuộc trò chuyện mới")
+  modelId   String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  user     User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  messages Message[]
+
+  @@index([userId, updatedAt])
+}
+
+// ─────────────────────────────────────────────
+// MESSAGES — tin nhắn trong hội thoại
+// role: USER | ASSISTANT | SYSTEM
+// ─────────────────────────────────────────────
+model Message {
+  id             String   @id @default(cuid())
+  conversationId String
+  role           String
+  content        String
+  modelId        String? // model sinh ra message (với ASSISTANT)
+  tokens         Int? // ước lượng token phản hồi (ASSISTANT) — cộng dồn quota tháng
+  attachments    String? // JSON: [{name, size, type, textContent?}]
+  sources        String? // JSON: nguồn web search [{title, url, snippet}]
+  createdAt      DateTime @default(now())
+
+  conversation Conversation @relation(fields: [conversationId], references: [id], onDelete: Cascade)
+
+  @@index([conversationId, createdAt])
+}
+
+// ─────────────────────────────────────────────
+// USER_SETTINGS — cài đặt người dùng (1-1 với User)
+// ─────────────────────────────────────────────
+model UserSettings {
+  userId            String  @id
+  defaultModelId    String?
+  webSearchEnabled  Boolean @default(false)
+  reducedMotionPref String? // "system" | "on" | "off"
+  theme             String? // "dark" | "light" | "system"
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+// ─────────────────────────────────────────────
+// PASSWORD_RESET_TOKENS — token đặt lại mật khẩu
+// Random, có hạn, dùng 1 lần (hash SHA-256, không lưu token gốc)
+// ─────────────────────────────────────────────
+model PasswordResetToken {
+  id        String    @id // = SHA-256(token)
+  userId    String
+  expiresAt DateTime
+  usedAt    DateTime?
+  createdAt DateTime  @default(now())
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+  @@index([expiresAt])
+}
+
+// ─────────────────────────────────────────────
+// TRIAL_BOOKINGS — đăng ký buổi tập thử (form công khai, không cần tài khoản)
+// ─────────────────────────────────────────────
+model TrialBooking {
+  id            String   @id @default(cuid())
+  name          String // họ tên người đặt
+  phone         String // định dạng VN, đã chuẩn hoá
+  goal          String // "muscle" | "fatloss" | "fitness"
+  preferredTime String // "morning" | "noon" | "afternoon" | "evening"
+  note          String?
+  createdAt     DateTime @default(now())
+
+  @@index([createdAt])
+}
+
+// ─────────────────────────────────────────────
+// PLAN_REQUESTS — yêu cầu nâng cấp gói (Free/Plus/VIP/Max)
+// User gửi SĐT + Gmail + số MoMo + gói mong muốn + đã chuyển khoản MoMo/ngân hàng;
+// chủ sở hữu duyệt ⇒ user.plan cập nhật.
+// ─────────────────────────────────────────────
+model PlanRequest {
+  id           String    @id @default(cuid())
+  userId       String
+  plan         String // "plus" | "vip" | "max"
+  phone        String // SĐT liên hệ (định dạng VN, đã chuẩn hoá)
+  momoNumber   String? // số MoMo tài khoản thanh toán (định dạng VN)
+  contactEmail String // Gmail liên hệ / nhận xác nhận
+  note         String? // ghi chú kèm (≤500)
+  status       String    @default("pending") // "pending" | "approved" | "rejected"
+  createdAt    DateTime  @default(now())
+  decidedAt    DateTime?
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([status, createdAt])
+  @@index([userId])
+}
+
+// ─────────────────────────────────────────────
+// AI_MEMORIES — trí nhớ dài hạn của hệ AI local
+// (sở thích/sự kiện user nói rõ "ghi nhớ" — không tự bịa)
+// ─────────────────────────────────────────────
+model AiMemory {
+  id         String   @id @default(cuid())
+  userId     String
+  kind       String   @default("long_term") // "long_term" | "semantic"
+  key        String // khóa ngắn, vd "preference:language"
+  value      String // nội dung nhớ (≤1000)
+  importance Int      @default(3) // 1..5 — dùng để rank khi lấy
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+
+  @@index([userId, kind])
+  @@index([userId, updatedAt])
+}
+
+// ─────────────────────────────────────────────
+// AI_TOOL_EXECUTIONS — nhật ký chạy tool THẬT (audit + debug)
+// ─────────────────────────────────────────────
+model AiToolExecution {
+  id             String   @id @default(cuid())
+  userId         String?
+  conversationId String?
+  tool           String
+  input          String? // JSON args (đã cắt)
+  output         String? // kết quả (đã cắt)
+  status         String   @default("ok") // "ok" | "error" | "timeout" | "denied"
+  error          String?
+  durationMs     Int?
+  createdAt      DateTime @default(now())
+
+  @@index([conversationId, createdAt])
+  @@index([userId, createdAt])
+  @@index([tool])
+}
+
+// ─────────────────────────────────────────────
+// KNOWLEDGE_DOCUMENTS — tài liệu user nạp vào cơ sở tri thức local (RAG)
+// Mỗi tài liệu được cắt chunk + nhúng (embedding) bằng model embedding local.
+// ─────────────────────────────────────────────
+model KnowledgeDocument {
+  id         String   @id @default(cuid())
+  userId     String // chủ tài liệu (phạm vi truy vấn theo user)
+  title      String
+  source     String? // ghi chú nguồn (tên file, URL...)
+  content    String // toàn văn (nội dung gốc)
+  charCount  Int
+  chunkCount Int
+  embeddingModel String // model embedding đã dùng (trung thực — vd nomic-embed-text)
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+
+  chunks KnowledgeChunk[]
+
+  @@index([userId, updatedAt])
+}
+
+// ─────────────────────────────────────────────
+// KNOWLEDGE_CHUNKS — đoạn văn bản + vector nhúng THẬT (JSON float[])
+// SQLite lưu JSON; Postgres bản production có thể chuyển vector type.
+// ─────────────────────────────────────────────
+model KnowledgeChunk {
+  id         String   @id @default(cuid())
+  documentId String
+  docIndex   Int // thứ tự chunk trong tài liệu
+  content    String // nội dung chunk
+  embedding  String // JSON: number[] — vector thật từ model embedding local
+  dim        Int // số chiều vector (vd 768)
+  norm       Float? // ||v|| để tối ưu cosine
+  createdAt  DateTime @default(now())
+
+  document KnowledgeDocument @relation(fields: [documentId], references: [id], onDelete: Cascade)
+
+  @@index([documentId])
+}
+
+// ─────────────────────────────────────────────
+// AI_FEEDBACK — đánh giá 👍/👎 của user trên phản hồi của AI
+// Nguồn dữ liệu THẬT để xây dataset huấn luyện (chỉ từ feedback tích cực).
+// ─────────────────────────────────────────────
+model AiFeedback {
+  id             String   @id @default(cuid())
+  userId         String
+  messageId      String? // id Message (nếu có)
+  conversationId String?
+  rating         String // "up" | "down"
+  comment        String? // ghi chú của user (≤500)
+  question       String // snapshot câu hỏi user
+  answer         String // snapshot câu trả lời AI
+  source         String // "local-model" | "local-rules"
+  createdAt      DateTime @default(now())
+
+  @@index([userId, createdAt])
+  @@index([rating, createdAt])
+}
+
+// ─────────────────────────────────────────────
+// TRAINING_JOBS — công việc huấn luyện LoRA/QLoRA hoặc xuất dataset
+// Job chạy thật khi có runtime Python+torch; không có → trạng thái
+// "pending_runtime" trung thực (KHÔNG fake kết quả huấn luyện).
+// ─────────────────────────────────────────────
+model TrainingJob {
+  id         String   @id @default(cuid())
+  userId     String
+  name       String
+  kind       String // "lora" | "qlora" | "export"
+  baseModel  String // model gốc (vd qwen2.5:0.5b hoặc HF repo)
+  status     String   @default("created") // "created" | "running" | "done" | "failed" | "pending_runtime"
+  config     String // JSON: cấu hình LoRA đầy đủ
+  result     String? // JSON: đường dẫn output, số mẫu, logs
+  error      String?
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+
+  @@index([userId, createdAt])
+  @@index([status, createdAt])
+}

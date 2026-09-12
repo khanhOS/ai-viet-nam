@@ -1,0 +1,51 @@
+{
+  "success": true,
+  "query": "black and white portrait of fitness personal trainer coach, dramatic studio lighting",
+  "count": 6,
+  "ranked": false,
+  "captioned_count": 0,
+  "results": [
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/5d5a179f3337.jpg",
+      "caption": "",
+      "source": "John Gress",
+      "original_width": "1500px",
+      "original_height": "1000px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/559ebae9b6f6.jpg",
+      "caption": "",
+      "source": "Britannica",
+      "original_width": "1600px",
+      "original_height": "1090px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/8296ce59fdf8.jpg",
+      "caption": "",
+      "source": "Alamy",
+      "original_width": "1300px",
+      "original_height": "956px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/744a85f09286.jpg",
+      "caption": "",
+      "source": "Men's Health",
+      "original_width": "1200px",
+      "original_height": "676px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/f7442840cb44.png",
+      "caption": "",
+      "source": "CNN",
+      "original_width": "3000px",
+      "original_height": "1688px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/015b98a0ec9c.jpg",
+      "caption": "",
+      "source": "The New Yorker",
+      "original_width": "2560px",
+      "original_height": "1959px"
+    }
+  ]
+}

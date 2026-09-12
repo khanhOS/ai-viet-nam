@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "nói tiếng viết\n\nMinh chưa có kiến thức local cho câu hỏi này — mình không đoán bừa đâu.\n\n(Mình đang chạy chế độ tri thức cục bộ — chưa có model AI cục bộ nào đang chạy. Chạy `bash scripts/setup-ollama.sh` trên máy chủ để bắt suy luận model thật, sau đó mình trả lời thoải mái câu hỏi ngoài tri thức)",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1789099846,
+  "id": "202609111210432c88d6fa8e6e4006",
+  "model": "glm-5v-turbo",
+  "object": "chat.completion",
+  "request_id": "202609111210432c88d6fa8e6e4006",
+  "usage": {
+    "completion_tokens": 84,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 256,
+    "prompt_tokens_details": {
+      "cached_tokens": 2
+    },
+    "total_tokens": 340
+  }
+}

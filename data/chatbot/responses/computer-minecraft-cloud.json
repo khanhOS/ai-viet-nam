@@ -1,0 +1,122 @@
+{
+  "cpu": {
+    "vi": [
+      "CPU (Central Processing Unit) là \"não\" máy tính: thực hiện mọi phép tính và lệnh — chạy hệ điều hành, app, tab trình duyệt. Hiệu năng đo bằng số nhân/tốc độ; nhiều nhân tốt cho đa nhiệm, xung cao tốt cho game. Chat AI cục bộ trên CPU chạy được nhưng chậm hơn GPU.",
+      "CPU là bộ xử lý trung tâm: nhận lệnh, tính toán, điều phối mọi linh kiện. Máy nhanh chậm phần lớn do CPU + RAM. Chọn CPU: xem thế hệ (mới hơn tốt hơn), số nhân (code/streaming cần nhiều), xung clock (game cần cao)."
+    ]
+  },
+  "gpu": {
+    "vi": [
+      "GPU (Graphics Processing Unit) là bộ xử lý song song hàng nghìn lõi — sinh đồ họa game và là \"máy tính\" của AI. Khác CPU (vài lõi mạnh, làm tuần tự): GPU làm hàng nghìn phép toán nhỏ CÙNG lúc → render nhanh, train/inference AI nhanh.",
+      "GPU sinh ra để vẽ hình, nhưng kiến trúc song loạt hợp AI/Nvidia CUDA nên thành trụ cột machine learning. Chạy LLM local: GPU có VRAM càng nhiều thì model càng to chạy được càng nhanh. Card phổ biến cho AI: RTX 3060 12GB là điểm chuẩn giá/rẻ."
+    ]
+  },
+  "ram_pc": {
+    "vi": [
+      "RAM là bộ nhớ TẠM cực nhanh cho việc đang chạy: mở app, tab trình duyệt, file đang soạn. Đóng app là giải phóng. Máy chậm vì hết RAM → hệ điều hành quăng sang ổ cứng (chậm hàng trăm lần). RAM nhiều hơn chỉ giúp khi bạn chạy nhiều thứ — không làm 1 app đơn lẻ nhanh hơn.",
+      "RAM = bàn làm việc tạm: CPU là thợ, RAM là mặt bàn càng rộng càng bày nhiều việc ra cùng lúc. Hết bàn (RAM đầy) thì thợ phải chạy ra kho (SSD) — chậm hẳn. Mức hợp lý 2024+: 16GB văn phòng/multi-task, 32GB+ cho dev/đồ họa/AI local."
+    ]
+  },
+  "storage": {
+    "vi": [
+      "SSD là ổ lưu trữ chip flash — nhanh gấp 5-20 lần HDD (đĩa quay cơ khí): mở máy tính giây thay phút, load game/app tức thì. NVMe (gắn trực tiếp bo mạch) là SSD nhanh nhất. HDD chỉ còn đáng mua khi cần lưu kho lớn rẻ (backup, phim).",
+      "Khác biệt cảm nhận được ngay: Windows khởi động 20s (HDD) → 5s (SSD). Loại: SATA SSD (~500MB/s) đủ dùng, NVMe (~3.500-7.000MB/s) cho dev/render. Dung lượng hệ điều hành + apps: 500GB NVMe là điểm ngọt. Không bao giờ lắp hệ điều hành lên HDD nữa  — thói quen từ thời cổ."
+    ]
+  },
+  "windows": {
+    "vi": [
+      "Windows là hệ điều hành của Microsoft — phần mềm nền quản lý phần cứng để chạy app. Hệ điều hành là \"người quản lý tòa nhà\": phân CPU/RAM/disk cho các chương trình, lo driver thiết bị, giao diện người dùng. Windows 10 vs 11: 11 có giao diện mới, hỗ trợ Android app, yêu cầu TPM 2.0.",
+      "Hệ điều hành (Windows/macOS/Linux) là lớp giữa app và phần cứng. Linux (Ubuntu, Debian...) miễn phí, tùy biến, chiếm lĩnh server; Windows phổ biến cho máy cá nhân game/office. Cloud VPS hầu hết chạy Linux."
+    ]
+  },
+  "drivers": {
+    "vi": [
+      "Driver là phần mềm dịch giữa Windows và từng linh kiện/phụ kiện: card đồ họa, âm thanh, máy in... Không có driver thì Windows không biết điều khiển thiết bị. Cài: Windows Update tự lo phần lớn; GPU thì tải từ NVIDIA/AMD; laptop thì trang hãng (đúng model).",
+      "Driver = hướng dẫn sử dụng riêng cho từng phần cứng. Lỗi đồ họa/màu sai/màn hình lag thường do driver GPU cũ — cập nhật từ NVIDIA GeForce Experience / AMD Software. Mẹo: chỉ tải driver từ trang chính hãng, tránh tool \"update driver\" lạ (đóng gói adware)."
+    ]
+  },
+  "troubleshooting": {
+    "vi": [
+      "Máy chậm — kiểm theo thứ tự:\n1. Mở Task Manager (Ctrl+Shift+Esc): xem CPU/RAM/Disk cái nào 100%\n2. RAM đầy → tắt app nền (Chrome nhiều tab là thủ phạm kinh điển)\n3. Disk 100% HDD → nâng cấp SSD (nâng cấp hiệu quả nhất)\n4. Kiểm tra malware (Windows Defender quét full)\n5. Startup: tắt app tự mở (Task Manager → Startup)\n6. Nóng máy → vệ sinh quạt, đổi keo tản nhiệt nếu 3-5 năm rồi",
+      "Nguyên nhân máy chậm hay gặp nhất (xếp theo xác suất): (1) hết RAM vì quá nhiều app/tab, (2) còn dùng HDD làm ổ hệ thống, (3) app nền + startup ngốn, (4) bụi nóng CPU (auto hạ xung), (5) malwareminer. Task Manager chỉ cho thủ phạm trong 30 giây."
+    ]
+  },
+  "minecraft_server": {
+    "vi": [
+      "Chạy server Minecraft Java cơ bản:\n1. Tải server.jar (Paper nếu muốn plugin) từ trang chính thức\n2. Tạo thư mục, đặt file vào, chạy: `java -Xms2G -Xmx4G -jar paper.jar nogui`\n3. Lần đầu sinh world + file eula.txt → sửa eula=true, chạy lại\n4. Mở port 25565 trên router/firewall nếu bạn bè ngoài mạng vào\n5. Bạn bè join: gõ IP máy bạn (LAN thì IP nội bộ)\nCần: Java 21 (MC 1.20.5+), RAM 4GB+ cho 5-10 người.",
+      "Muốn nhanh gọn: mua VPS 2-4GB (~100-200k/tháng), cài Java + Paper, mở port 25565, cho bạn bè IP. Muốn bạn điện thoại (Bedrock) vào cùng: thêm Geyser plugin. Muốn plugin quản lý: LuckPerms + WorldGuard + Essentials."
+    ]
+  },
+  "server_software": {
+    "vi": [
+      "Phần mềm server Minecraft (Java) — dòng đời: Vanilla (gốc, chậm) → CraftBukkit (plugin) → Spigot (tối ưu CraftBukkit) → Paper (fork Spigot, tối ưu mạnh + API tốt — lựa chọn mặc định hiện nay) → Purpur (fork Paper, thêm tính năng vui). Cứ dùng Paper: nhanh, plugin đầy đủ, cộng đồng lớn.",
+      "Paper là lựa chọn chuẩn cho server công khai: hiệu năng cao hơn Spigot đáng kể (cùng phần cứng chứa được nhiều người hơn), vá bảo mật tốt, plugin viết cho Spigot đều chạy được. Purpur khi cần thêm chi tiết tuỳ biến (vật phẩm, mob). Folia là nhánh Paper đa luồng cho server cực lớn."
+    ]
+  },
+  "plugins": {
+    "vi": [
+      "Plugin là mở rộng cho server Paper/Spigot (chỉ bản Java): thêm lệnh, mini-game, kinh tế, bảo vệ vùng... Cài: thả file .jar vào thư mục plugins/ → restart server → config sinh ra trong plugins/<tên>. Tải từ: SpigotMC, Hangar (Paper), BuiltByBit. KHÔNG cài plugin Bukkit lên Fabric/Forge — khác hệ.",
+      "Plugin phổ biến nên có: EssentialsX (lệnh cơ bản, /home /spawn), LuckPerms (phân quyền nhóm), WorldGuard + WorldEdit (bảo vệ + chỉnh sửa thế giới), Vault (nền kinh tế), Geyser (cho bạn Bedrock vào). Quy tắc: ít plugin tốt hơn nhiều plugin — mỗi plugin thêm độ trễ."
+    ]
+  },
+  "geyser_floodgate": {
+    "vi": [
+      "Geyser là cầu nối giao thức: cho client Bedrock (điện thoại, console) join server Java — dịch packet giữa hai phiên bản. Floodgate đi kèm: cho tài khoản Bedrock (không cần mua Java) vào được, tự thêm tiền tố vào tên. Cài: thả 2 file .jar vào plugins/ — thế là bạn bè iPhone/Android vào được server PC của bạn.",
+      "Java và Bedrock là 2 bản Minecraft giao thức khác nhau — bình thường không gặp nhau. Geyser dịch trực tiếp nên gần như mọi tính năng hoạt động; Skin/respawn anchor có thể lệch nhẹ. Bedrock player cần tài khoản Microsoft + Floodgate để không cần tài khoản Java."
+    ]
+  },
+  "luckperms": {
+    "vi": [
+      "LuckPerms là plugin phân quyền cho server: tạo nhóm (admin, mod, member, vip...) gán quyền từng lệnh/tính năng, gán người vào nhóm. Lệnh gốc: `/lp creategroup vip` → `/lp group vip permission set some.permission true` → `/lp user <tên> parent add vip`. Web editor: `/lp editor` mở giao diện trực quan.",
+      "Phân quyền là xương sống server công khai: không LuckPerms thì chỉ có op (toàn quyền) hoặc thường (không có gì). LuckPerms cho phép mịn: nhóm VIP được /fly, mod được kick... Dữ liệu lưu SQLite/MySQL ngay trong config, đổi lúc nào cũng được mà không mất."
+    ]
+  },
+  "worldedit_worldguard": {
+    "vi": [
+      "WorldEdit = Photoshop cho thế giới: lệnh chọn vùng + copy/paste/fill/undo nhanh (làm spawn trong vài phút thay vì vài ngày). WorldGuard = khóa: bảo vệ vùng khỏi grief (phá, trộm), cấm PvP/PvE từng khu, chặn fire spread. Hai anh em đi cùng nhau — đều chạy trên Paper.",
+      "Ví dụ: `//wand` chọn 2 góc nhà → `//set stone` thay vật liệu, `//copy` + `//paste` nhân bản. WorldGuard: `/rg claim khoi_vien` xác nhận vùng bạn chọn — người khác không phá được. Lệnh khu vực: `/rg define <tên>`, gán người: `/rg addmember <tên> <player>`."
+    ]
+  },
+  "server_performance": {
+    "vi": [
+      "Server Minecraft lag — checklist:\n1. Xem TPS: `/tps` (chuẩn 20; dưới 18 là lag). Timings của Paper cho plugin nào tốn: `/timings report`\n2. Giảm view-distance/simulation-distance trong server.properties (10/5 là hợp lý)\n3. Cắt bớt plugin (đặc biệt plugin cũ chưa update)\n4. RAM: cấp 4-6GB `-Xmx4G`, đừng cấp gần bằng RAM máy (swap = chết)\n5. Giữ chunk entity ít: clear item rơi (`/kill @e[type=item]`), giới hạn redstone clock",
+      "TPS: lý do số 1 server chậm là: plugin nặng, view-distance quá to, quái vật/item chất đống chunk người chơi đi qua. Paper xử lý sẵn nhiều — nếu vẫn lag thì Timings report là bước đầu tiên, nhìn đúng plugin/tick event đang ngốn rồi xử lý đúng chỗ thay vì tăng RAM bừa."
+    ]
+  },
+  "server_properties": {
+    "vi": [
+      "server.properties là file cấu hình chính của server Minecraft — mở bằng notepad: port (server-port, mặc định 25565), số người (max-players), chế độ online (online-mode: true kiểm tra tài khoản chính hãng), whitelist (chỉ người trong danh sách vào), view-distance (bán kính chunk gửi client — giảm để nhẹ server), difficulty, motd (mô tả server)... Sửa xong phải restart server.",
+      "Các key hay đụng: `online-mode=false` chỉ khi muốn crack vào (rủi ro bảo mật, chỉ dùng mạng LAN); `white-list=true` + file whitelist.json thêm bạn bằng `whitelist add <tên>`; `view-distance=8` giảm lag tức thì; `level-seed` đặt seed tạo thế giới. Backup file này trước khi sửa hàng loạt."
+    ]
+  },
+  "vps": {
+    "vi": [
+      "VPS (Virtual Private Server) là máy ảo thuê trên server thật: bạn có root riêng, IP riêng, tự cài mọi thứ — như một chiếc máy tính chạy 24/7 ở datacenter. Khác shared hosting (ch dùng dịch vụ định sẵn). Giá: ~100-300k/tháng cho 2-4GB RAM đủ chạy web + Minecraft server nhỏ.",
+      "Dùng VPS khi: web cần backend thật sự, cần chạy 24/7, cần tự cấu hình (port, service), host game server. Chọn theo: RAM (đo lường nhu cầu), CPU, vị trí (gần user VN thì Singapore/HN), OS (Ubuntu LTS phổ biến nhất). Nhớ set firewall (UFW) + SSH key thay mật khẩu."
+    ]
+  },
+  "vm": {
+    "vi": [
+      "Máy ảo (VM) là máy tính mô phỏng bằng phần mềm chạy TRÊN máy thật: có CPU/RAM/ổ đĩa/OS riêng. Hypervisor (VMware, VirtualBox, KVM) chia tài nguyên máy thật thành nhiều máy ảo — đây chính là cách VPS được tạo ra (1 server vật lý → hàng chục VPS).",
+      "Dùng máy ảo để: chạy thử hệ điều hành khác, cách ly môi trường test (virus không thoát ra máy chính), mô phỏng server trước khi deploy. Container (Docker) là hàng xóm nhẹ hơn — chia kernel chứ không cần full OS, khởi động trong 1 giây thay vì 1 phút."
+    ]
+  },
+  "remote_desktop": {
+    "vi": [
+      "Remote desktop là điều khiển máy tính từ xa như ngồi trước nó: RDP (Windows), VNC, AnyDesk/TeamViewer (dễ, có GUI). Cho server Linux thì SSH là vua: terminal qua dòng lệnh, nhẹ, bảo mật (`ssh user@ip`). Giao diện đồ họa tốn băng thông — server hầu như chỉ cần SSH.",
+      "SSH dùng mỗi ngày khi quản VPS: `ssh root@1.2.3.4` → terminal như ngồi tại chỗ. Bảo mật: tắt đăng nhập mật khẩu, dùng SSH key (`ssh-keygen`), đổi port mặc định, cài fail2ban chống dò. RDP chỉ bật khi thực sự cần GUI Windows từ xa."
+    ]
+  },
+  "networking_ports": {
+    "vi": [
+      "Port (cổng) là số định danh dịch vụ trên 1 IP: IP là địa chỉ tòa nhà, port là số phòng. HTTP 80, HTTPS 443, Minecraft 25565, SSH 22. Port forwarding là mở port trên router cho người ngoài internet vào được dịch vụ trên máy bạn (đặt IP tĩnh nội bộ cho máy chạy dịch vụ trước).",
+      "Kiểm tra port mở chưa: dùng `netstat -tulpn | grep 25565` xem server có lắng nghe, rồi trang check-port từ ngoài (canyouseeme.org) hoặc nhờ bạn telnet. Máy chủ phải lắng nghe 0.0.0.0 (không phải 127.0.0.1) thì ngoài mới vào được. Firewall cũng phải mở đúng port."
+    ]
+  },
+  "firewall": {
+    "vi": [
+      "Firewall (tường lửa) là bộ lọc lưu lượng vào/ra theo quy tắc: cho port nào, chặn IP nào. UFW trên Ubuntu là bạn thân: `ufw allow 22` (SSH), `ufw allow 25565` (Minecraft), `ufw enable`. Mặc định chặn từ chối, chỉ mở đúng thứ cần — server công khai chỉ mở port dịch vụ thật.",
+      "Nguyên tắc firewall: deny all → allow theo nhu cầu. Chỉ mở: SSH (đổi port mặc định nếu được), HTTP/HTTPS nếu có web, port game nếu host. Đừng mở dải port rộng \"cho chắc\" — đó là cửa hậu. UFW kiểm tra: `ufw status verbose`. Windows cũng có Windows Defender Firewall tương tự."
+    ]
+  }
+}

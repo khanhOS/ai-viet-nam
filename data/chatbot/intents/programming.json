@@ -1,0 +1,549 @@
+[
+  {
+    "id": "programming_help",
+    "description": "Hỏi chung về lập trình / bắt đầu học",
+    "topic": "programming",
+    "patterns": [
+      "học lập trình từ đâu",
+      "bắt đầu lập trình thế nào",
+      "lập trình khó không",
+      "nên học ngôn ngữ nào trước",
+      "how to start programming",
+      "làm lập trình viên cần gì",
+      "tự học code được không",
+      "học code từ đầu",
+      "lập trình là gì"
+    ],
+    "keywords": [
+      "học lập trình",
+      "bắt đầu lập trình",
+      "học code"
+    ],
+    "aliases": [
+      "learning programming"
+    ],
+    "examples": [
+      "Học lập trình từ đâu?",
+      "nên học ngôn ngữ nào trước?",
+      "lập trình khó không"
+    ],
+    "related_intents": [
+      "javascript",
+      "python",
+      "html"
+    ],
+    "response_id": "programming_help",
+    "confidence_threshold": 0.5
+  },
+  {
+    "id": "javascript",
+    "description": "JavaScript là gì",
+    "topic": "programming",
+    "patterns": [
+      "javascript là gì",
+      "js là gì",
+      "js la gi",
+      "javascript dùng để làm gì",
+      "javascript có khó không",
+      "cho biết về javascript",
+      "giải thích js",
+      "what is javascript",
+      "what can javascript do",
+      "javascript dùng ở frontend à",
+      "js có chạy backend được không",
+      "javascript là sao",
+      "js nghĩa là gì",
+      "javascript"
+    ],
+    "keywords": [
+      "javascript",
+      "js"
+    ],
+    "aliases": [
+      "js",
+      "javascript"
+    ],
+    "examples": [
+      "javascript là gì",
+      "JS là gì",
+      "js la gi",
+      "JavaScript dùng để làm gì",
+      "cho tôi biết về javascript",
+      "what is javascript",
+      "javascript dùng ở frontend à",
+      "JS có chạy backend được không"
+    ],
+    "related_intents": [
+      "typescript",
+      "nodejs",
+      "html",
+      "react"
+    ],
+    "response_id": "javascript",
+    "knowledge_ref": "javascript",
+    "confidence_threshold": 0.5
+  },
+  {
+    "id": "typescript",
+    "description": "TypeScript là gì",
+    "topic": "programming",
+    "patterns": [
+      "typescript là gì",
+      "ts là gì",
+      "ts la gi",
+      "typescript dùng để làm gì",
+      "giải thích typescript",
+      "what is typescript",
+      "ts khác js thế nào",
+      "typescript có đáng học không",
+      "typescript nghĩa là gì",
+      "typescript"
+    ],
+    "keywords": [
+      "typescript",
+      "ts"
+    ],
+    "aliases": [
+      "ts",
+      "typescript"
+    ],
+    "examples": [
+      "TypeScript là gì?",
+      "ts là gì",
+      "what is TypeScript",
+      "TS khác JS thế nào?"
+    ],
+    "related_intents": [
+      "javascript",
+      "nextjs"
+    ],
+    "response_id": "typescript",
+    "knowledge_ref": "typescript",
+    "confidence_threshold": 0.5
+  },
+  {
+    "id": "python",
+    "description": "Python là gì",
+    "topic": "programming",
+    "patterns": [
+      "python là gì",
+      "python dùng để làm gì",
+      "giải thích python",
+      "what is python",
+      "python dùng làm gì",
+      "python có dễ học không",
+      "py là gì",
+      "python là sao",
+      "python làm được gì",
+      "python"
+    ],
+    "keywords": [
+      "python"
+    ],
+    "aliases": [
+      "python",
+      "py"
+    ],
+    "examples": [
+      "Python là gì?",
+      "python dùng để làm gì?",
+      "what is Python",
+      "Python làm được gì?"
+    ],
+    "related_intents": [
+      "programming_help",
+      "javascript"
+    ],
+    "response_id": "python",
+    "knowledge_ref": "python",
+    "confidence_threshold": 0.5
+  },
+  {
+    "id": "html",
+    "description": "HTML là gì",
+    "topic": "programming",
+    "patterns": [
+      "html là gì",
+      "html la gi",
+      "html dùng để làm gì",
+      "what is html",
+      "giải thích html",
+      "html là cấu trúc gì",
+      "html là ngôn ngữ gì",
+      "html là sao",
+      "html nghĩa là gì",
+      "html"
+    ],
+    "keywords": [
+      "html"
+    ],
+    "aliases": [
+      "html"
+    ],
+    "examples": [
+      "HTML là gì?",
+      "html la gi",
+      "what is HTML",
+      "HTML dùng để làm gì?"
+    ],
+    "related_intents": [
+      "css",
+      "javascript",
+      "what_is_website"
+    ],
+    "response_id": "html",
+    "knowledge_ref": "html",
+    "confidence_threshold": 0.5
+  },
+  {
+    "id": "css",
+    "description": "CSS là gì",
+    "topic": "programming",
+    "patterns": [
+      "css là gì",
+      "css la gi",
+      "css dùng để làm gì",
+      "what is css",
+      "giải thích css",
+      "css làm đẹp web à",
+      "css là sao",
+      "css nghĩa là gì",
+      "css"
+    ],
+    "keywords": [
+      "css"
+    ],
+    "aliases": [
+      "css"
+    ],
+    "examples": [
+      "CSS là gì?",
+      "what is CSS",
+      "CSS dùng để làm gì?"
+    ],
+    "related_intents": [
+      "html",
+      "react"
+    ],
+    "response_id": "css",
+    "knowledge_ref": "css",
+    "confidence_threshold": 0.5
+  },
+  {
+    "id": "react",
+    "description": "React là gì",
+    "topic": "programming",
+    "patterns": [
+      "react là gì",
+      "react la gi",
+      "react dùng để làm gì",
+      "reactjs là gì",
+      "what is react",
+      "giải thích react",
+      "react là thư viện gì",
+      "react là sao",
+      "hook trong react là gì",
+      "component react là gì",
+      "react"
+    ],
+    "keywords": [
+      "react",
+      "reactjs",
+      "component",
+      "hook"
+    ],
+    "aliases": [
+      "react",
+      "reactjs"
+    ],
+    "examples": [
+      "React là gì?",
+      "react la gi",
+      "what is React",
+      "React dùng để làm gì?"
+    ],
+    "related_intents": [
+      "nextjs",
+      "javascript"
+    ],
+    "response_id": "react",
+    "knowledge_ref": "react",
+    "confidence_threshold": 0.5
+  },
+  {
+    "id": "nextjs",
+    "description": "Next.js là gì",
+    "topic": "programming",
+    "patterns": [
+      "nextjs là gì",
+      "next.js là gì",
+      "next la gi",
+      "nextjs dùng để làm gì",
+      "what is nextjs",
+      "giải thích nextjs",
+      "nextjs là framework gì",
+      "next.js khác react thế nào",
+      "nextjs là sao",
+      "ssr trong nextjs là gì",
+      "nextjs"
+    ],
+    "keywords": [
+      "nextjs",
+      "next.js",
+      "ssr"
+    ],
+    "aliases": [
+      "nextjs",
+      "next.js"
+    ],
+    "examples": [
+      "Next.js là gì?",
+      "nextjs là gì",
+      "what is Next.js",
+      "Next.js khác React thế nào?"
+    ],
+    "related_intents": [
+      "react",
+      "deployment",
+      "vercel"
+    ],
+    "response_id": "nextjs",
+    "knowledge_ref": "nextjs",
+    "confidence_threshold": 0.5
+  },
+  {
+    "id": "nodejs",
+    "description": "Node.js là gì",
+    "topic": "programming",
+    "patterns": [
+      "nodejs là gì",
+      "node.js là gì",
+      "node la gi",
+      "nodejs dùng để làm gì",
+      "what is nodejs",
+      "giải thích nodejs",
+      "nodejs là runtime gì",
+      "nodejs chạy đâu",
+      "nodejs là sao",
+      "npm là gì",
+      "nodejs"
+    ],
+    "keywords": [
+      "nodejs",
+      "node.js",
+      "node",
+      "npm"
+    ],
+    "aliases": [
+      "nodejs",
+      "node"
+    ],
+    "examples": [
+      "Node.js là gì?",
+      "what is Node.js",
+      "Node.js dùng để làm gì?",
+      "npm là gì?"
+    ],
+    "related_intents": [
+      "javascript",
+      "api_development",
+      "backend"
+    ],
+    "response_id": "nodejs",
+    "knowledge_ref": "nodejs",
+    "confidence_threshold": 0.5
+  },
+  {
+    "id": "api_development",
+    "description": "Viết API backend",
+    "topic": "programming",
+    "patterns": [
+      "viết api thế nào",
+      "cách viết api",
+      "tạo api như thế nào",
+      "làm rest api",
+      "api endpoint là gì",
+      "how to build an api",
+      "xây api backend",
+      "get post put delete là gì",
+      "rest api là gì",
+      "gọi api từ frontend thế nào",
+      "rest api",
+      "viết api"
+    ],
+    "keywords": [
+      "viết api",
+      "rest api",
+      "endpoint",
+      "get post"
+    ],
+    "aliases": [
+      "rest api"
+    ],
+    "examples": [
+      "Viết API thế nào?",
+      "REST API là gì?",
+      "cách tạo API backend",
+      "gọi API từ frontend ra sao?"
+    ],
+    "related_intents": [
+      "what_is_api",
+      "nodejs",
+      "backend"
+    ],
+    "response_id": "api_development",
+    "confidence_threshold": 0.5
+  },
+  {
+    "id": "backend",
+    "description": "Backend là gì",
+    "topic": "programming",
+    "patterns": [
+      "backend là gì",
+      "back end là gì",
+      "backend la gi",
+      "backend làm gì",
+      "what is backend",
+      "giải thích backend",
+      "backend là sao",
+      "backend chạy ở đâu",
+      "backend gồm những gì"
+    ],
+    "keywords": [
+      "backend"
+    ],
+    "aliases": [
+      "backend"
+    ],
+    "examples": [
+      "Backend là gì?",
+      "back end làm gì?",
+      "what is backend"
+    ],
+    "related_intents": [
+      "frontend",
+      "nodejs",
+      "what_is_database"
+    ],
+    "response_id": "backend",
+    "knowledge_ref": "backend",
+    "confidence_threshold": 0.5
+  },
+  {
+    "id": "frontend",
+    "description": "Frontend là gì",
+    "topic": "programming",
+    "patterns": [
+      "frontend là gì",
+      "front end là gì",
+      "frontend la gi",
+      "frontend làm gì",
+      "what is frontend",
+      "giải thích frontend",
+      "frontend là sao",
+      "học frontend cần gì",
+      "frontend gồm gì"
+    ],
+    "keywords": [
+      "frontend"
+    ],
+    "aliases": [
+      "frontend"
+    ],
+    "examples": [
+      "Frontend là gì?",
+      "front end làm gì?",
+      "what is frontend",
+      "học frontend cần gì?"
+    ],
+    "related_intents": [
+      "backend",
+      "html",
+      "css",
+      "javascript"
+    ],
+    "response_id": "frontend",
+    "knowledge_ref": "frontend",
+    "confidence_threshold": 0.5
+  },
+  {
+    "id": "git",
+    "description": "Git / version control",
+    "topic": "programming",
+    "patterns": [
+      "git là gì",
+      "git dùng để làm gì",
+      "github là gì",
+      "git là sao",
+      "what is git",
+      "commit là gì",
+      "branch là gì",
+      "merge là gì",
+      "git clone là gì",
+      "git và github khác nhau thế nào",
+      "pull request là gì",
+      "git",
+      "github"
+    ],
+    "keywords": [
+      "git",
+      "github",
+      "commit",
+      "branch",
+      "merge"
+    ],
+    "aliases": [
+      "git",
+      "github"
+    ],
+    "examples": [
+      "Git là gì?",
+      "GitHub là gì?",
+      "commit là gì",
+      "Git khác GitHub thế nào?"
+    ],
+    "related_intents": [
+      "deployment"
+    ],
+    "response_id": "git",
+    "knowledge_ref": "git",
+    "confidence_threshold": 0.5
+  },
+  {
+    "id": "env_vars",
+    "description": "Biến môi trường",
+    "topic": "programming",
+    "patterns": [
+      "biến môi trường là gì",
+      "environment variable là gì",
+      "env file là gì",
+      ".env dùng để làm gì",
+      "what are environment variables",
+      "env la gi",
+      "lưu api key ở đâu",
+      "biến env là sao",
+      "process.env là gì"
+    ],
+    "keywords": [
+      "biến môi trường",
+      "environment variable",
+      "env",
+      ".env"
+    ],
+    "aliases": [
+      "env",
+      ".env"
+    ],
+    "examples": [
+      "Biến môi trường là gì?",
+      ".env dùng để làm gì?",
+      "lưu API key ở đâu an toàn?"
+    ],
+    "related_intents": [
+      "deployment",
+      "what_is_api"
+    ],
+    "response_id": "env_vars",
+    "confidence_threshold": 0.5
+  }
+]

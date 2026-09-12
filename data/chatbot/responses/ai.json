@@ -1,0 +1,204 @@
+{
+  "what_is_ai": {
+    "vi": [
+      "AI (Artificial Intelligence — trí tuệ nhân tạo) là lĩnh vực xây dựng hệ thống máy tính thực hiện những việc thường cần trí tuệ con người: hiểu ngôn ngữ, nhận dạng hình ảnh, suy luận, dự đoán và hỗ trợ ra quyết định.",
+      "AI là viết tắt của Artificial Intelligence — công nghệ làm máy tính thực hiện được các nhiệm vụ cần sự thông minh: hiểu tiếng nói, nhận ảnh, học từ dữ liệu, đưa ra gợi ý.",
+      "Nói gọn: AI là cách khiến máy tính \"tư duy\" đủ để làm việc của người — dịch, nhận mặt, đề xuất sản phẩm, trả lời câu hỏi."
+    ],
+    "en": [
+      "AI (Artificial Intelligence) is the field of building systems that perform tasks normally requiring human intelligence: understanding language, recognizing images, reasoning and predicting.",
+      "In short: AI makes computers do tasks that usually need human smarts — translating, recognizing, recommending, answering."
+    ]
+  },
+  "what_is_llm": {
+    "vi": [
+      "LLM (Large Language Model — mô hình ngôn ngữ lớn) là model AI được huấn luyện trên kho văn bản khổng lồ để hiểu và sinh ngôn ngữ tự nhiên. Nó dự đoán từ tiếp theo dựa trên ngữ cảnh, nên chat được, viết được, tóm được.",
+      "LLM là model AI khổng lồ học từ hàng tỷ câu văn để biết cách nối từ thành câu có nghĩa. ChatGPT, Claude, Gemini đều là LLM.",
+      "Đơn giản: LLM là \"bộ não văn bản\" — đọc vào chuỗi chữ, đoán ra chuỗi chữ tiếp theo, và vì học từ dữ liệu khổng lồ nên đoán rất hợp lý."
+    ],
+    "en": [
+      "An LLM (Large Language Model) is an AI model trained on massive text corpora to understand and generate natural language by predicting the next token in context."
+    ]
+  },
+  "what_is_local_ai": {
+    "vi": [
+      "Local AI là AI chạy thẳng trên máy bạn (hoặc server bạn kiểm soát) — model và dữ liệu nằm локated, không gửi câu hỏi ra dịch vụ ngoài. Ưu điểm: riêng tư, không mất phí theo lượt, chạy offline được. Nhược điểm: giới hạn bởi phần cứng máy bạn.",
+      "AI cục bộ = chạy model ngay trên máy tính của mình. Không API, không gửi dữ liệu đi đâu — như Ollama chạy model trên chính laptop của bạn."
+    ]
+  },
+  "what_is_api": {
+    "vi": [
+      "API (Application Programming Interface) là \"cầu nối\" cho phép 2 phần mềm nói chuyện với nhau: ứng dụng của bạn gửi request theo định dạng quy ước, dịch vụ bên kia trả kết quả. Ví dụ: app thời tiết gọi API của server khí tượng để lấy nhiệt độ.",
+      "API là bộ quy tắc giao tiếp giữa các chương trình — bạn gửi yêu cầu kèm dữ liệu, nhận về phản hồi. ChatGPT API cho phép app của bạn gửi câu hỏi và nhận câu trả lời từ model của OpenAI."
+    ],
+    "en": [
+      "An API is a contract that lets two pieces of software talk: you send a structured request, the service returns a result — like a weather app calling a weather API."
+    ]
+  },
+  "what_is_model": {
+    "vi": [
+      "Model AI là \"bộ não\" được huấn luyện từ dữ liệu — một tập tham số toán học khổng lồ đúc kết mẫu hình từ dữ liệu. Khác biệt với chương trình thường: không ai viết từng dòng quy tắc, model tự học quy luật từ ví dụ.",
+      "Model = sản phẩm của việc huấn luyện (training): cho máy ăn hàng triệu ví dụ, nó tự điều chỉnh tham số đến khi làm được việc (nhận ảnh, dịch, chat). Model tốt hay dở phụ thuộc dữ liệu và cách huấn luyện."
+    ]
+  },
+  "what_is_token": {
+    "vi": [
+      "Token là đơn vị văn bản mà model AI đọc/ghi — thường ~4 ký tự hoặc khoảng nửa từ tiếng Việt. Model không đọc nguyên câu mà cắt thành chuỗi token. Nhiều dịch vụ tính phí và giới hạn theo số token.",
+      "Token là \"viên gạch\" của văn bản với AI: 1 từ dài có thể tách thành 2-3 token, 1 từ ngắn đôi khi chỉ là 1 token. Ngữ cảnh dài = nhiều token = tốn hơn và chậm hơn."
+    ]
+  },
+  "what_is_prompt": {
+    "vi": [
+      "Prompt là đoạn văn bản bạn đưa cho AI để ra lệnh/đặt câu hỏi. Cách viết prompt quyết định chất lượng câu trả lời: nói rõ vai trò, bối cảnh, định dạng mong muốn.",
+      "Prompt là câu lệnh bằng ngôn ngữ tự nhiên cho AI. Prompt tốt = cụ thể: thay \"viết gì đó về chó\" thì \"viết 3 dòng giới thiệu về chó Corgi cho người mới nuôi, giọng vui\"."
+    ]
+  },
+  "what_is_context": {
+    "vi": [
+      "Context window là lượng văn bản tối đa model đọc được trong 1 lượt (tính bằng token), gồm cả câu hỏi và lịch sử chat. Vượt quá thì phần cũ bị cắt — model \"quên\" đầu hội thoại.",
+      "Context window = bộ nhớ làm việc của model: vừa phải chứa prompt, dữ liệu kèm theo, vừa chứa câu trả lời. Cửa sổ càng lớn thì hội thoại dài càng ổn."
+    ]
+  },
+  "what_is_embedding": {
+    "vi": [
+      "Embedding là cách biến văn bản (từ, câu, đoạn) thành dãy số (vector) sao cho nội dung gần nghĩa thì số gần nhau. Đây là nền tảng để máy so sánh, tìm kiếm ngữ nghĩa — thay vì khớp chữ chính xác thì khớp ý.",
+      "Embedding = chấm văn bản thành toạ độ trong không gian nghĩa. \"Con chó\" và \"chú cún\" nằm gần nhau, \"con chó\" và \"cái bàn\" nằm xa. Tìm kiếm ngữ nghĩa dựa vào khoảng cách này."
+    ]
+  },
+  "what_is_rag": {
+    "vi": [
+      "RAG (Retrieval-Augmented Generation) là kỹ thuật: trước khi trả lời, hệ thống ĐI TÌM tài liệu liên quan trong kho của bạn, nhét vào context cho model đọc, rồi mới sinh câu trả lời. Giúp trả lời đúng dữ liệu nội bộ và giảm bịa.",
+      "RAG = tra cứu + sinh văn bản. Ví dụ: hỏi \"chính sách nghỉ phép công ty mình?\" → hệ thống tìm đoạn Handbook liên quan, đưa cho model, model trả lời dựa trên đúng đoạn đó thay vì đoán mò."
+    ]
+  },
+  "what_is_fine_tuning": {
+    "vi": [
+      "Fine-tuning là huấn luyện thêm một model có sẵn trên dữ liệu riêng của bạn để nó chuyên về lĩnh vực/giọng điệu cụ thể. Model gốc đã biết chung chung, fine-tune dạy nó \"nói chuyện kiểu của bạn\".",
+      "Fine-tuning = học nâng cao trên nền có sẵn: lấy model nền + dữ liệu chuyên ngành của bạn → chạy tiếp quá trình huấn luyện → ra model biến thể giỏi việc riêng của bạn. Rẻ hơn huấn luyện từ đầu rất nhiều."
+    ]
+  },
+  "what_is_inference": {
+    "vi": [
+      "Inference (suy luận) là giai đoạn SỬ DỤNG model đã huấn luyện để ra kết quả: đưa câu hỏi vào, nhận câu trả lời ra. Khác với training (học), inference là \"làm bài\". Chi phí chạy chatbot chủ yếu là inference.",
+      "Inference là lúc model vận hành thật: mỗi câu bạn hỏi là 1 lần forward qua mạng nơ-ron. GPU/TPU mạnh → inference nhanh → trả lời nhanh."
+    ]
+  },
+  "what_is_neural_network": {
+    "vi": [
+      "Mạng nơ-ron (neural network) là model toán học mô phỏng thô kiểu neuron sinh học: các tầng \"nút\" nhận số, nhân trọng số, cộng lại, truyền tiếp. Học = điều chỉnh hàng triệu trọng số đó theo dữ liệu. Deep learning = mạng nhiều tầng.",
+      "Neural network là khối xây dựng của AI hiện đại: tầng nút xếp chồng, trọng số chỉnh dần khi học. Xếp đủ nhiều tầng (deep) + dữ liệu đủ nhiều → nhận diện/sinh tạo được thứ trước đây chỉ người làm được."
+    ]
+  },
+  "how_ai_works": {
+    "vi": [
+      "AI hiện đại hoạt động theo vòng: (1) thu dữ liệu → (2) huấn luyện model học mẫu hình từ dữ liệu → (3) triển khai model → (4) nhận input mới, suy luận (inference) ra output → (5) người dùng phản hồi, dữ liệu mới lại vào vòng huấn luyện. Không có ma thuật — toàn là toán + dữ liệu.",
+      "Cơ chế cốt lõi: model học thống kê từ dữ liệu khổng lồ. Khi bạn hỏi, nó không \"tra Google\" mà tính xác suất output hợp lý nhất từ những gì đã học. Vì thế nó giỏi mẫu hình chung nhưng có thể sai chi tiết."
+    ]
+  },
+  "how_llm_works": {
+    "vi": [
+      "LLM sinh văn bản bằng cách dự đoán token tiếp theo: đọc toàn bộ ngữ cảnh → tính xác suất cho mỗi token có thể → chọn 1 → lặp lại đến hết câu. Hàng tỷ tham số được huấn luyện từ văn bản khổng lồ khiến việc nối từ này ra chữ nghĩa, logic.",
+      "Bóc tách: bạn gõ \"Trời hôm nay\" → model chấm điểm các khả năng → chọn \"nắng\"/\"mưa\" → câu dài dần theo từng token. Nghe đơn giản nhưng quy mô tham số + dữ liệu biến nó thành chat, viết code, dịch."
+    ]
+  },
+  "ai_hallucination": {
+    "vi": [
+      "Hallucination là khi AI bịa ra thông tin sai nhưng nói rất tự tin — do model sinh văn bản theo xác suất, không \"biết\" sự thật. Tránh: yêu cầu dẫn nguồn, đối chiếu dữ liệu thật, dùng RAG để buộc nó trả lời theo tài liệu.",
+      "AI bịa (hallucination) vì bản chất là máy đoán chữ hợp lý chứ không phải tra cứu. Cách phòng: hỏi lại nguồn, cross-check, cho dữ liệu cụ thể vào context. Bot này thì không bịa — không có dữ liệu là nói thẳng không biết."
+    ]
+  },
+  "what_is_machine_learning": {
+    "vi": [
+      "Machine Learning (học máy) là nhánh AI mà máy tự học luật từ dữ liệu, thay vì được lập trình từng quy tắc. Cho nó đủ ví dụ, nó tự rút ra pattern — như người học nghề bằng cách làm nhiều lần.",
+      "ML = học từ dữ liệu. Thay vì viết code 'nếu A thì B', bạn đưa hàng nghìn ví dụ A-B cho máy tự học cách suy ra. AI hiện đại phần lớn dựng trên nền này."
+    ],
+    "en": [
+      "Machine Learning is the branch of AI where the system learns rules from data instead of being programmed rule by rule.",
+      "ML = learning from examples: you feed it thousands of A→B cases and it figures the pattern out itself."
+    ]
+  },
+  "local_ai_without_api": {
+    "vi": [
+      "Được — chạy AI local nghĩa là model chạy ngay trên máy bạn, không cần gọi API bên ngoài, không cần key, không tốn phí theo lượt. Đổi lại bạn cần RAM/VRAM đủ lớn và tốc độ tuỳ máy.",
+      "Chạy local thì không cần API gì cả: tải model về (kiểu Ollama/llama.cpp), chạy trực tiếp trên CPU/GPU của bạn. Riêng tư hoàn toàn — dữ liệu không rời khỏi máy."
+    ],
+    "en": [
+      "Yes — running AI locally means the model runs on your own machine: no external API, no key, no per-request fees.",
+      "Local AI needs no API at all. Download a model (Ollama, llama.cpp) and run it on your own CPU/GPU."
+    ]
+  },
+  "local_ai_setup": {
+    "vi": [
+      "Nhanh nhất: cài Ollama → chạy `ollama run llama3.2` (hoặc model nhỏ hơn máy yếu) → chat ngay trong terminal. Muốn giao diện web thì cài thêm Open WebUI. Máy càng nhiều RAM/VRAM, model càng to càng ngon.",
+      "3 bước: (1) cài Ollama từ ollama.com, (2) gõ `ollama pull` model phù hợp RAM (máy 8GB lấy model 3-4B), (3) `ollama run <model>` để chat. Cần giao diện đẹp thì thêm Open WebUI."
+    ],
+    "en": [
+      "Fastest path: install Ollama, run `ollama run llama3.2`, chat right in the terminal. More RAM/VRAM = bigger, better models.",
+      "3 steps: install Ollama → pull a model that fits your RAM → run it. Add Open WebUI if you want a web interface."
+    ]
+  },
+  "ram_requirements": {
+    "vi": [
+      "Ước lượng: model 7B ~ 8GB RAM (nén Q4), 13B ~ 16GB, 70B ~ 48GB+. Máy 8GB chạy được model 3B-7B dạng quantized là mượt. ít RAM hơn thì lấy model 1-3B.",
+      "Nguyên tắc: RAM cần ≈ số tham số × 0.6-1 byte với model nén Q4. 8GB chạy 7B được, 16GB thoải mái 13B, còn 70B trở lên nên có GPU riêng."
+    ],
+    "en": [
+      "Rule of thumb: a 7B quantized model needs ~8GB RAM, 13B ~16GB, 70B ~48GB+. An 8GB machine runs 3B–7B models well."
+    ]
+  },
+  "ollama": {
+    "vi": [
+      "Ollama là công cụ chạy LLM local trên chính máy bạn — cài xong gõ `ollama run llama3.2` là chat được. Nó lo phần tải model, nén và chạy; bạn không cần API key hay internet sau khi tải.",
+      "Ollama = trình quản lý model local: một lệnh tải model về, một lệnh chạy. Tự động chọn bản nén phù hợp, có API local để cắm vào app khác."
+    ],
+    "en": [
+      "Ollama lets you run LLMs locally: one command downloads a model, another runs it. No API key, no cloud.",
+      "Ollama is a local model manager — it handles downloading, quantizing and serving models on your machine."
+    ]
+  },
+  "llama_cpp": {
+    "vi": [
+      "llama.cpp là engine chạy LLM bằng C++ thuần — nhẹ, chạy được cả trên CPU thường, không cần GPU. Là nền của rất nhiều tool local AI (Ollama cũng dựng trên nó).",
+      "llama.cpp là 'lõi' chạy model local hiệu quả nhất: biên dịch C++, dùng định dạng GGUF, chạy tốt trên CPU, tốn ít RAM nhờ quantization."
+    ],
+    "en": [
+      "llama.cpp is a pure C++ engine that runs LLMs efficiently — even on plain CPUs. It powers many local-AI tools including Ollama."
+    ]
+  },
+  "local_model": {
+    "vi": [
+      "Local model là model AI chạy trên máy bạn (không gửi dữ liệu đi đâu). Ưu điểm: riêng tư, miễn phí sau khi tải, dùng offline. Nhược: chất lượng thường kém hơn model to trên cloud.",
+      "Model local = file model tải về chạy trên máy mình. Bạn sở hữu hẳn nó — không quota, không phí, không ai đọc được nội dung chat."
+    ],
+    "en": [
+      "A local model runs on your machine — private, free after download, works offline, though usually smaller than top cloud models."
+    ]
+  },
+  "quantization": {
+    "vi": [
+      "Quantization là kỹ thuật nén model để tốn ít RAM hơn — ví dụ model 7B từ ~14GB xuống ~4GB (Q4) mà chất lượng giảm không đáng kể. Q4/Q8 là mức nén phổ biến: Q4 nhẹ nhất, Q8 gần nguyên bản.",
+      "Quantization = giảm độ chính xác số học (FP16 → 4-bit/8-bit) để model nhẹ đi 3-4 lần. Đổi lại mất vài % chất lượng. Gần như bắt buộc nếu chạy model lớn trên máy thường."
+    ],
+    "en": [
+      "Quantization compresses a model to use much less RAM (7B: ~14GB → ~4GB at Q4) with minimal quality loss. Q4 = smallest, Q8 = near-original."
+    ]
+  },
+  "gpu_inference": {
+    "vi": [
+      "GPU tính toán song song rất mạnh nên chạy LLM nhanh hơn CPU nhiều lần — đặc biệt khi sinh token. VRAM càng nhiều thì càng chạy được model to. Nếu không có GPU dời, CPU vẫn chạy được với model nhỏ + quantization.",
+      "Muốn nhanh thì chạy bằng GPU: cần VRAM ≥ kích thước model (Q4). 8GB VRAM chạy 7B là ngon. CPU chạy được nhưng chậm — chọn model nhỏ (1-3B) nếu chỉ có CPU."
+    ],
+    "en": [
+      "GPUs massively parallelize LLM inference — much faster than CPU. You need VRAM ≥ model size (Q4): 8GB VRAM handles a 7B model nicely."
+    ]
+  },
+  "local_ai_vs_api": {
+    "vi": [
+      "Local: riêng tư, miễn phí, offline — nhưng model nhỏ hơn, tốc độ tuỳ máy. API: model mạnh nhất, không cần phần cứng — nhưng tốn phí theo token và dữ liệu đi qua bên thứ ba. Chạy thử nội bộ/máy đủ mạnh → local; cần chất lượng tối đa → API.",
+      "Gọn thế này: local thắng về riêng tư + chi phí dài hạn; API thắng về chất lượng model + không cần phần cứng. Nhiều người dùng cả hai — việc nhạy cảm cho local, việc khó cho API."
+    ],
+    "en": [
+      "Local wins on privacy, cost-over-time and offline use; APIs win on model quality and zero hardware. Use both: sensitive stuff local, hard tasks via API."
+    ]
+  }
+}

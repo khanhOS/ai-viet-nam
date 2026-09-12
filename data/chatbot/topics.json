@@ -1,0 +1,13 @@
+[
+  { "id": "general", "name": "Chung", "description": "chào hỏi, cảm ơn, trợ giúp, xem bot là ai" },
+  { "id": "ai", "name": "AI & LLM", "description": "AI, LLM, prompt, RAG, fine-tuning, hallucination..." },
+  { "id": "local_ai", "name": "AI cục bộ", "description": "chạy AI local, Ollama, llama.cpp, RAM/VRAM" },
+  { "id": "programming", "name": "Lập trình", "description": "JavaScript, TypeScript, Python, React, Next.js, Node.js, git, debug..." },
+  { "id": "database", "name": "Database", "description": "SQLite, PostgreSQL, MongoDB, Prisma..." },
+  { "id": "auth", "name": "Xác thực", "description": "đăng nhập, session, JWT, OAuth, phân quyền" },
+  { "id": "webdev", "name": "Web & Deploy", "description": "website tĩnh/động, hosting, domain, deployment" },
+  { "id": "khanhos", "name": "KhanhOS", "description": "tính năng web này, gói dịch vụ, tài khoản owner" },
+  { "id": "computer", "name": "Máy tính", "description": "CPU, GPU, RAM, SSD, Windows, driver..." },
+  { "id": "minecraft", "name": "Minecraft", "description": "server Paper/Spigot, plugin, Geyser, LuckPerms..." },
+  { "id": "cloud", "name": "Cloud & VPS", "description": "VPS, máy ảo, remote desktop, port, firewall" }
+]

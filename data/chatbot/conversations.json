@@ -1,0 +1,74 @@
+[
+  {
+    "id": "conversation_ai_local",
+    "messages": [
+      { "role": "user", "content": "AI là gì?" },
+      { "role": "assistant", "intent": "what_is_ai" },
+      { "role": "user", "content": "thế local AI?" },
+      { "role": "assistant", "intent": "what_is_local_ai" },
+      { "role": "user", "content": "có cần API không?" },
+      { "role": "assistant", "intent": "local_ai_without_api" },
+      { "role": "user", "content": "máy 8gb chạy được không?" },
+      { "role": "assistant", "intent": "ram_requirements" }
+    ]
+  },
+  {
+    "id": "conversation_web_stack",
+    "messages": [
+      { "role": "user", "content": "Next.js là gì?" },
+      { "role": "assistant", "intent": "nextjs" },
+      { "role": "user", "content": "nó dùng database gì?" },
+      { "role": "assistant", "intent": "what_is_database" },
+      { "role": "user", "content": "sqlite là gì?" },
+      { "role": "assistant", "intent": "sqlite" }
+    ]
+  },
+  {
+    "id": "conversation_js_ts",
+    "messages": [
+      { "role": "user", "content": "JS là gì?" },
+      { "role": "assistant", "intent": "javascript" },
+      { "role": "user", "content": "còn typescript?" },
+      { "role": "assistant", "intent": "typescript" },
+      { "role": "user", "content": "giải thích chi tiết hơn" },
+      { "role": "assistant", "intent": "explain_more" }
+    ]
+  },
+  {
+    "id": "conversation_khanhos",
+    "messages": [
+      { "role": "user", "content": "KhanhOS là gì?" },
+      { "role": "assistant", "intent": "what_is_khanhos" },
+      { "role": "user", "content": "web này dùng model gì?" },
+      { "role": "assistant", "intent": "khanhos_models" },
+      { "role": "user", "content": "có những gói nào?" },
+      { "role": "assistant", "intent": "khanhos_plans" },
+      { "role": "user", "content": "nâng cấp kiểu gì?" },
+      { "role": "assistant", "intent": "khanhos_plans" }
+    ]
+  },
+  {
+    "id": "conversation_mc_server",
+    "messages": [
+      { "role": "user", "content": "làm sao chạy minecraft server?" },
+      { "role": "assistant", "intent": "minecraft_server" },
+      { "role": "user", "content": "nên dùng paper hay spigot?" },
+      { "role": "assistant", "intent": "server_software" },
+      { "role": "user", "content": "bạn điện thoại vào được không?" },
+      { "role": "assistant", "intent": "geyser_floodgate" },
+      { "role": "user", "content": "server lag thì sao?" },
+      { "role": "assistant", "intent": "server_performance" }
+    ]
+  },
+  {
+    "id": "conversation_deploy",
+    "messages": [
+      { "role": "user", "content": "deploy là gì?" },
+      { "role": "assistant", "intent": "deployment" },
+      { "role": "user", "content": "cần mua domain không?" },
+      { "role": "assistant", "intent": "domain" },
+      { "role": "user", "content": "host ở đâu rẻ?" },
+      { "role": "assistant", "intent": "hosting" }
+    ]
+  }
+]

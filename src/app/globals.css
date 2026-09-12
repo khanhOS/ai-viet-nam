@@ -1,0 +1,1016 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/* ══════════════════════════════════════════════
+   KHANHOS AI — DESIGN SYSTEM "OBSIDIAN & AURORA"
+   Dark-only premium. Teal aurora accent.
+   ══════════════════════════════════════════════ */
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-body);
+  --font-mono: var(--font-code);
+  --font-display: var(--font-display);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --color-glow: var(--glow);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+:root {
+  --radius: 1rem;
+
+  /* Nền obsidian — tối, hơi lạnh */
+  --background: oklch(0.14 0.006 220);
+  --foreground: oklch(0.93 0.004 220);
+
+  --card: oklch(0.17 0.007 220);
+  --card-foreground: oklch(0.93 0.004 220);
+
+  --popover: oklch(0.16 0.008 220);
+  --popover-foreground: oklch(0.93 0.004 220);
+
+  /* Aurora teal — màu thương hiệu KhanhOS */
+  --primary: oklch(0.78 0.13 172);
+  --primary-foreground: oklch(0.16 0.02 172);
+
+  --secondary: oklch(0.21 0.008 220);
+  --secondary-foreground: oklch(0.88 0.004 220);
+
+  --muted: oklch(0.21 0.008 220);
+  --muted-foreground: oklch(0.62 0.01 220);
+
+  --accent: oklch(0.24 0.02 180);
+  --accent-foreground: oklch(0.93 0.02 172);
+
+  --destructive: oklch(0.65 0.2 20);
+
+  --border: oklch(1 0 0 / 8%);
+  --input: oklch(1 0 0 / 12%);
+  --ring: oklch(0.78 0.13 172 / 55%);
+
+  /* Glow dùng cho orb, focus, hover */
+  --glow: oklch(0.78 0.13 172 / 40%);
+
+  --chart-1: oklch(0.78 0.13 172);
+  --chart-2: oklch(0.7 0.15 160);
+  --chart-3: oklch(0.62 0.12 185);
+  --chart-4: oklch(0.85 0.08 150);
+  --chart-5: oklch(0.9 0.05 140);
+
+  --sidebar: oklch(0.155 0.007 220);
+  --sidebar-foreground: oklch(0.93 0.004 220);
+  --sidebar-primary: oklch(0.78 0.13 172);
+  --sidebar-primary-foreground: oklch(0.16 0.02 172);
+  --sidebar-accent: oklch(0.22 0.012 210);
+  --sidebar-accent-foreground: oklch(0.93 0.004 220);
+  --sidebar-border: oklch(1 0 0 / 7%);
+  --sidebar-ring: oklch(0.78 0.13 172 / 55%);
+}
+
+/* ════════════════════════════════════════════
+   LIGHT THEME — "PORCELAIN & AURORA"
+   Bật khi html có class .light (next-themes).
+   Cùng ngôn ngữ thiết kế: tối giản, thủy tinh mờ,
+   accent teal đậm hơn để giữ độ tương phản.
+   ════════════════════════════════════════════ */
+html.light {
+  --background: oklch(0.975 0.004 180);
+  --foreground: oklch(0.21 0.01 220);
+
+  --card: oklch(0.99 0.002 180);
+  --card-foreground: oklch(0.21 0.01 220);
+
+  --popover: oklch(0.985 0.003 180);
+  --popover-foreground: oklch(0.21 0.01 220);
+
+  /* Teal đậm hơn cho độ tương phản trên nền sáng */
+  --primary: oklch(0.55 0.11 172);
+  --primary-foreground: oklch(0.985 0.02 172);
+
+  --secondary: oklch(0.93 0.006 200);
+  --secondary-foreground: oklch(0.25 0.01 220);
+
+  --muted: oklch(0.93 0.006 200);
+  --muted-foreground: oklch(0.45 0.015 220);
+
+  --accent: oklch(0.9 0.03 180);
+  --accent-foreground: oklch(0.25 0.04 172);
+
+  --destructive: oklch(0.55 0.21 22);
+
+  --border: oklch(0.2 0.01 220 / 12%);
+  --input: oklch(0.2 0.01 220 / 16%);
+  --ring: oklch(0.55 0.11 172 / 45%);
+
+  --glow: oklch(0.55 0.11 172 / 28%);
+
+  --sidebar: oklch(0.965 0.005 185);
+  --sidebar-foreground: oklch(0.21 0.01 220);
+  --sidebar-primary: oklch(0.55 0.11 172);
+  --sidebar-primary-foreground: oklch(0.985 0.02 172);
+  --sidebar-accent: oklch(0.92 0.02 185);
+  --sidebar-accent-foreground: oklch(0.21 0.01 220);
+  --sidebar-border: oklch(0.2 0.01 220 / 10%);
+  --sidebar-ring: oklch(0.55 0.11 172 / 45%);
+}
+
+html.light ::selection {
+  background: oklch(0.55 0.11 172 / 22%);
+  color: oklch(0.25 0.04 172);
+}
+
+@layer base {
+  html.light ::-webkit-scrollbar-thumb {
+    background: oklch(0.6 0.01 220 / 45%);
+    border-radius: 999px;
+    border: 2px solid transparent;
+    background-clip: padding-box;
+  }
+  html.light ::-webkit-scrollbar-thumb:hover {
+    background: oklch(0.45 0.01 220 / 60%);
+    background-clip: padding-box;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  html {
+    scrollbar-gutter: stable;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "cv02", "cv03", "cv04", "ss01";
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  ::selection {
+    background: oklch(0.78 0.13 172 / 30%);
+    color: oklch(0.98 0.01 172);
+  }
+
+  /* Scrollbar mảnh, tinh tế */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: oklch(0.3 0.01 220 / 60%);
+    border-radius: 999px;
+    border: 2px solid transparent;
+    background-clip: padding-box;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: oklch(0.4 0.01 220 / 80%);
+    background-clip: padding-box;
+  }
+}
+
+/* ══════════════════════════════════════════════
+   UTILITIES RIÊNG CỦA KHANHOS
+   ══════════════════════════════════════════════ */
+
+@layer utilities {
+  /* Glass panel — dùng cho composer, modal, menu */
+  .kh-glass {
+    background: oklch(0.18 0.008 220 / 72%);
+    backdrop-filter: blur(16px) saturate(1.4);
+    -webkit-backdrop-filter: blur(16px) saturate(1.4);
+    border: 1px solid oklch(1 0 0 / 8%);
+  }
+
+  html.light .kh-glass {
+    background: oklch(0.985 0.003 180 / 82%);
+    border: 1px solid oklch(0.2 0.01 220 / 10%);
+    box-shadow: 0 1px 24px oklch(0.2 0.01 220 / 5%);
+  }
+
+  .kh-glass-strong {
+    background: oklch(0.16 0.009 220 / 88%);
+    backdrop-filter: blur(24px) saturate(1.5);
+    -webkit-backdrop-filter: blur(24px) saturate(1.5);
+    border: 1px solid oklch(1 0 0 / 10%);
+  }
+
+  html.light .kh-glass-strong {
+    background: oklch(0.995 0.002 180 / 94%);
+    border: 1px solid oklch(0.2 0.01 220 / 12%);
+    box-shadow: 0 2px 32px oklch(0.2 0.01 220 / 8%);
+  }
+
+  /* Viền phát sáng nhẹ */
+  .kh-glow-border {
+    border: 1px solid oklch(0.78 0.13 172 / 35%);
+    box-shadow:
+      0 0 0 1px oklch(0.78 0.13 172 / 12%),
+      0 0 24px oklch(0.78 0.13 172 / 14%);
+  }
+
+  .kh-glow-sm {
+    box-shadow: 0 0 18px oklch(0.78 0.13 172 / 22%);
+  }
+
+  .kh-glow-md {
+    box-shadow:
+      0 0 30px oklch(0.78 0.13 172 / 28%),
+      0 0 80px oklch(0.78 0.13 172 / 12%);
+  }
+
+  /* Text gradient thương hiệu */
+  .kh-text-gradient {
+    background: linear-gradient(
+      120deg,
+      oklch(0.95 0.02 172) 0%,
+      oklch(0.78 0.13 172) 45%,
+      oklch(0.68 0.14 185) 100%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  html.light .kh-text-gradient {
+    background: linear-gradient(
+      120deg,
+      oklch(0.35 0.08 172) 0%,
+      oklch(0.5 0.11 172) 45%,
+      oklch(0.42 0.1 195) 100%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  /* Nút tròn kính ở góc trái */
+  .kh-icon-btn {
+    @apply inline-flex items-center justify-center rounded-full h-10 w-10;
+    color: oklch(0.75 0.01 220);
+    background: oklch(1 0 0 / 4%);
+    border: 1px solid oklch(1 0 0 / 8%);
+    backdrop-filter: blur(8px);
+    transition:
+      transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1),
+      box-shadow 0.25s ease,
+      background 0.25s ease,
+      color 0.25s ease;
+  }
+  html.light .kh-icon-btn {
+    color: oklch(0.4 0.01 220);
+    background: oklch(1 0 0 / 70%);
+    border: 1px solid oklch(0.2 0.01 220 / 12%);
+  }
+  .kh-icon-btn:hover {
+    transform: scale(1.08);
+    background: oklch(0.78 0.13 172 / 12%);
+    border-color: oklch(0.78 0.13 172 / 30%);
+    color: oklch(0.85 0.1 172);
+    box-shadow: 0 0 16px oklch(0.78 0.13 172 / 25%);
+  }
+  html.light .kh-icon-btn:hover {
+    background: oklch(0.55 0.11 172 / 10%);
+    border-color: oklch(0.55 0.11 172 / 35%);
+    color: oklch(0.45 0.09 172);
+    box-shadow: 0 0 16px oklch(0.55 0.11 172 / 20%);
+  }
+  .kh-icon-btn:active {
+    transform: scale(0.96);
+  }
+}
+
+/* ══════════════════════════════════════════════
+   ANIMATIONS
+   ══════════════════════════════════════════════ */
+
+@keyframes kh-float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+@keyframes kh-pulse-glow {
+  0%,
+  100% {
+    opacity: 0.55;
+    filter: blur(0px);
+  }
+  50% {
+    opacity: 0.9;
+    filter: blur(1px);
+  }
+}
+
+@keyframes kh-blink {
+  0%,
+  49% {
+    opacity: 1;
+  }
+  50%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes kh-shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+@keyframes kh-aurora-drift {
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.5;
+  }
+  33% {
+    transform: translate(4%, -6%) scale(1.08);
+    opacity: 0.7;
+  }
+  66% {
+    transform: translate(-5%, 4%) scale(0.95);
+    opacity: 0.4;
+  }
+}
+
+.kh-anim-float {
+  animation: kh-float 7s ease-in-out infinite;
+}
+.kh-anim-pulse-glow {
+  animation: kh-pulse-glow 4.5s ease-in-out infinite;
+}
+.kh-anim-aurora {
+  animation: kh-aurora-drift 24s ease-in-out infinite;
+}
+
+/* ══════════════════════════════════════════════
+   EFFECTS LAYER (trang chính)
+   ══════════════════════════════════════════════ */
+
+/* ── Shimmer chữ — gradient trôi qua wordmark ── */
+.kh-anim-shimmer-text {
+  background-size: 220% 100%;
+  animation: kh-shimmer-pan 5.5s ease-in-out infinite alternate;
+}
+@keyframes kh-shimmer-pan {
+  0% {
+    background-position: 0% 0;
+  }
+  100% {
+    background-position: 100% 0;
+  }
+}
+
+/* ── Tia sáng chéo bắn ngang màn hình ── */
+.kh-beam {
+  position: absolute;
+  width: 30vw;
+  min-width: 220px;
+  height: 1px;
+  border-radius: 999px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    oklch(0.85 0.13 172 / 55%),
+    transparent
+  );
+  filter: blur(0.5px);
+  opacity: 0;
+  animation: kh-beam-shoot var(--kh-beam-dur, 13s) linear infinite;
+  animation-delay: var(--kh-beam-delay, 0s);
+  will-change: transform, opacity;
+}
+html.light .kh-beam {
+  background: linear-gradient(
+    90deg,
+    transparent,
+    oklch(0.5 0.11 172 / 42%),
+    transparent
+  );
+}
+@keyframes kh-beam-shoot {
+  0% {
+    transform: translate3d(10vw, -6vh, 0) rotate(14deg);
+    opacity: 0;
+  }
+  3% {
+    opacity: 0.9;
+  }
+  16% {
+    transform: translate3d(-130vw, 28vh, 0) rotate(14deg);
+    opacity: 0;
+  }
+  100% {
+    transform: translate3d(-130vw, 28vh, 0) rotate(14deg);
+    opacity: 0;
+  }
+}
+
+/* ── Spotlight bám chuột ── */
+.kh-spotlight {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 34rem;
+  height: 34rem;
+  margin-left: -17rem;
+  margin-top: -17rem;
+  border-radius: 9999px;
+  background: radial-gradient(
+    closest-side,
+    oklch(0.78 0.13 172 / 9%),
+    transparent 70%
+  );
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  pointer-events: none;
+  will-change: transform;
+  z-index: 30;
+}
+html.light .kh-spotlight {
+  background: radial-gradient(
+    closest-side,
+    oklch(0.55 0.11 172 / 7%),
+    transparent 70%
+  );
+}
+
+/* ── Grain film (nhiễu cinema, cực nhẹ) ── */
+.kh-grain {
+  position: fixed;
+  inset: -60px;
+  z-index: 40;
+  pointer-events: none;
+  opacity: 0.05;
+}
+.kh-grain::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  animation: kh-grain-shift 0.9s steps(3) infinite;
+}
+@keyframes kh-grain-shift {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  33% {
+    transform: translate3d(-12px, 8px, 0);
+  }
+  66% {
+    transform: translate3d(10px, -6px, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+/* ── Card glow bám theo chuột ── */
+.kh-card-glow {
+  position: relative;
+}
+.kh-card-glow::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: radial-gradient(
+    260px circle at var(--mx, 50%) var(--my, 50%),
+    oklch(0.78 0.13 172 / 14%),
+    transparent 68%
+  );
+  opacity: 0;
+  transition: opacity 0.35s ease;
+  pointer-events: none;
+}
+.kh-card-glow:hover::before {
+  opacity: 1;
+}
+html.light .kh-card-glow::before {
+  background: radial-gradient(
+    260px circle at var(--mx, 50%) var(--my, 50%),
+    oklch(0.5 0.11 172 / 11%),
+    transparent 68%
+  );
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .kh-anim-shimmer-text {
+    animation: none;
+    background-size: 100% 100%;
+  }
+  .kh-beam,
+  .kh-grain,
+  .kh-spotlight {
+    display: none;
+  }
+  .kh-card-glow::before {
+    transition: none;
+  }
+  .kh-grain::before {
+    animation: none;
+  }
+}
+
+/* Con trỏ nhấp nháy khi AI đang stream */
+.kh-stream-cursor::after {
+  content: "▍";
+  margin-left: 1px;
+  color: oklch(0.78 0.13 172);
+  animation: kh-blink 1s steps(1) infinite;
+}
+
+/* Markdown nội dung chat */
+.kh-markdown {
+  line-height: 1.72;
+  word-break: break-word;
+}
+.kh-markdown > *:first-child {
+  margin-top: 0;
+}
+.kh-markdown > *:last-child {
+  margin-bottom: 0;
+}
+.kh-markdown p {
+  margin: 0.6em 0;
+}
+.kh-markdown h1,
+.kh-markdown h2,
+.kh-markdown h3,
+.kh-markdown h4 {
+  font-weight: 650;
+  margin: 1.2em 0 0.5em;
+  letter-spacing: -0.01em;
+}
+.kh-markdown h1 {
+  font-size: 1.35em;
+}
+.kh-markdown h2 {
+  font-size: 1.2em;
+}
+.kh-markdown h3 {
+  font-size: 1.08em;
+}
+.kh-markdown ul,
+.kh-markdown ol {
+  margin: 0.6em 0;
+  padding-left: 1.4em;
+}
+.kh-markdown ul {
+  list-style: disc;
+}
+.kh-markdown ol {
+  list-style: decimal;
+}
+.kh-markdown li {
+  margin: 0.28em 0;
+}
+.kh-markdown li::marker {
+  color: oklch(0.78 0.13 172 / 70%);
+}
+.kh-markdown a {
+  color: oklch(0.82 0.1 172);
+  text-decoration: underline;
+  text-decoration-color: oklch(0.78 0.13 172 / 40%);
+  text-underline-offset: 3px;
+  transition: text-decoration-color 0.2s ease;
+}
+.kh-markdown a:hover {
+  text-decoration-color: oklch(0.78 0.13 172);
+}
+.kh-markdown blockquote {
+  border-left: 2px solid oklch(0.78 0.13 172 / 50%);
+  padding-left: 1em;
+  margin: 0.8em 0;
+  color: oklch(0.7 0.01 220);
+}
+html.light .kh-markdown blockquote {
+  color: oklch(0.42 0.012 220);
+}
+.kh-markdown table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1em 0;
+  font-size: 0.92em;
+}
+.kh-markdown th,
+.kh-markdown td {
+  border: 1px solid oklch(1 0 0 / 10%);
+  padding: 0.5em 0.75em;
+  text-align: left;
+}
+html.light .kh-markdown th,
+html.light .kh-markdown td {
+  border: 1px solid oklch(0.2 0.01 220 / 14%);
+}
+.kh-markdown th {
+  background: oklch(1 0 0 / 5%);
+  font-weight: 600;
+}
+html.light .kh-markdown th {
+  background: oklch(0.2 0.01 220 / 5%);
+}
+.kh-markdown code:not(pre code) {
+  font-family: var(--font-code);
+  font-size: 0.88em;
+  background: oklch(0.78 0.13 172 / 12%);
+  color: oklch(0.85 0.08 172);
+  padding: 0.15em 0.45em;
+  border-radius: 0.375rem;
+  border: 1px solid oklch(0.78 0.13 172 / 15%);
+}
+html.light .kh-markdown code:not(pre code) {
+  background: oklch(0.55 0.11 172 / 10%);
+  color: oklch(0.4 0.08 172);
+  border: 1px solid oklch(0.55 0.11 172 / 20%);
+}
+.kh-markdown hr {
+  border: none;
+  height: 1px;
+  background: oklch(1 0 0 / 10%);
+  margin: 1.5em 0;
+}
+html.light .kh-markdown hr {
+  background: oklch(0.2 0.01 220 / 12%);
+}
+.kh-markdown pre {
+  margin: 0;
+}
+.kh-markdown strong {
+  color: oklch(0.96 0.01 220);
+  font-weight: 650;
+}
+html.light .kh-markdown strong {
+  color: oklch(0.15 0.01 220);
+}
+
+/* ══════════════════════════════════════════════
+   PREFERS-REDUCED-MOTION — tắt animation không cần thiết
+   ══════════════════════════════════════════════ */
+
+@media (prefers-reduced-motion: reduce) {
+  .kh-anim-float,
+  .kh-anim-pulse-glow,
+  .kh-anim-aurora {
+    animation: none !important;
+  }
+  .kh-stream-cursor::after {
+    animation: none !important;
+    opacity: 0.7;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   IRON FORGE — fitness studio brand sections (namespace .fx-)
+   Đen thuần + cam neon + bạc kim loại. Đậm chất industrial.
+   ═══════════════════════════════════════════════════════════════ */
+
+.fx-root {
+  --fx-orange: #ff5c1a;
+  --fx-orange-soft: rgba(255, 92, 26, 0.14);
+  --fx-silver: #c9ccd1;
+  --fx-ink: #050505;
+  --fx-panel: #0d0d0e;
+  --fx-line: rgba(255, 255, 255, 0.09);
+  --fx-line-strong: rgba(255, 255, 255, 0.16);
+  color: #e8e8ea;
+  background: var(--fx-ink);
+}
+
+/* ── Grain texture (film noise + parallax drift) ── */
+.fx-grain {
+  position: fixed;
+  inset: -60px;
+  z-index: 30;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.8s ease;
+  will-change: transform;
+}
+.fx-grain.fx-grain-on {
+  opacity: 0.085;
+}
+.fx-grain::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  animation: fx-grain-shift 0.9s steps(3) infinite;
+}
+@keyframes fx-grain-shift {
+  0% { transform: translate3d(0, 0, 0); }
+  33% { transform: translate3d(-14px, 9px, 0); }
+  66% { transform: translate3d(11px, -7px, 0); }
+  100% { transform: translate3d(0, 0, 0); }
+}
+
+/* ── Scroll reveal: staggered fade + upward translate ── */
+.fx-reveal {
+  opacity: 0;
+  transform: translateY(26px);
+  transition:
+    opacity 0.75s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.75s cubic-bezier(0.22, 1, 0.36, 1);
+  transition-delay: var(--fx-d, 0ms);
+}
+.fx-reveal.fx-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── Hero reel: Ken Burns slow-motion ── */
+.fx-reel-layer {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: opacity 1.8s ease;
+}
+.fx-reel-layer.fx-active {
+  opacity: 1;
+  z-index: 1;
+}
+.fx-reel-layer img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(1) contrast(1.18) brightness(0.62);
+}
+.fx-reel-layer.fx-active img {
+  animation: fx-kenburns 17s ease-in-out forwards;
+}
+@keyframes fx-kenburns {
+  from { transform: scale(1.02) translate3d(0, 0, 0); }
+  to { transform: scale(1.16) translate3d(-1.5%, -2%, 0); }
+}
+
+/* Vệt quét sáng kim loại mảnh */
+.fx-reel::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  background:
+    radial-gradient(120% 90% at 50% 10%, transparent 40%, rgba(0, 0, 0, 0.55) 100%),
+    linear-gradient(to top, var(--fx-ink) 0%, rgba(5, 5, 5, 0.25) 34%, transparent 62%);
+}
+
+/* ── Nút bật/tắt âm thanh reel ── */
+.fx-sound-btn {
+  position: absolute;
+  right: max(1rem, env(safe-area-inset-right));
+  bottom: max(1rem, env(safe-area-inset-bottom));
+  z-index: 4;
+}
+.fx-sound-btn .fx-ring {
+  position: absolute;
+  inset: 0;
+  border-radius: 9999px;
+  border: 1px solid var(--fx-orange);
+  animation: fx-ring-pulse 2.4s ease-out infinite;
+}
+@keyframes fx-ring-pulse {
+  0% { transform: scale(1); opacity: 0.7; }
+  70% { transform: scale(1.55); opacity: 0; }
+  100% { transform: scale(1.55); opacity: 0; }
+}
+
+/* ── Coach card flip 3D ── */
+.fx-flip {
+  perspective: 1400px;
+}
+.fx-flip-inner {
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.72s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.fx-flip:hover .fx-flip-inner,
+.fx-flip:focus-visible .fx-flip-inner,
+.fx-flip.fx-flipped .fx-flip-inner {
+  transform: rotateY(180deg);
+}
+.fx-flip-face {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+.fx-flip-back {
+  position: absolute;
+  inset: 0;
+  transform: rotateY(180deg);
+}
+
+/* ── CTA pulse nhẹ ── */
+.fx-cta-pulse {
+  animation: fx-cta-pulse 2.6s ease-in-out infinite;
+}
+@keyframes fx-cta-pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(255, 92, 26, 0.45); }
+  50% { box-shadow: 0 0 0 12px rgba(255, 92, 26, 0); }
+}
+
+/* ── Sticky bottom bar ── */
+.fx-sticky-cta {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 40;
+  transform: translateY(110%);
+  transition: transform 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.fx-sticky-cta.fx-sticky-on {
+  transform: translateY(0);
+}
+
+/* ── Marquee dải chữ chạy (brand strip) ── */
+.fx-marquee-track {
+  display: flex;
+  width: max-content;
+  animation: fx-marquee 26s linear infinite;
+}
+@keyframes fx-marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+/* ── Chi tiết chung ── */
+.fx-photo {
+  filter: grayscale(1) contrast(1.15) brightness(0.85);
+  transition: filter 0.5s ease, transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.fx-card:hover .fx-photo {
+  filter: grayscale(1) contrast(1.28) brightness(0.98);
+  transform: scale(1.045);
+}
+.fx-card {
+  transition: border-color 0.4s ease, box-shadow 0.4s ease, transform 0.4s ease;
+}
+.fx-card:hover {
+  border-color: rgba(255, 92, 26, 0.55);
+  box-shadow: 0 0 0 1px rgba(255, 92, 26, 0.25), 0 18px 50px -18px rgba(255, 92, 26, 0.25);
+  transform: translateY(-4px);
+}
+.fx-heading {
+  letter-spacing: -0.02em;
+  line-height: 0.95;
+}
+.fx-kicker {
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+}
+.fx-divider-notch {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 12px 100%, 0 calc(100% - 12px));
+}
+
+/* ── Stories carousel: con trỏ kéo ── */
+.fx-carousel {
+  cursor: grab;
+  touch-action: pan-y;
+}
+.fx-carousel:active {
+  cursor: grabbing;
+}
+
+/* ── Reduced motion cho toàn bộ fx- ── */
+@media (prefers-reduced-motion: reduce) {
+  .fx-reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  .fx-reel-layer.fx-active img,
+  .fx-grain::before,
+  .fx-marquee-track,
+  .fx-cta-pulse,
+  .fx-sound-btn .fx-ring {
+    animation: none !important;
+  }
+  .fx-grain.fx-grain-on {
+    opacity: 0.05;
+  }
+  .fx-flip-inner,
+  .fx-sticky-cta {
+    transition: none;
+  }
+}
+
+/* ═══════════════════════════════════════════════════════
+   AUTH & MODAL — animation mượt (buttery)
+   Dùng thuộc tính `scale` riêng (không đụng transform/
+   translate của tailwind) → compose với căn giữa modal.
+   ═══════════════════════════════════════════════════════ */
+@keyframes kh-modal-in {
+  from {
+    opacity: 0;
+    scale: 0.945;
+    filter: blur(5px);
+  }
+  55% {
+    filter: blur(0px);
+  }
+  to {
+    opacity: 1;
+    scale: 1;
+    filter: blur(0px);
+  }
+}
+@keyframes kh-modal-out {
+  from {
+    opacity: 1;
+    scale: 1;
+    filter: blur(0px);
+  }
+  to {
+    opacity: 0;
+    scale: 0.96;
+    filter: blur(3px);
+  }
+}
+[data-slot="dialog-content"][data-state="open"] {
+  animation: kh-modal-in 380ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+[data-slot="dialog-content"][data-state="closed"] {
+  animation: kh-modal-out 190ms cubic-bezier(0.55, 0, 1, 0.45) both;
+}
+
+/* Rung khi lỗi — replay bằng key React */
+@keyframes kh-shake {
+  0%, 100% { translate: 0 0; }
+  15% { translate: -7px 0; }
+  32% { translate: 6px 0; }
+  49% { translate: -4px 0; }
+  66% { translate: 3px 0; }
+  83% { translate: -1px 0; }
+}
+.kh-shake {
+  animation: kh-shake 420ms cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+}
+
+/* Viền input lỗi nhấp nháy đỏ nhẹ */
+@keyframes kh-err-border {
+  0%, 100% { border-color: color-mix(in oklab, oklch(0.62 0.22 25) 28%, transparent); }
+  50% { border-color: color-mix(in oklab, oklch(0.62 0.22 25) 65%, transparent); }
+}
+.kh-err-pulse {
+  animation: kh-err-border 1.1s ease-in-out 2;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [data-slot="dialog-content"][data-state="open"],
+  [data-slot="dialog-content"][data-state="closed"],
+  .kh-shake,
+  .kh-err-pulse {
+    animation: none !important;
+  }
+}

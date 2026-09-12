@@ -1,0 +1,86 @@
+{
+  "what_is_database": {
+    "vi": [
+      "Database (cơ sở dữ liệu) là nơi lưu trữ và quản lý dữ liệu có tổ chức của ứng dụng: bảng, dòng, cột, quan hệ. Website AI thường dùng database để lưu tài khoản, lịch sử hội thoại, cài đặt người dùng — như web này dùng Prisma + SQLite.",
+      "Database là \"kho dữ liệu có kỷ luật\": ghi ra đúng schema, truy vấn được bằng ngôn ngữ có cấu trúc (SQL), hỗ trợ quan hệ giữa các bảng (user → hội thoại → tin nhắn), có ràng buộc nên dữ liệu khó hỏng. Khác JSON file: nhiều người ghi đồng thời vẫn ổn, truy vấn phức tạp nhanh."
+    ],
+    "en": [
+      "A database stores and manages an application's structured data — accounts, chat history, settings. This site uses Prisma + SQLite."
+    ]
+  },
+  "sqlite": {
+    "vi": [
+      "SQLite là database gọn nhất thế giới: TOÀN BỘ nằm trong 1 file .db, không cần cài server riêng, không cấu hình — ứng dụng nhúng thẳng. Phù hợp: app nhỏ/vừa, phát triển local, thiết bị nhúng. Hạn chế: nhiều người ghi đồng thời lớn thì kém. Web KhanhOS đang dùng SQLite (file db/custom.db).",
+      "SQLite = database 0 công cài đặt: 1 file cho tất cả. Dev gần như luôn bắt đầu bằng SQLite rồi scale sang Postgres khi cần. Quan trọng: SQLite là database THẬT — có transaction, index, SQL đầy đủ, chỉ khác kiến trúc (nhúng, không server)."
+    ]
+  },
+  "postgresql": {
+    "vi": [
+      "PostgreSQL là database mã nguồn mở mạnh nhất dòng quan hệ: chuẩn SQL cao, JSON hỗ trợ tốt, extension phong phú (PostGIS cho bản đồ, pgvector cho AI). Chạy client-server riêng — hợp ứng dụng thật, nhiều người dùng đồng thời. Lựa chọn mặc định khi vượt qua quy mô SQLite.",
+      "Postgres là \"xe tải\" của database quan hệ: đáng tin, đúng chuẩn, mở rộng được type riêng, full-text search, thậm chí vector search cho AI. Miễn phí 100%. Khi web của bạn có thật nhiều user ghi dữ liệu cùng lúc — đó là lúc chuyển từ SQLite sang Postgres."
+    ]
+  },
+  "mysql": {
+    "vi": [
+      "MySQL là database quan hệ phổ biến bậc nhất (thuộc Oracle): nhanh, ổn định, đi kèm mọi hosting. WordPress, Facebook thuở đầu dùng MySQL. So với Postgres: MySQL đơn giản hơn với nhu cầu web cơ bản, Postgres mạnh hơn về tính năng nâng cao (JSONB, extension).",
+      "MySQL = lựa chọn truyền thống cho web LAMP: phổ biến, tài liệu đầy đủ, host nào cũng có. Còn chọn mới hiện nay thiên về Postgres hơn vì chuẩn SQL và hệ sinh thái AI (pgvector). Cả hai đều tuyệt cho 95% dự án."
+    ]
+  },
+  "mongodb": {
+    "vi": [
+      "MongoDB là database NoSQL dạng document: lưu JSON-like (BSON) không cần schema cứng — thêm field không phải migrate. Hợp dữ liệu biến động, prototype nhanh. Không phải vô hạn tốt hơn SQL: quan hệ phức tạp, giao dịch nhiều bảng vẫn là thế mạnh của SQL.",
+      "Mongo lưu \"document\" như JSON: 1 bản ghi tự chứa hết thông tin, không cần JOIN nhiều bảng. NoSQL = linh hoạt schema. Dùng khi: cấu trúc dữ liệu lỏng, cần scale ghi lớn, dữ liệu dạng tài liệu. SQL thắng khi: dữ liệu quan hệ chặt, cần transaction chuẩn."
+    ]
+  },
+  "prisma": {
+    "vi": [
+      "Prisma là ORM (Object-Relational Mapping) cho Node/TypeScript: khai báo schema ở file `schema.prisma` → tự sinh client có type an toàn → query database bằng code JS thay vì viết SQL tay. Hỗ trợ SQLite/Postgres/MySQL/MongoDB. Web này dùng Prisma: schema User/Session/Conversation/Message.",
+      "ORM là lớp trung gian giữa code và database: bạn thao tác với object (user.save()), ORM dịch ra SQL. Prisma nổi bật vì: type-safe hoàn toàn, migration quản lý được, và query engine hiệu quả. Lợi ích so với SQL tay: ít lỗi cú pháp, đổi database đỡ đau."
+    ]
+  },
+  "database_backup": {
+    "vi": [
+      "Backup database tùy loại:\n- SQLite: copy file .db khi app đang nghỉ (hoặc dùng VACUUM INTO)\n- Postgres: `pg_dump -U user dbname > backup.sql` (restore: psql < backup.sql)\n- MySQL: `mysqldump -u user -p dbname > backup.sql`\nNguyên tắc: backup tự động định kỳ + giữ bản xa máy chủ + THỬ restore định kỳ — backup chưa restore được là chưa có backup.",
+      "Luôn backup trước khi migrate schema hoặc deploy lớn. Lên lịch: hằng ngày cho dữ liệu quan trọng, kiểm tra kích thước file backup (file 0 byte = thảm họa), và lưu ít nhất 1 bản ở nơi khác (S3, máy khác)."
+    ]
+  },
+  "authentication": {
+    "vi": [
+      "Authentication (xác thực) là trả lời \"BẠN LÀ AI\": kiểm tra email+mật khẩu, rồi cấp chứng nhận (session cookie hoặc token) cho các request sau. Khác Authorization (phân quyền) — \"bạn được làm gì\". Hai cái đi kèm: login là authn, admin-only là authz.",
+      "Authn = chứng minh danh tính (mật khẩu, OTP, OAuth Google). Ứng dụng web: user nhập thông tin → server xác minh → phát session/token → client đính kèm trong request tiếp theo. Web này: session cookie httpOnly + hash SHA-256 lưu server."
+    ]
+  },
+  "session_login": {
+    "vi": [
+      "Session đăng nhập hoạt động thế này: (1) bạn nhập email+mật khẩu → (2) server xác minh → (3) sinh token ngẫu nhiên, lưu bản hash ở DB, gửi bản gốc về cookie httpOnly → (4) mỗi request sau, browser tự đính kèm cookie, server tra hash là biết đúng bạn. Logout = xoá session ở DB + cookie.",
+      "Cookie httpOnly là cookie JS KHÔNG đọc được — chỉ server gửi/đọc, chống XSS đánh cắp. Session lưu SERVER-side nên muốn thu hồi thì xoá ở DB là xong ngay. Đây cũng là mô hình web này đang dùng (kèm thời hạn + rate limit)."
+    ]
+  },
+  "password_security": {
+    "vi": [
+      "ĐÚNG cách lưu mật khẩu: KHÔNG BAO GIỜ lưu plaintext. Dùng hash chậm có salt — bcrypt, scrypt, argon2 (không phải MD5/SHA1 — nhanh quá dễ dò vét). Mỗi user một salt riêng. Xác minh = hash lại rồi so. Web này dùng scrypt (N=16384) + salt ngẫu nhiên mỗi user.",
+      "Hash chậm + salt là tổ hợp vàng: kẻ tấn công bị database cũng phải dò từng mật khẩu một với hàm cố tình chậm, salt khiến không dùng bảng cầu vồng chung. Thêm nữa: rate limit login, không tiết lộ \"email không tồn tại\" (tránh dò danh sách)."
+    ]
+  },
+  "jwt": {
+    "vi": [
+      "JWT (JSON Web Token) là chuỗi chữ ký số mang thông tin: header.payload.signature. Server ký payload, client giữ token và đính kèm mỗi request; server chỉ cần xác CHỮ KÝ (không cần tra DB) — nên hợp hệ phân tán, mobile. Đổi lại: khó thu hồi ngay (token còn hạn là còn dùng được) — phải có blacklist hoặc hạn ngắn.",
+      "JWT vs Session: session lưu server (đỡ lo thu hồi, cần truy cập DB), JWT tự chứa thông tin (không cần tra cứu, nhưng thu hồi khó). Chat web thường session cookie an toàn hơn; API mobile/3rd-party thường JWT thuận hơn."
+    ]
+  },
+  "roles_owner": {
+    "vi": [
+      "Phân quyền (authorization) quyết định \"bạn được làm gì\" sau khi đã biết bạn là ai. Cách phổ biến: gán role cho user (user, owner, admin...) rồi chặn ở từng route: chỉ owner duyệt nâng cấp gói, user thường chỉ chat. Web KhanhOS dùng 2 role: user và owner (chủ sở hữu, vô hạn mức dùng, duyệt yêu cầu).",
+      "RBAC (Role-Based Access Control): thay vì gán quyền cho từng người, gán cho role rồi gán role cho người — quản lý được quy mô. Luôn kiểm tra quyền Ở SERVER (route/API), không tin gì từ client — client chỉ là giao diện."
+    ]
+  },
+  "oauth": {
+    "vi": [
+      "OAuth là bộ chuẩn cho phép app xin quyền truy cập tài khoản của bạn mà KHÔNG cần lấy mật khẩu — kiểu 'Đăng nhập bằng Google'. Bạn xác nhận trên trang Google, app chỉ nhận token quyền hạn chế.",
+      "OAuth = đăng nhập ủy quyền: bấm 'Đăng nhập bằng Google/Facebook', bên đó xác nhận bạn là ai rồi cấp cho app một token giới hạn quyền. Mật khẩu của bạn không bao giờ đến tay app."
+    ],
+    "en": [
+      "OAuth is the standard for granting an app limited access to your account without handing over your password — the 'Sign in with Google' flow."
+    ]
+  }
+}

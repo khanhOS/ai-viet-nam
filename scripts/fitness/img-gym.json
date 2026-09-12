@@ -1,0 +1,44 @@
+{
+  "success": true,
+  "query": "dark gym interior dumbbells weight equipment moody black and white",
+  "count": 5,
+  "ranked": false,
+  "captioned_count": 0,
+  "results": [
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/671d7b698f8f.jpg",
+      "caption": "",
+      "source": "Dreamstime.com",
+      "original_width": "1600px",
+      "original_height": "1690px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/90c1d95aed88.jpg",
+      "caption": "",
+      "source": "Pinterest",
+      "original_width": "675px",
+      "original_height": "1200px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/f090396f82e1.jpg",
+      "caption": "",
+      "source": "Alamy",
+      "original_width": "1300px",
+      "original_height": "956px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/036bc277d06c.jpg",
+      "caption": "",
+      "source": "Pinterest",
+      "original_width": "736px",
+      "original_height": "1104px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/99de88f6624c.jpg",
+      "caption": "",
+      "source": "Andor Willow",
+      "original_width": "1080px",
+      "original_height": "1080px"
+    }
+  ]
+}

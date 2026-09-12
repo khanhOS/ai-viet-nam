@@ -1,0 +1,44 @@
+{
+  "success": true,
+  "query": "black and white woman dumbbell workout fitness motivation high contrast",
+  "count": 5,
+  "ranked": false,
+  "captioned_count": 0,
+  "results": [
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/82cbf05cbd24.jpg",
+      "caption": "",
+      "source": "Alamy",
+      "original_width": "1300px",
+      "original_height": "956px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/80b06a19c5c8.jpeg",
+      "caption": "",
+      "source": "Pexels",
+      "original_width": "2801px",
+      "original_height": "4000px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/c36d50b44f8c.jpg",
+      "caption": "",
+      "source": "Alamy",
+      "original_width": "1300px",
+      "original_height": "1017px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/a228bc77cb2b.jpg",
+      "caption": "",
+      "source": "Women's Health",
+      "original_width": "1100px",
+      "original_height": "1100px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/0d1b9a303897.jpg",
+      "caption": "",
+      "source": "Julie Lohre",
+      "original_width": "2080px",
+      "original_height": "1170px"
+    }
+  ]
+}

@@ -1,0 +1,533 @@
+[
+  {
+    "id": "greeting",
+    "description": "Chào hỏi, mở đầu hội thoại",
+    "topic": "general",
+    "patterns": [
+      "xin chào",
+      "chào bạn",
+      "chào",
+      "hello",
+      "hi",
+      "hey",
+      "alo",
+      "ê alo",
+      "yo",
+      "hê lô",
+      "chào bot",
+      "hello bot",
+      "hi bot",
+      "chào buổi sáng",
+      "chào buổi tối",
+      "good morning",
+      "good evening",
+      "sup",
+      "xin chào nhé"
+    ],
+    "keywords": [
+      "chào",
+      "hello",
+      "alo",
+      "chao"
+    ],
+    "aliases": [
+      "hi",
+      "hey",
+      "yo"
+    ],
+    "examples": [
+      "Xin chào!",
+      "hello",
+      "alo",
+      "ê bot ơi",
+      "hê lô, có ai không"
+    ],
+    "related_intents": [
+      "how_are_you",
+      "identity",
+      "help"
+    ],
+    "response_id": "greeting",
+    "confidence_threshold": 0.55
+  },
+  {
+    "id": "goodbye",
+    "description": "Chào tạm biệt, kết thúc",
+    "topic": "general",
+    "patterns": [
+      "tạm biệt",
+      "bye",
+      "goodbye",
+      "bai bai",
+      "see you",
+      "ngủ ngon",
+      "tạm biệt bot",
+      "bye bot",
+      "gặp lại sau",
+      "đi đây",
+      "thôi mình đi đây"
+    ],
+    "keywords": [
+      "tạm biệt",
+      "bye",
+      "goodbye",
+      "ngủ ngon"
+    ],
+    "aliases": [
+      "bb",
+      "bibi"
+    ],
+    "examples": [
+      "Tạm biệt nhé",
+      "bye bye",
+      "ngủ ngon nha",
+      "gặp lại sau"
+    ],
+    "related_intents": [
+      "greeting"
+    ],
+    "response_id": "goodbye",
+    "confidence_threshold": 0.55
+  },
+  {
+    "id": "thanks",
+    "description": "Cảm ơn",
+    "topic": "general",
+    "patterns": [
+      "cảm ơn",
+      "cảm ơn nhé",
+      "cảm ơn nha",
+      "cảm ơn bot",
+      "thanks",
+      "thank you",
+      "tks",
+      "thank you so much",
+      "cảm ơn nhiều",
+      "quá tuyệt"
+    ],
+    "keywords": [
+      "cảm ơn",
+      "thanks",
+      "thank you",
+      "tks"
+    ],
+    "aliases": [
+      "tks",
+      "thank"
+    ],
+    "examples": [
+      "Cảm ơn nhé!",
+      "thanks bot",
+      "thank you so much",
+      "cảm ơn nhiều nha"
+    ],
+    "related_intents": [
+      "greeting"
+    ],
+    "response_id": "thanks"
+  },
+  {
+    "id": "apology",
+    "description": "Xin lỗi",
+    "topic": "general",
+    "patterns": [
+      "xin lỗi",
+      "sorry",
+      "xin lỗi bot",
+      "lỗi của mình",
+      "mình sai rồi"
+    ],
+    "keywords": [
+      "xin lỗi",
+      "sorry"
+    ],
+    "aliases": [
+      "sry"
+    ],
+    "examples": [
+      "Xin lỗi nha",
+      "sorry nhé",
+      "mình nhầm"
+    ],
+    "related_intents": [
+      "thanks"
+    ],
+    "response_id": "apology"
+  },
+  {
+    "id": "yes",
+    "description": "Đồng ý / xác nhận",
+    "topic": "general",
+    "patterns": [
+      "đúng rồi",
+      "đúng vậy",
+      "ừ đúng",
+      "ok rồi",
+      "được đó",
+      "yes",
+      "yeah",
+      "chính xác",
+      "đúng luôn"
+    ],
+    "keywords": [
+      "đúng rồi",
+      "chính xác",
+      "đúng vậy"
+    ],
+    "aliases": [
+      "yep",
+      "yeah"
+    ],
+    "examples": [
+      "Đúng rồi",
+      "ok",
+      "yes",
+      "chính xác luôn"
+    ],
+    "related_intents": [
+      "no"
+    ],
+    "response_id": "yes",
+    "confidence_threshold": 0.6
+  },
+  {
+    "id": "no",
+    "description": "Từ chối / phủ nhận",
+    "topic": "general",
+    "patterns": [
+      "không phải",
+      "sai rồi",
+      "không đúng",
+      "nope",
+      "đừng",
+      "thôi khỏi"
+    ],
+    "keywords": [
+      "sai rồi",
+      "không phải",
+      "nope"
+    ],
+    "aliases": [
+      "no"
+    ],
+    "examples": [
+      "Không phải vậy",
+      "sai rồi",
+      "nope",
+      "thôi khỏi"
+    ],
+    "related_intents": [
+      "yes"
+    ],
+    "response_id": "no",
+    "confidence_threshold": 0.6
+  },
+  {
+    "id": "help",
+    "description": "Xin trợ giúp cách dùng",
+    "topic": "general",
+    "patterns": [
+      "giúp mình với",
+      "giúp với",
+      "cần giúp",
+      "help me",
+      "help",
+      "giúp đỡ",
+      "làm sao để dùng",
+      "xài thế nào",
+      "dùng sao đây",
+      "hướng dẫn sử dụng"
+    ],
+    "keywords": [
+      "giúp",
+      "hướng dẫn sử dụng",
+      "help"
+    ],
+    "aliases": [
+      "help"
+    ],
+    "examples": [
+      "Giúp mình với",
+      "help me",
+      "làm sao để dùng web này",
+      "hướng dẫn sử dụng đi"
+    ],
+    "related_intents": [
+      "capabilities",
+      "greeting"
+    ],
+    "response_id": "help"
+  },
+  {
+    "id": "capabilities",
+    "description": "Bot làm được gì",
+    "topic": "general",
+    "patterns": [
+      "bạn làm được gì",
+      "bot làm được gì",
+      "mày biết làm gì",
+      "bạn có thể làm gì",
+      "mình có thể hỏi gì",
+      "what can you do",
+      "chức năng của bạn",
+      "bạn biết những gì",
+      "bot này làm được gì",
+      "web này chat được gì",
+      "ai làm được gì",
+      "bạn giỏi gì"
+    ],
+    "keywords": [
+      "làm được gì",
+      "biết làm gì",
+      "chức năng"
+    ],
+    "aliases": [
+      "capabilities"
+    ],
+    "examples": [
+      "Bạn làm được gì?",
+      "bot này biết gì",
+      "what can you do",
+      "mình có thể hỏi gì ở đây"
+    ],
+    "related_intents": [
+      "help",
+      "identity",
+      "what_is_khanhos"
+    ],
+    "response_id": "capabilities"
+  },
+  {
+    "id": "identity",
+    "description": "Bạn là ai / tên gì",
+    "topic": "general",
+    "patterns": [
+      "bạn là ai",
+      "mày là ai",
+      "bạn là bot gì",
+      "bạn tên gì",
+      "tên bạn là gì",
+      "who are you",
+      "bạn là ai vậy",
+      "nói tên đi",
+      "bạn là người hay máy",
+      "are you a bot",
+      "are you human",
+      "bạn là ai đấy"
+    ],
+    "keywords": [
+      "bạn là ai",
+      "tên gì",
+      "who are you"
+    ],
+    "aliases": [
+      "identity"
+    ],
+    "examples": [
+      "Bạn là ai?",
+      "bạn tên gì thế",
+      "who are you",
+      "bạn là người hay máy"
+    ],
+    "related_intents": [
+      "capabilities",
+      "about"
+    ],
+    "response_id": "identity"
+  },
+  {
+    "id": "about",
+    "description": "Giới thiệu tổng quan về web",
+    "topic": "general",
+    "patterns": [
+      "giới thiệu về web",
+      "giới thiệu bản thân",
+      "about",
+      "giới thiệu đi",
+      "nói về bạn đi",
+      "kể về web này đi",
+      "web này để làm gì"
+    ],
+    "keywords": [
+      "giới thiệu"
+    ],
+    "aliases": [
+      "about"
+    ],
+    "examples": [
+      "Giới thiệu về web này đi",
+      "about",
+      "nói về bạn đi"
+    ],
+    "related_intents": [
+      "identity",
+      "what_is_khanhos"
+    ],
+    "response_id": "about"
+  },
+  {
+    "id": "how_are_you",
+    "description": "Hỏi thăm sức khỏe",
+    "topic": "general",
+    "patterns": [
+      "bạn khỏe không",
+      "how are you",
+      "dạo này thế nào",
+      "bạn có khỏe không",
+      "how's it going",
+      "bạn ổn không"
+    ],
+    "keywords": [
+      "khỏe không",
+      "how are you"
+    ],
+    "aliases": [
+      "how are you"
+    ],
+    "examples": [
+      "Bạn khỏe không?",
+      "how are you today",
+      "dạo này thế nào"
+    ],
+    "related_intents": [
+      "greeting"
+    ],
+    "response_id": "how_are_you"
+  },
+  {
+    "id": "explain_more",
+    "description": "Yêu cầu giải thích chi tiết hơn về chủ đề vừa nói",
+    "topic": "general",
+    "patterns": [
+      "giải thích rõ hơn",
+      "nói rõ hơn",
+      "chi tiết hơn",
+      "cụ thể hơn",
+      "kể thêm đi",
+      "nói thêm đi",
+      "giải thích kỹ hơn",
+      "explain more",
+      "more details",
+      "còn gì nữa không",
+      "nói sâu hơn"
+    ],
+    "keywords": [
+      "rõ hơn",
+      "chi tiết hơn",
+      "cụ thể hơn",
+      "thêm đi"
+    ],
+    "aliases": [
+      "more"
+    ],
+    "examples": [
+      "Giải thích rõ hơn đi",
+      "chi tiết hơn chút",
+      "còn gì nữa không",
+      "kể thêm đi"
+    ],
+    "related_intents": [
+      "simplify",
+      "example_please"
+    ],
+    "response_id": "explain_more",
+    "confidence_threshold": 0.55
+  },
+  {
+    "id": "example_please",
+    "description": "Xin ví dụ về chủ đề vừa nói",
+    "topic": "general",
+    "patterns": [
+      "cho ví dụ",
+      "cho mình ví dụ",
+      "ví dụ đi",
+      "ví dụ cụ thể",
+      "give me an example",
+      "for example",
+      "lấy ví dụ xem",
+      "ví dụ thực tế"
+    ],
+    "keywords": [
+      "cho ví dụ",
+      "ví dụ đi",
+      "lấy ví dụ"
+    ],
+    "aliases": [
+      "example"
+    ],
+    "examples": [
+      "Cho ví dụ đi",
+      "ví dụ cụ thể nhé",
+      "give me an example"
+    ],
+    "related_intents": [
+      "explain_more"
+    ],
+    "response_id": "example_please",
+    "confidence_threshold": 0.55
+  },
+  {
+    "id": "simplify",
+    "description": "Yêu cầu giải thích đơn giản hơn",
+    "topic": "general",
+    "patterns": [
+      "giải thích đơn giản",
+      "nói đơn giản thôi",
+      "giải thích ngắn gọn",
+      "explain simply",
+      "explain like i'm five",
+      "nói dễ hiểu hơn",
+      "giải thích cho người mới",
+      "nói dễ hiểu thôi",
+      "tóm lại là gì"
+    ],
+    "keywords": [
+      "đơn giản",
+      "dễ hiểu",
+      "ngắn gọn"
+    ],
+    "aliases": [
+      "simple"
+    ],
+    "examples": [
+      "Giải thích đơn giản thôi",
+      "nói dễ hiểu hơn đi",
+      "explain like i'm five"
+    ],
+    "related_intents": [
+      "explain_more",
+      "summarize"
+    ],
+    "response_id": "simplify",
+    "confidence_threshold": 0.55
+  },
+  {
+    "id": "summarize",
+    "description": "Tóm tắt câu trả lời trước",
+    "topic": "general",
+    "patterns": [
+      "tóm tắt lại",
+      "summarize",
+      "nói ngắn lại",
+      "tóm tắt giùm",
+      "tóm lại là sao"
+    ],
+    "keywords": [
+      "tóm tắt",
+      "summarize"
+    ],
+    "aliases": [
+      "summarize"
+    ],
+    "examples": [
+      "Tóm tắt lại đi",
+      "summarize hộ mình",
+      "nói ngắn lại xem"
+    ],
+    "related_intents": [
+      "simplify"
+    ],
+    "response_id": "summarize",
+    "confidence_threshold": 0.6
+  }
+]

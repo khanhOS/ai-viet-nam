@@ -1,0 +1,51 @@
+{
+  "success": true,
+  "query": "black and white close up photo of athlete sweating intense workout gritty",
+  "count": 6,
+  "ranked": false,
+  "captioned_count": 0,
+  "results": [
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/0dba8a1c5979.jpg",
+      "caption": "",
+      "source": "StockCake",
+      "original_width": "1024px",
+      "original_height": "1024px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/895dd5640561.jpg",
+      "caption": "",
+      "source": "StockCake",
+      "original_width": "1456px",
+      "original_height": "816px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/45c4e050aa52.jpg",
+      "caption": "",
+      "source": "Alamy",
+      "original_width": "1300px",
+      "original_height": "957px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/75a4e61c8ffb.jpg",
+      "caption": "",
+      "source": "Dreamstime.com",
+      "original_width": "1600px",
+      "original_height": "1158px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/efc926121376.jpg",
+      "caption": "",
+      "source": "Men's Health",
+      "original_width": "1200px",
+      "original_height": "900px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/b440495d0b6b.jpg",
+      "caption": "",
+      "source": "Men's Health",
+      "original_width": "1200px",
+      "original_height": "900px"
+    }
+  ]
+}

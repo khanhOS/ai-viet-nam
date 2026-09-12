@@ -1,0 +1,489 @@
+[
+  {
+    "id": "what_is_website",
+    "description": "Website là gì / gồm những gì",
+    "topic": "webdev",
+    "patterns": [
+      "website là gì",
+      "web là gì",
+      "website là cái gì",
+      "web app là gì",
+      "what is a website",
+      "giải thích website",
+      "một website gồm những gì",
+      "website hoạt động thế nào",
+      "web là sao",
+      "làm web cần học gì",
+      "website",
+      "web app"
+    ],
+    "keywords": [
+      "website",
+      "web app",
+      "làm web"
+    ],
+    "aliases": [
+      "website",
+      "web"
+    ],
+    "examples": [
+      "Website là gì?",
+      "web app là gì",
+      "một website gồm những gì?",
+      "làm web cần học gì?"
+    ],
+    "related_intents": [
+      "static_vs_dynamic",
+      "frontend",
+      "backend"
+    ],
+    "response_id": "what_is_website",
+    "confidence_threshold": 0.5
+  },
+  {
+    "id": "static_vs_dynamic",
+    "description": "Web tĩnh / web động",
+    "topic": "webdev",
+    "patterns": [
+      "web tĩnh là gì",
+      "web động là gì",
+      "static website là gì",
+      "dynamic website là gì",
+      "web động khác web tĩnh",
+      "static vs dynamic website",
+      "web tinh la gi",
+      "web dong la gi",
+      "giải thích web tĩnh web động",
+      "web tĩnh",
+      "web động"
+    ],
+    "keywords": [
+      "web tĩnh",
+      "web động",
+      "static",
+      "dynamic"
+    ],
+    "aliases": [
+      "static website",
+      "dynamic website"
+    ],
+    "examples": [
+      "Web tĩnh là gì?",
+      "web động là gì?",
+      "static vs dynamic khác nhau thế nào?"
+    ],
+    "related_intents": [
+      "what_is_website",
+      "frontend",
+      "backend"
+    ],
+    "response_id": "static_vs_dynamic",
+    "confidence_threshold": 0.5
+  },
+  {
+    "id": "hosting",
+    "description": "Hosting là gì",
+    "topic": "webdev",
+    "patterns": [
+      "hosting là gì",
+      "host la gi",
+      "web hosting là gì",
+      "what is web hosting",
+      "giải thích hosting",
+      "hosting là sao",
+      "web cần hosting thế nào",
+      "hosting miễn phí có tốt không",
+      "shared hosting là gì",
+      "hosting",
+      "host"
+    ],
+    "keywords": [
+      "hosting",
+      "host"
+    ],
+    "aliases": [
+      "hosting",
+      "host"
+    ],
+    "examples": [
+      "Hosting là gì?",
+      "web cần hosting thế nào?",
+      "hosting miễn phí có tốt không?"
+    ],
+    "related_intents": [
+      "domain",
+      "deployment",
+      "vps"
+    ],
+    "response_id": "hosting",
+    "confidence_threshold": 0.5
+  },
+  {
+    "id": "domain",
+    "description": "Domain là gì",
+    "topic": "webdev",
+    "patterns": [
+      "domain là gì",
+      "ten mien la gi",
+      "tên miền là gì",
+      "what is a domain name",
+      "giải thích domain",
+      "dns là gì",
+      "domain là sao",
+      "mua domain ở đâu",
+      "subdomain là gì",
+      "domain",
+      "tên miền",
+      "dns"
+    ],
+    "keywords": [
+      "domain",
+      "tên miền",
+      "dns",
+      "subdomain"
+    ],
+    "aliases": [
+      "domain",
+      "dns"
+    ],
+    "examples": [
+      "Domain là gì?",
+      "tên miền là gì?",
+      "DNS là gì?",
+      "mua domain ở đâu?"
+    ],
+    "related_intents": [
+      "hosting",
+      "deployment"
+    ],
+    "response_id": "domain",
+    "confidence_threshold": 0.5
+  },
+  {
+    "id": "deployment",
+    "description": "Deploy website là gì",
+    "topic": "webdev",
+    "patterns": [
+      "deploy là gì",
+      "deployment là gì",
+      "deploy website thế nào",
+      "deploy web lên đâu",
+      "how to deploy a website",
+      "publish website thế nào",
+      "đưa web lên mạng",
+      "vercel deploy thế nào",
+      "build production là gì",
+      "deploy",
+      "deployment"
+    ],
+    "keywords": [
+      "deploy",
+      "deployment",
+      "publish",
+      "production"
+    ],
+    "aliases": [
+      "deploy",
+      "deployment"
+    ],
+    "examples": [
+      "Deploy là gì?",
+      "deploy website thế nào?",
+      "đưa web lên internet làm sao?"
+    ],
+    "related_intents": [
+      "hosting",
+      "domain",
+      "vercel"
+    ],
+    "response_id": "deployment",
+    "confidence_threshold": 0.5
+  },
+  {
+    "id": "what_is_khanhos",
+    "description": "KhanhOS AI là gì",
+    "topic": "khanhos",
+    "patterns": [
+      "khanhos là gì",
+      "khanh os là gì",
+      "web này là gì",
+      "trang này là gì",
+      "what is khanhos",
+      "khanhos ai là gì",
+      "giải thích khanhos",
+      "khanhos là sao",
+      "khanhos ai là web gì",
+      "web này là cái gì",
+      "khanhos",
+      "khanhos ai"
+    ],
+    "keywords": [
+      "khanhos",
+      "khanh os"
+    ],
+    "aliases": [
+      "khanhos",
+      "khanhos ai"
+    ],
+    "examples": [
+      "KhanhOS là gì?",
+      "KhanhOS AI là gì?",
+      "web này là gì?",
+      "làm sao đăng ký KhanhOS?",
+      "KhanhOS có API không?"
+    ],
+    "related_intents": [
+      "khanhos_features",
+      "about",
+      "identity"
+    ],
+    "response_id": "what_is_khanhos",
+    "knowledge_ref": "khanhos",
+    "confidence_threshold": 0.5
+  },
+  {
+    "id": "khanhos_features",
+    "description": "KhanhOS có tính năng gì",
+    "topic": "khanhos",
+    "patterns": [
+      "khanhos có những tính năng gì",
+      "khanhos có chức năng gì",
+      "web này có gì",
+      "khanhos features",
+      "tính năng của khanhos",
+      "khanhos làm được gì",
+      "khanhos có chat ai không",
+      "web này chat được không"
+    ],
+    "keywords": [
+      "tính năng",
+      "khanhos",
+      "chức năng"
+    ],
+    "aliases": [
+      "features"
+    ],
+    "examples": [
+      "KhanhOS có những tính năng gì?",
+      "web này có gì hay?",
+      "KhanhOS có chat AI không?"
+    ],
+    "related_intents": [
+      "what_is_khanhos",
+      "khanhos_models",
+      "capabilities"
+    ],
+    "response_id": "khanhos_features",
+    "knowledge_ref": "khanhos",
+    "confidence_threshold": 0.5
+  },
+  {
+    "id": "khanhos_models",
+    "description": "KhanhOS dùng model gì",
+    "topic": "khanhos",
+    "patterns": [
+      "khanhos dùng model gì",
+      "khanhos dùng ai gì",
+      "web này chạy model gì",
+      "khanhos models",
+      "khanhos có những model nào",
+      "model của web này là gì",
+      "bot này chạy bằng gì"
+    ],
+    "keywords": [
+      "model",
+      "khanhos"
+    ],
+    "aliases": [],
+    "examples": [
+      "KhanhOS dùng model gì?",
+      "web này chạy model nào?",
+      "bot này chạy bằng gì?"
+    ],
+    "related_intents": [
+      "what_is_khanhos",
+      "identity",
+      "what_is_local_ai"
+    ],
+    "response_id": "khanhos_models",
+    "confidence_threshold": 0.5
+  },
+  {
+    "id": "khanhos_plans",
+    "description": "Gói dịch vụ KhanhOS",
+    "topic": "khanhos",
+    "patterns": [
+      "khanhos có những gói nào",
+      "gói dịch vụ của khanhos",
+      "khanhos plans",
+      "gói plus vip max là gì",
+      "nâng cấp gói thế nào",
+      "khanhos free có gì",
+      "gói free là gì",
+      "mua gói khanhos thế nào",
+      "giá gói khanhos",
+      "hạn mức mỗi gói là bao nhiêu"
+    ],
+    "keywords": [
+      "gói",
+      "nâng cấp",
+      "plus",
+      "vip",
+      "max",
+      "free",
+      "gói dịch vụ"
+    ],
+    "aliases": [
+      "plans",
+      "gói dịch vụ"
+    ],
+    "examples": [
+      "KhanhOS có những gói nào?",
+      "nâng cấp gói thế nào?",
+      "gói Plus có gì?"
+    ],
+    "related_intents": [
+      "khanhos_owner",
+      "what_is_khanhos"
+    ],
+    "response_id": "khanhos_plans",
+    "confidence_threshold": 0.5
+  },
+  {
+    "id": "khanhos_account",
+    "description": "Tài khoản / đăng ký KhanhOS",
+    "topic": "khanhos",
+    "patterns": [
+      "làm sao đăng ký khanhos",
+      "khanhos đăng ký thế nào",
+      "đăng nhập khanhos kiểu gì",
+      "khanhos login",
+      "khanhos register",
+      "quên mật khẩu khanhos",
+      "khanhos cần tài khoản không",
+      "tạo tài khoản web này thế nào"
+    ],
+    "keywords": [
+      "đăng ký",
+      "đăng nhập",
+      "tài khoản",
+      "khanhos"
+    ],
+    "aliases": [
+      "login",
+      "register"
+    ],
+    "examples": [
+      "Làm sao đăng ký KhanhOS?",
+      "quên mật khẩu thì làm sao?",
+      "cần tài khoản không?"
+    ],
+    "related_intents": [
+      "what_is_khanhos",
+      "session_login"
+    ],
+    "response_id": "khanhos_account",
+    "confidence_threshold": 0.5
+  },
+  {
+    "id": "khanhos_owner",
+    "description": "Owner / admin KhanhOS",
+    "topic": "khanhos",
+    "patterns": [
+      "khanhos có owner không",
+      "ai sở hữu khanhos",
+      "chủ web này là ai",
+      "khanhos có admin không",
+      "owner web là ai",
+      "ai quản lý khanhos",
+      "liên hệ chủ web thế nào"
+    ],
+    "keywords": [
+      "owner",
+      "admin",
+      "chủ",
+      "sở hữu"
+    ],
+    "aliases": [
+      "owner",
+      "admin"
+    ],
+    "examples": [
+      "KhanhOS có owner không?",
+      "chủ web này là ai?",
+      "ai quản lý web này?"
+    ],
+    "related_intents": [
+      "what_is_khanhos",
+      "roles_owner"
+    ],
+    "response_id": "khanhos_owner",
+    "confidence_threshold": 0.5
+  },
+  {
+    "id": "khanhos_privacy",
+    "description": "Dữ liệu / riêng tư trên KhanhOS",
+    "topic": "khanhos",
+    "patterns": [
+      "khanhos có lưu dữ liệu không",
+      "web này có an toàn không",
+      "dữ liệu chat lưu ở đâu",
+      "khanhos có gửi dữ liệu đi đâu không",
+      "privacy của web này thế nào",
+      "web này có theo dõi không"
+    ],
+    "keywords": [
+      "dữ liệu",
+      "an toàn",
+      "riêng tư",
+      "privacy",
+      "lưu"
+    ],
+    "aliases": [
+      "privacy"
+    ],
+    "examples": [
+      "Web này có lưu dữ liệu không?",
+      "dữ liệu chat lưu ở đâu?",
+      "có gửi dữ liệu đi đâu không?"
+    ],
+    "related_intents": [
+      "what_is_khanhos",
+      "khanhos_models"
+    ],
+    "response_id": "khanhos_privacy",
+    "confidence_threshold": 0.5
+  },
+  {
+    "id": "vercel",
+    "description": "Vercel — hosting cho Next.js",
+    "topic": "webdev",
+    "patterns": [
+      "vercel là gì",
+      "vercel la gi",
+      "what is vercel",
+      "deploy lên vercel",
+      "vercel dùng để làm gì",
+      "giải thích vercel",
+      "hosting nextjs ở đâu"
+    ],
+    "keywords": [
+      "vercel"
+    ],
+    "aliases": [
+      "vercel"
+    ],
+    "examples": [
+      "Vercel là gì?",
+      "deploy Next.js lên đâu?"
+    ],
+    "related_intents": [
+      "hosting",
+      "domain",
+      "nextjs"
+    ],
+    "response_id": "vercel",
+    "knowledge_ref": "vercel",
+    "confidence_threshold": 0.5
+  }
+]

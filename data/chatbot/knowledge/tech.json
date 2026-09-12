@@ -1,0 +1,93 @@
+[
+  {
+    "id": "minecraft_server",
+    "topic": "minecraft",
+    "title": "Minecraft Server",
+    "keywords": ["minecraft server", "server minecraft", "mc server"],
+    "aliases": ["minecraft server", "mc server"],
+    "content": {
+      "definition": "Minecraft server là chương trình chạy Minecraft thế giới chung: một máy giữ thế giới, nhiều người cùng join qua IP (phiên bản Java) hoặc qua Geyser (Bedrock).",
+      "simple_explanation": "Bình thường bạn chơi một mình trong máy; có server là thuê/bật một máy để cả nhóm vào chung một thế giới — xây nhà, đá nhau, sống ảo cùng nhau.",
+      "examples": [
+        "Tự host trên máy: `java -Xmx4G -jar paper.jar nogui`",
+        "Thuê VPS 2-4GB cho bạn bè join 24/7",
+        "Port mặc định 25565 — mở router/firewall để ngoài vào được"
+      ],
+      "related_topics": ["Paper", "Plugins", "VPS", "Geyser"]
+    },
+    "related_intents": ["minecraft_server", "server_software", "server_properties"]
+  },
+  {
+    "id": "plugins",
+    "topic": "minecraft",
+    "title": "Plugin Minecraft",
+    "keywords": ["plugin", "plugins"],
+    "aliases": ["plugin", "plugins"],
+    "content": {
+      "definition": "Plugin là mở rộng cho server Paper/Spigot (bản Java): thêm lệnh, mini-game, kinh tế, bảo vệ... bằng file .jar thả vào thư mục plugins/.",
+      "simple_explanation": "Plugin là \"app\" của server Minecraft: muốn gì thì cài cái đó — bảo vệ nhà (WorldGuard), phân quyền (LuckPerms), cho bạn mobile vào (Geyser).",
+      "examples": [
+        "EssentialsX — bộ lệnh cơ bản",
+        "LuckPerms — phân quyền nhóm",
+        "WorldEdit — sửa thế giới hàng loạt",
+        "Geyser — client Bedrock vào server Java"
+      ],
+      "related_topics": ["Paper", "LuckPerms", "WorldGuard"]
+    },
+    "related_intents": ["plugins", "server_software", "luckperms"]
+  },
+  {
+    "id": "geyser",
+    "topic": "minecraft",
+    "title": "Geyser & Floodgate",
+    "keywords": ["geyser", "floodgate", "bedrock"],
+    "aliases": ["geyser", "floodgate"],
+    "content": {
+      "definition": "Geyser là plugin cầu giao thức: dịch packet giữa client Bedrock (mobile/console) và server Java, cho hai nền tảng chơi chung một server. Floodgate đi kèm cho tài khoản Bedrock không cần mua Java.",
+      "simple_explanation": "Java với Bedrock như hai thứ tiếng khác nhau — Geyser là phiên dịch. Cài 2 file .jar là bạn iPhone/Android/PS vào được server PC của bạn bè.",
+      "examples": [
+        "Thả Geyser-Spigot.jar + floodgate.jar vào plugins/",
+        "Bedrock join bằng cổng 19132 (UDP)",
+        "Floodgate gắn dấu . để phân biệt tài khoản Bedrock"
+      ],
+      "related_topics": ["Plugins", "Minecraft Server"]
+    },
+    "related_intents": ["geyser_floodgate", "plugins"]
+  },
+  {
+    "id": "luckperms",
+    "topic": "minecraft",
+    "title": "LuckPerms",
+    "keywords": ["luckperms", "phân quyền minecraft", "permission"],
+    "aliases": ["luckperms"],
+    "content": {
+      "definition": "LuckPerms là plugin phân quyền cho server Minecraft: tạo nhóm quyền (admin, mod, vip, member), gán từng quyền lệnh/tính năng, gán người vào nhóm, có web editor.",
+      "simple_explanation": "Không LuckPerms thì chỉ có 2 cấp: OP (thần) hoặc thường dân. Có LuckPerms thì phân cấp được mịn: VIP được /fly, mod được kick, admin được tất cả.",
+      "examples": [
+        "`/lp creategroup vip` tạo nhóm",
+        "`/lp user <tên> parent add vip` gán người",
+        "`/lp editor` — mở web editor trực quan"
+      ],
+      "related_topics": ["Plugins", "Server Management"]
+    },
+    "related_intents": ["luckperms", "plugins", "roles_owner"]
+  },
+  {
+    "id": "vps",
+    "topic": "cloud",
+    "title": "VPS — Máy chủ ảo",
+    "keywords": ["vps", "máy chủ ảo", "virtual private server"],
+    "aliases": ["vps"],
+    "content": {
+      "definition": "VPS (Virtual Private Server) là máy ảo thuê trên server vật lý ở datacenter: có root, IP riêng, chạy 24/7, tự cài đặt mọi thứ.",
+      "simple_explanation": "VPS như thuê một căn hộ trong chung cư: của riêng bạn, chìa khóa root, chạy cả ngày đêm không cần máy bạn mở. ~100-300k/tháng là đủ web + Minecraft server nhỏ.",
+      "examples": [
+        "VPS Singapore cho user Việt Nam",
+        "Ubuntu LTS + SSH key + UFW",
+        "Chạy web Node/Python 24/7"
+      ],
+      "related_topics": ["Firewall", "SSH", "Deployment"]
+    },
+    "related_intents": ["vps", "vm", "hosting"]
+  }
+]

@@ -1,0 +1,94 @@
+[
+  {
+    "id": "html",
+    "topic": "programming",
+    "title": "HTML",
+    "keywords": [
+      "html"
+    ],
+    "aliases": [
+      "html"
+    ],
+    "content": {
+      "definition": "HTML (HyperText Markup Language) là ngôn ngữ đánh dấu mô tả cấu trúc nội dung trang web: các thẻ (heading, đoạn, ảnh, form, nút) cho trình duyệt biết hiển thị gì.",
+      "simple_explanation": "HTML là bộ khung xương của trang web: chưa có màu mè (CSS lo) hay động đậy (JS lo) — chỉ nói rõ \"đây là tiêu đề, đây là ảnh, đây là ô nhập liệu\".",
+      "examples": [
+        "<h1> là tiêu đề lớn nhất",
+        "<a href=\"...\"> tạo liên kết",
+        "<form> + <input> làm form đăng nhập",
+        "Ctrl+U xem HTML trang bất kỳ"
+      ],
+      "related_topics": [
+        "CSS",
+        "JavaScript",
+        "Frontend"
+      ]
+    },
+    "related_intents": [
+      "html",
+      "css"
+    ]
+  },
+  {
+    "id": "css",
+    "topic": "programming",
+    "title": "CSS",
+    "keywords": [
+      "css"
+    ],
+    "aliases": [
+      "css"
+    ],
+    "content": {
+      "definition": "CSS (Cascading Style Sheets) là ngôn ngữ trình bày của web: màu sắc, phông chữ, khoảng cách, bố cục, hiệu ứng và responsive theo kích thước màn hình.",
+      "simple_explanation": "CSS là stylist của HTML: HTML là người — CSS là trang phục + kiểu tóc. Không CSS thì mọi trang web trông như văn bản Word năm 1995.",
+      "examples": [
+        "Flexbox/Grid — bố cục hiện đại",
+        "Media query — mobile hiển thị khác desktop",
+        "Tailwind CSS — viết style bằng class",
+        "Animation + transition — hiệu ứng mượt"
+      ],
+      "related_topics": [
+        "HTML",
+        "Tailwind CSS",
+        "Frontend"
+      ]
+    },
+    "related_intents": [
+      "css",
+      "html"
+    ]
+  },
+  {
+    "id": "vercel",
+    "topic": "webdev",
+    "title": "Vercel — Hosting cho Next.js",
+    "keywords": [
+      "vercel",
+      "deploy",
+      "hosting nextjs"
+    ],
+    "aliases": [
+      "vercel"
+    ],
+    "content": {
+      "definition": "Vercel là nền tảng cloud xây bởi chính tác giả Next.js, tối ưu để deploy ứng dụng Next.js: nối Git, tự build, tự chạy CDN toàn cầu.",
+      "simple_explanation": "Push code lên GitHub → Vercel tự build và đưa lên internet trong ~1 phút, kèm domain *.vercel.app miễn phí.",
+      "examples": [
+        "Deploy web tĩnh",
+        "Deploy Next.js SSR/API routes",
+        "Preview mỗi pull request"
+      ],
+      "related_topics": [
+        "Hosting",
+        "Domain",
+        "Deployment"
+      ]
+    },
+    "related_intents": [
+      "hosting",
+      "domain",
+      "nextjs"
+    ]
+  }
+]

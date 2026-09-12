@@ -1,0 +1,497 @@
+[
+  {
+    "id": "what_is_database",
+    "description": "Database là gì",
+    "topic": "database",
+    "patterns": [
+      "database là gì",
+      "db là gì",
+      "database la gi",
+      "cơ sở dữ liệu là gì",
+      "co so du lieu la gi",
+      "database dùng để làm gì",
+      "database lưu cái gì",
+      "web ai có cần database không",
+      "website có cần database không",
+      "what is a database",
+      "giải thích database",
+      "database là sao",
+      "database khác file json như nào",
+      "database nghĩa là gì",
+      "database",
+      "cơ sở dữ liệu"
+    ],
+    "keywords": [
+      "database",
+      "cơ sở dữ liệu",
+      "db"
+    ],
+    "aliases": [
+      "database",
+      "cơ sở dữ liệu",
+      "db"
+    ],
+    "examples": [
+      "database là gì",
+      "db là gì",
+      "cơ sở dữ liệu là gì",
+      "database dùng để làm gì",
+      "web AI có cần database không?",
+      "database lưu cái gì?",
+      "database khác file json như nào?",
+      "sqlite là database à?"
+    ],
+    "related_intents": [
+      "sqlite",
+      "postgresql",
+      "prisma",
+      "backend"
+    ],
+    "response_id": "what_is_database",
+    "knowledge_ref": "database",
+    "confidence_threshold": 0.5
+  },
+  {
+    "id": "sqlite",
+    "description": "SQLite là gì",
+    "topic": "database",
+    "patterns": [
+      "sqlite là gì",
+      "sqlite la gi",
+      "sqlite là database à",
+      "sqlite dùng khi nào",
+      "what is sqlite",
+      "giải thích sqlite",
+      "sqlite là sao",
+      "sqlite có tốt không",
+      "sqlite dùng cho web được không",
+      "sqlite"
+    ],
+    "keywords": [
+      "sqlite"
+    ],
+    "aliases": [
+      "sqlite",
+      "sqlite3"
+    ],
+    "examples": [
+      "SQLite là gì?",
+      "sqlite la gi",
+      "SQLite là database à?",
+      "when to use SQLite?"
+    ],
+    "related_intents": [
+      "what_is_database",
+      "postgresql",
+      "prisma"
+    ],
+    "response_id": "sqlite",
+    "knowledge_ref": "sqlite",
+    "confidence_threshold": 0.5
+  },
+  {
+    "id": "postgresql",
+    "description": "PostgreSQL là gì",
+    "topic": "database",
+    "patterns": [
+      "postgres là gì",
+      "postgresql là gì",
+      "postgres la gi",
+      "psql là gì",
+      "what is postgresql",
+      "giải thích postgres",
+      "postgresql là sao",
+      "postgres vs mysql cái nào tốt",
+      "postgresql dùng khi nào",
+      "postgres",
+      "postgresql"
+    ],
+    "keywords": [
+      "postgres",
+      "postgresql",
+      "psql"
+    ],
+    "aliases": [
+      "postgres",
+      "postgresql",
+      "psql"
+    ],
+    "examples": [
+      "PostgreSQL là gì?",
+      "postgres la gi",
+      "Postgres vs MySQL cái nào tốt?"
+    ],
+    "related_intents": [
+      "what_is_database",
+      "mysql",
+      "mongodb"
+    ],
+    "response_id": "postgresql",
+    "knowledge_ref": "postgresql",
+    "confidence_threshold": 0.5
+  },
+  {
+    "id": "mysql",
+    "description": "MySQL là gì",
+    "topic": "database",
+    "patterns": [
+      "mysql là gì",
+      "mysql la gi",
+      "mysql dùng để làm gì",
+      "what is mysql",
+      "giải thích mysql",
+      "mysql là sao",
+      "mysql và postgres khác gì",
+      "mysql"
+    ],
+    "keywords": [
+      "mysql"
+    ],
+    "aliases": [
+      "mysql"
+    ],
+    "examples": [
+      "MySQL là gì?",
+      "mysql dùng để làm gì?",
+      "MySQL và Postgres khác gì?"
+    ],
+    "related_intents": [
+      "postgresql",
+      "what_is_database"
+    ],
+    "response_id": "mysql",
+    "confidence_threshold": 0.5
+  },
+  {
+    "id": "mongodb",
+    "description": "MongoDB là gì",
+    "topic": "database",
+    "patterns": [
+      "mongodb là gì",
+      "mongo là gì",
+      "mongodb la gi",
+      "what is mongodb",
+      "giải thích mongodb",
+      "nosql là gì",
+      "mongodb là sao",
+      "mongo lưu kiểu gì",
+      "sql vs nosql khác nhau thế nào",
+      "mongodb",
+      "mongo"
+    ],
+    "keywords": [
+      "mongodb",
+      "mongo",
+      "nosql"
+    ],
+    "aliases": [
+      "mongodb",
+      "mongo",
+      "nosql"
+    ],
+    "examples": [
+      "MongoDB là gì?",
+      "NoSQL là gì?",
+      "SQL vs NoSQL khác nhau thế nào?"
+    ],
+    "related_intents": [
+      "what_is_database",
+      "postgresql"
+    ],
+    "response_id": "mongodb",
+    "knowledge_ref": "mongodb",
+    "confidence_threshold": 0.5
+  },
+  {
+    "id": "prisma",
+    "description": "Prisma ORM là gì",
+    "topic": "database",
+    "patterns": [
+      "prisma là gì",
+      "prisma orm là gì",
+      "what is prisma",
+      "giải thích prisma",
+      "prisma là sao",
+      "orm là gì",
+      "prisma dùng để làm gì",
+      "schema prisma là gì",
+      "prisma"
+    ],
+    "keywords": [
+      "prisma",
+      "orm"
+    ],
+    "aliases": [
+      "prisma",
+      "orm"
+    ],
+    "examples": [
+      "Prisma là gì?",
+      "ORM là gì?",
+      "Prisma dùng để làm gì?"
+    ],
+    "related_intents": [
+      "what_is_database",
+      "nextjs",
+      "sqlite"
+    ],
+    "response_id": "prisma",
+    "knowledge_ref": "prisma",
+    "confidence_threshold": 0.5
+  },
+  {
+    "id": "database_backup",
+    "description": "Backup database",
+    "topic": "database",
+    "patterns": [
+      "backup database thế nào",
+      "sao lưu database",
+      "database backup là gì",
+      "how to backup database",
+      "khôi phục database thế nào",
+      "restore database",
+      "pg_dump là gì",
+      "dump database là sao"
+    ],
+    "keywords": [
+      "backup",
+      "sao lưu",
+      "restore",
+      "pg_dump"
+    ],
+    "aliases": [
+      "backup"
+    ],
+    "examples": [
+      "Backup database thế nào?",
+      "sao lưu database như thế nào?",
+      "restore database ra sao?"
+    ],
+    "related_intents": [
+      "postgresql",
+      "sqlite"
+    ],
+    "response_id": "database_backup",
+    "confidence_threshold": 0.5
+  },
+  {
+    "id": "authentication",
+    "description": "Authentication là gì",
+    "topic": "auth",
+    "patterns": [
+      "authentication là gì",
+      "xác thực là gì",
+      "auth là gì",
+      "auth la gi",
+      "what is authentication",
+      "giải thích authentication",
+      "auth là sao",
+      "authentication vs authorization",
+      "xác thực khác phân quyền thế nào",
+      "authentication",
+      "auth"
+    ],
+    "keywords": [
+      "authentication",
+      "xác thực",
+      "auth"
+    ],
+    "aliases": [
+      "authentication",
+      "auth"
+    ],
+    "examples": [
+      "Authentication là gì?",
+      "xác thực là gì?",
+      "Auth khác phân quyền thế nào?"
+    ],
+    "related_intents": [
+      "session_login",
+      "jwt",
+      "oauth",
+      "roles_owner"
+    ],
+    "response_id": "authentication",
+    "knowledge_ref": "authentication",
+    "confidence_threshold": 0.5
+  },
+  {
+    "id": "session_login",
+    "description": "Session / đăng nhập hoạt động ra sao",
+    "topic": "auth",
+    "patterns": [
+      "session là gì",
+      "đăng nhập hoạt động thế nào",
+      "cookie session là gì",
+      "what is a session",
+      "cookie là gì",
+      "httpOnly cookie là gì",
+      "server session lưu đâu",
+      "logout hoạt động thế nào",
+      "session là sao"
+    ],
+    "keywords": [
+      "session",
+      "cookie",
+      "đăng nhập"
+    ],
+    "aliases": [
+      "session",
+      "cookie"
+    ],
+    "examples": [
+      "Session là gì?",
+      "đăng nhập hoạt động thế nào?",
+      "Cookie là gì?"
+    ],
+    "related_intents": [
+      "authentication",
+      "jwt",
+      "password_security"
+    ],
+    "response_id": "session_login",
+    "knowledge_ref": "session",
+    "confidence_threshold": 0.5
+  },
+  {
+    "id": "password_security",
+    "description": "Mật khẩu bảo mật thế nào",
+    "topic": "auth",
+    "patterns": [
+      "mật khẩu lưu thế nào",
+      "lưu mật khẩu an toàn thế nào",
+      "hash mật khẩu là gì",
+      "bcrypt là gì",
+      "scrypt là gì",
+      "salt là gì trong mật khẩu",
+      "password hashing là gì",
+      "mật khẩu có được lưu rõ không"
+    ],
+    "keywords": [
+      "mật khẩu",
+      "hash",
+      "bcrypt",
+      "scrypt",
+      "salt"
+    ],
+    "aliases": [
+      "hash",
+      "bcrypt"
+    ],
+    "examples": [
+      "Mật khẩu lưu thế nào cho an toàn?",
+      "hash mật khẩu là gì?",
+      "salt là gì?"
+    ],
+    "related_intents": [
+      "authentication",
+      "session_login"
+    ],
+    "response_id": "password_security",
+    "confidence_threshold": 0.5
+  },
+  {
+    "id": "jwt",
+    "description": "JWT là gì",
+    "topic": "auth",
+    "patterns": [
+      "jwt là gì",
+      "json web token là gì",
+      "what is jwt",
+      "token đăng nhập là gì",
+      "jwt vs session cái nào tốt",
+      "giải thích jwt",
+      "jwt là sao",
+      "jwt"
+    ],
+    "keywords": [
+      "jwt",
+      "json web token"
+    ],
+    "aliases": [
+      "jwt"
+    ],
+    "examples": [
+      "JWT là gì?",
+      "what is JWT",
+      "JWT vs session cái nào tốt?"
+    ],
+    "related_intents": [
+      "authentication",
+      "session_login"
+    ],
+    "response_id": "jwt",
+    "knowledge_ref": "jwt",
+    "confidence_threshold": 0.5
+  },
+  {
+    "id": "roles_owner",
+    "description": "Phân quyền user/owner/admin",
+    "topic": "auth",
+    "patterns": [
+      "phân quyền là gì",
+      "authorization là gì",
+      "role là gì trong web",
+      "admin owner khác user thế nào",
+      "user role là gì",
+      "rbac là gì",
+      "phân quyền admin thế nào",
+      "phân quyền",
+      "authorization"
+    ],
+    "keywords": [
+      "phân quyền",
+      "authorization",
+      "role",
+      "rbac"
+    ],
+    "aliases": [
+      "authorization",
+      "rbac"
+    ],
+    "examples": [
+      "Phân quyền là gì?",
+      "authorization là gì?",
+      "Admin khác user thế nào?"
+    ],
+    "related_intents": [
+      "authentication",
+      "khanhos_owner"
+    ],
+    "response_id": "roles_owner",
+    "confidence_threshold": 0.5
+  },
+  {
+    "id": "oauth",
+    "description": "OAuth / đăng nhập bằng Google",
+    "topic": "auth",
+    "patterns": [
+      "oauth là gì",
+      "oauth la gi",
+      "what is oauth",
+      "oauth 2.0 là gì",
+      "đăng nhập bằng google là gì",
+      "oauth dùng để làm gì",
+      "giải thích oauth",
+      "social login là gì"
+    ],
+    "keywords": [
+      "oauth",
+      "social login"
+    ],
+    "aliases": [
+      "oauth"
+    ],
+    "examples": [
+      "OAuth là gì?",
+      "đăng nhập bằng Google hoạt động thế nào?"
+    ],
+    "related_intents": [
+      "authentication",
+      "jwt"
+    ],
+    "response_id": "oauth",
+    "knowledge_ref": "authentication",
+    "confidence_threshold": 0.5
+  }
+]

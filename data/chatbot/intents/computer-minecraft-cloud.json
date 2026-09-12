@@ -1,0 +1,765 @@
+[
+  {
+    "id": "cpu",
+    "description": "CPU là gì",
+    "topic": "computer",
+    "patterns": [
+      "cpu là gì",
+      "cpu la gi",
+      "what is a cpu",
+      "giải thích cpu",
+      "cpu là sao",
+      "cpu làm gì trong máy tính",
+      "cpu quyết định gì",
+      "cpu"
+    ],
+    "keywords": [
+      "cpu",
+      "bộ xử lý"
+    ],
+    "aliases": [
+      "cpu"
+    ],
+    "examples": [
+      "CPU là gì?",
+      "what is a CPU",
+      "CPU làm gì trong máy tính?"
+    ],
+    "related_intents": [
+      "gpu",
+      "ram_pc"
+    ],
+    "response_id": "cpu",
+    "confidence_threshold": 0.5
+  },
+  {
+    "id": "gpu",
+    "description": "GPU là gì",
+    "topic": "computer",
+    "patterns": [
+      "gpu là gì",
+      "gpu la gi",
+      "what is a gpu",
+      "vga là gì",
+      "giải thích gpu",
+      "gpu là sao",
+      "gpu dùng để làm gì",
+      "gpu khác cpu thế nào",
+      "card đồ họa là gì",
+      "gpu",
+      "vga"
+    ],
+    "keywords": [
+      "gpu",
+      "vga",
+      "card đồ họa"
+    ],
+    "aliases": [
+      "gpu",
+      "vga"
+    ],
+    "examples": [
+      "GPU là gì?",
+      "GPU khác CPU thế nào?",
+      "card đồ họa là gì?"
+    ],
+    "related_intents": [
+      "cpu",
+      "ram_requirements"
+    ],
+    "response_id": "gpu",
+    "confidence_threshold": 0.5
+  },
+  {
+    "id": "ram_pc",
+    "description": "RAM máy tính",
+    "topic": "computer",
+    "patterns": [
+      "ram là gì",
+      "ram la gi",
+      "what is ram",
+      "ram máy tính là gì",
+      "giải thích ram",
+      "ram là sao",
+      "ram nhiều có nhanh hơn không",
+      "ram dùng để làm gì",
+      "8gb ram có đủ không",
+      "ram"
+    ],
+    "keywords": [
+      "ram",
+      "bộ nhớ"
+    ],
+    "aliases": [
+      "ram"
+    ],
+    "examples": [
+      "RAM là gì?",
+      "RAM nhiều có nhanh hơn không?",
+      "8GB RAM có đủ không?"
+    ],
+    "related_intents": [
+      "cpu",
+      "storage"
+    ],
+    "response_id": "ram_pc",
+    "confidence_threshold": 0.5
+  },
+  {
+    "id": "storage",
+    "description": "Ổ cứng SSD/HDD",
+    "topic": "computer",
+    "patterns": [
+      "ssd là gì",
+      "hdd là gì",
+      "ổ cứng là gì",
+      "ssd khác hdd thế nào",
+      "what is an ssd",
+      "nvme là gì",
+      "ssd là sao",
+      "nên mua ssd hay hdd",
+      "ổ cứng ssd là gì",
+      "ssd",
+      "hdd",
+      "ổ cứng"
+    ],
+    "keywords": [
+      "ssd",
+      "hdd",
+      "ổ cứng",
+      "nvme"
+    ],
+    "aliases": [
+      "ssd",
+      "hdd",
+      "nvme"
+    ],
+    "examples": [
+      "SSD là gì?",
+      "SSD khác HDD thế nào?",
+      "nên mua SSD hay HDD?"
+    ],
+    "related_intents": [
+      "ram_pc"
+    ],
+    "response_id": "storage",
+    "confidence_threshold": 0.5
+  },
+  {
+    "id": "windows",
+    "description": "Windows / hệ điều hành",
+    "topic": "computer",
+    "patterns": [
+      "windows là gì",
+      "windows 11 có gì mới",
+      "windows 10 với 11 khác gì",
+      "what is windows",
+      "hệ điều hành là gì",
+      "he dieu hanh la gi",
+      "linux là gì",
+      "windows là sao",
+      "windows",
+      "linux",
+      "hệ điều hành"
+    ],
+    "keywords": [
+      "windows",
+      "hệ điều hành",
+      "linux"
+    ],
+    "aliases": [
+      "windows",
+      "linux"
+    ],
+    "examples": [
+      "Windows là gì?",
+      "hệ điều hành là gì?",
+      "Windows 11 có gì mới?"
+    ],
+    "related_intents": [
+      "drivers"
+    ],
+    "response_id": "windows",
+    "confidence_threshold": 0.5
+  },
+  {
+    "id": "drivers",
+    "description": "Driver là gì",
+    "topic": "computer",
+    "patterns": [
+      "driver là gì",
+      "drive là gì máy tính",
+      "what is a driver",
+      "cài driver thế nào",
+      "giải thích driver",
+      "driver là sao",
+      "thiếu driver thì sao",
+      "update driver thế nào",
+      "driver card đồ họa ở đâu",
+      "driver"
+    ],
+    "keywords": [
+      "driver",
+      "trình điều khiển"
+    ],
+    "aliases": [
+      "driver"
+    ],
+    "examples": [
+      "Driver là gì?",
+      "cài driver thế nào?",
+      "update driver làm sao?"
+    ],
+    "related_intents": [
+      "windows",
+      "gpu"
+    ],
+    "response_id": "drivers",
+    "confidence_threshold": 0.5
+  },
+  {
+    "id": "troubleshooting",
+    "description": "Máy tính chậm / sự cố",
+    "topic": "computer",
+    "patterns": [
+      "máy tính chậm",
+      "máy chậm quá",
+      "laptop chậm",
+      "máy bị chậm",
+      "máy chạy chậm quá",
+      "sửa máy tính chậm",
+      "máy đơ làm sao",
+      "computer slow how to fix",
+      "laptop chậm phải làm gì",
+      "tăng tốc máy tính",
+      "máy giật lag làm sao",
+      "vì sao máy chậm",
+      "máy tính lag quá",
+      "pc chậm quá"
+    ],
+    "keywords": [
+      "máy tính chậm",
+      "máy chậm",
+      "laptop chậm",
+      "máy tính",
+      "giật",
+      "lag",
+      "tăng tốc",
+      "đơ"
+    ],
+    "aliases": [
+      "troubleshooting"
+    ],
+    "examples": [
+      "Máy tính chậm làm sao?",
+      "vì sao máy chậm?",
+      "laptop giật lag quá?"
+    ],
+    "related_intents": [
+      "ram_pc",
+      "storage",
+      "windows"
+    ],
+    "response_id": "troubleshooting",
+    "confidence_threshold": 0.5
+  },
+  {
+    "id": "minecraft_server",
+    "description": "Chạy Minecraft server",
+    "topic": "minecraft",
+    "patterns": [
+      "làm sao chạy minecraft server",
+      "cách làm server minecraft",
+      "minecraft server la gi",
+      "hướng dẫn mở server minecraft",
+      "how to make a minecraft server",
+      "mở server minecraft thế nào",
+      "tự host server minecraft",
+      "chạy server mc trên máy tính",
+      "chạy minecraft server"
+    ],
+    "keywords": [
+      "server minecraft",
+      "minecraft server",
+      "mở server"
+    ],
+    "aliases": [
+      "minecraft server"
+    ],
+    "examples": [
+      "Làm sao chạy Minecraft server?",
+      "cách làm server Minecraft?",
+      "how to make a minecraft server"
+    ],
+    "related_intents": [
+      "server_software",
+      "server_properties",
+      "plugins"
+    ],
+    "response_id": "minecraft_server",
+    "knowledge_ref": "minecraft_server",
+    "confidence_threshold": 0.5
+  },
+  {
+    "id": "server_software",
+    "description": "Paper/Spigot/Purpur",
+    "topic": "minecraft",
+    "patterns": [
+      "paper là gì",
+      "spigot là gì",
+      "purpur là gì",
+      "paper spigot khác gì",
+      "what is paper minecraft",
+      "nên dùng paper hay spigot",
+      "craftbukkit là gì",
+      "giải thích paper mc",
+      "paper mc là sao",
+      "paper",
+      "spigot",
+      "purpur"
+    ],
+    "keywords": [
+      "paper",
+      "spigot",
+      "purpur",
+      "craftbukkit",
+      "bukkit"
+    ],
+    "aliases": [
+      "paper",
+      "spigot",
+      "purpur",
+      "craftbukkit"
+    ],
+    "examples": [
+      "Paper là gì?",
+      "nên dùng Paper hay Spigot?",
+      "Purpur là gì?"
+    ],
+    "related_intents": [
+      "minecraft_server",
+      "plugins",
+      "server_performance"
+    ],
+    "response_id": "server_software",
+    "confidence_threshold": 0.5
+  },
+  {
+    "id": "plugins",
+    "description": "Plugin Minecraft",
+    "topic": "minecraft",
+    "patterns": [
+      "plugin minecraft là gì",
+      "cách cài plugin",
+      "plugin la gi mc",
+      "how to install minecraft plugins",
+      "cài plugin thế nào",
+      "plugin paper ở đâu",
+      "thêm plugin server thế nào",
+      "spigot plugin là gì",
+      "plugin minecraft",
+      "plugin mc",
+      "cài plugin"
+    ],
+    "keywords": [
+      "plugin",
+      "plugins"
+    ],
+    "aliases": [
+      "plugin",
+      "plugins"
+    ],
+    "examples": [
+      "Plugin Minecraft là gì?",
+      "cách cài plugin?",
+      "tải plugin ở đâu?"
+    ],
+    "related_intents": [
+      "server_software",
+      "luckperms",
+      "worldedit_worldguard"
+    ],
+    "response_id": "plugins",
+    "knowledge_ref": "plugins",
+    "confidence_threshold": 0.5
+  },
+  {
+    "id": "geyser_floodgate",
+    "description": "Geyser / Floodgate — Bedrock join Java",
+    "topic": "minecraft",
+    "patterns": [
+      "geyser là gì",
+      "floodgate là gì",
+      "geyser dùng làm gì",
+      "bedrock join server java thế nào",
+      "what is geyser mc",
+      "giải thích geyser floodgate",
+      "điện thoại vào server pc thế nào",
+      "pe vào server java được không",
+      "geyser",
+      "floodgate"
+    ],
+    "keywords": [
+      "geyser",
+      "floodgate",
+      "bedrock",
+      "java bedrock"
+    ],
+    "aliases": [
+      "geyser",
+      "floodgate"
+    ],
+    "examples": [
+      "Geyser dùng làm gì?",
+      "Bedrock join server Java thế nào?",
+      "Floodgate là gì?"
+    ],
+    "related_intents": [
+      "minecraft_server",
+      "plugins"
+    ],
+    "response_id": "geyser_floodgate",
+    "knowledge_ref": "geyser",
+    "confidence_threshold": 0.5
+  },
+  {
+    "id": "luckperms",
+    "description": "LuckPerms phân quyền MC",
+    "topic": "minecraft",
+    "patterns": [
+      "luckperms là gì",
+      "phân quyền minecraft thế nào",
+      "luckperms xài thế nào",
+      "what is luckperms",
+      "group plugin mc là gì",
+      "đặt quyền op thế nào",
+      "luckperms là sao",
+      "permission plugin minecraft",
+      "luckperms"
+    ],
+    "keywords": [
+      "luckperms",
+      "phân quyền",
+      "permission"
+    ],
+    "aliases": [
+      "luckperms"
+    ],
+    "examples": [
+      "LuckPerms là gì?",
+      "phân quyền Minecraft thế nào?",
+      "cách dùng LuckPerms?"
+    ],
+    "related_intents": [
+      "plugins",
+      "server_software"
+    ],
+    "response_id": "luckperms",
+    "knowledge_ref": "luckperms",
+    "confidence_threshold": 0.5
+  },
+  {
+    "id": "worldedit_worldguard",
+    "description": "WorldEdit / WorldGuard",
+    "topic": "minecraft",
+    "patterns": [
+      "worldedit là gì",
+      "worldguard là gì",
+      "world edit dùng thế nào",
+      "bảo vệ khu vực minecraft",
+      "what is worldedit",
+      "worldguard bảo vệ vùng",
+      "copy paste nhà minecraft thế nào",
+      "worldedit",
+      "worldguard"
+    ],
+    "keywords": [
+      "worldedit",
+      "worldguard",
+      "bảo vệ",
+      "khu vực"
+    ],
+    "aliases": [
+      "worldedit",
+      "worldguard"
+    ],
+    "examples": [
+      "WorldEdit là gì?",
+      "WorldGuard dùng để làm gì?",
+      "bảo vệ khu vực thế nào?"
+    ],
+    "related_intents": [
+      "plugins",
+      "luckperms"
+    ],
+    "response_id": "worldedit_worldguard",
+    "confidence_threshold": 0.5
+  },
+  {
+    "id": "server_performance",
+    "description": "Tối ưu server Minecraft",
+    "topic": "minecraft",
+    "patterns": [
+      "server minecraft lag làm sao",
+      "tối ưu server minecraft",
+      "server mc giật",
+      "minecraft server lag fix",
+      "server minecraft chậm",
+      "tăng tps minecraft",
+      "ram cho server minecraft bao nhiêu",
+      "tps là gì mc",
+      "fix lag",
+      "lag server",
+      "giảm lag"
+    ],
+    "keywords": [
+      "server minecraft",
+      "lag",
+      "tps",
+      "tối ưu server",
+      "server chậm",
+      "server giật"
+    ],
+    "aliases": [
+      "server lag"
+    ],
+    "examples": [
+      "Server Minecraft lag làm sao?",
+      "tối ưu server Minecraft thế nào?",
+      "RAM cho server bao nhiêu đủ?"
+    ],
+    "related_intents": [
+      "minecraft_server",
+      "server_software",
+      "ram_pc"
+    ],
+    "response_id": "server_performance",
+    "confidence_threshold": 0.5
+  },
+  {
+    "id": "server_properties",
+    "description": "File server.properties",
+    "topic": "minecraft",
+    "patterns": [
+      "server.properties là gì",
+      "server properties chỉnh gì",
+      "sửa file server.properties",
+      "đổi port server minecraft",
+      "max-players là gì",
+      "whitelist minecraft là gì",
+      "online-mode là gì",
+      "view-distance là gì"
+    ],
+    "keywords": [
+      "server.properties",
+      "whitelist",
+      "online-mode",
+      "max-players",
+      "port"
+    ],
+    "aliases": [
+      "server.properties"
+    ],
+    "examples": [
+      "server.properties là gì?",
+      "đổi port server thế nào?",
+      "whitelist là gì?"
+    ],
+    "related_intents": [
+      "minecraft_server",
+      "server_performance"
+    ],
+    "response_id": "server_properties",
+    "confidence_threshold": 0.5
+  },
+  {
+    "id": "vps",
+    "description": "VPS là gì",
+    "topic": "cloud",
+    "patterns": [
+      "vps là gì",
+      "vps la gi",
+      "what is a vps",
+      "thuê vps làm gì",
+      "giải thích vps",
+      "vps là sao",
+      "vps khác hosting thế nào",
+      "vps giá bao nhiêu",
+      "mua vps ở đâu",
+      "vps"
+    ],
+    "keywords": [
+      "vps",
+      "thuê server"
+    ],
+    "aliases": [
+      "vps"
+    ],
+    "examples": [
+      "VPS là gì?",
+      "thuê VPS làm gì?",
+      "VPS khác hosting thế nào?"
+    ],
+    "related_intents": [
+      "vm",
+      "hosting",
+      "deployment"
+    ],
+    "response_id": "vps",
+    "knowledge_ref": "vps",
+    "confidence_threshold": 0.5
+  },
+  {
+    "id": "vm",
+    "description": "Máy ảo / VM",
+    "topic": "cloud",
+    "patterns": [
+      "máy ảo là gì",
+      "vm là gì",
+      "virtual machine là gì",
+      "what is a virtual machine",
+      "giải thích máy ảo",
+      "vmware là gì",
+      "hypervisor là gì",
+      "vm là sao",
+      "máy ảo",
+      "virtual machine",
+      "vm"
+    ],
+    "keywords": [
+      "máy ảo",
+      "virtual machine",
+      "vm",
+      "hypervisor"
+    ],
+    "aliases": [
+      "vm",
+      "virtual machine",
+      "máy ảo"
+    ],
+    "examples": [
+      "Máy ảo là gì?",
+      "VM là gì?",
+      "Virtual Machine dùng để làm gì?"
+    ],
+    "related_intents": [
+      "vps",
+      "remote_desktop"
+    ],
+    "response_id": "vm",
+    "confidence_threshold": 0.5
+  },
+  {
+    "id": "remote_desktop",
+    "description": "Remote desktop / RDP",
+    "topic": "cloud",
+    "patterns": [
+      "remote desktop là gì",
+      "rdp là gì",
+      "điều khiển máy từ xa thế nào",
+      "what is rdp",
+      "teamviewer là gì",
+      "anydesk là gì",
+      "ssh là gì",
+      "remote vào vps thế nào"
+    ],
+    "keywords": [
+      "remote desktop",
+      "rdp",
+      "ssh",
+      "điều khiển từ xa"
+    ],
+    "aliases": [
+      "rdp",
+      "ssh",
+      "remote desktop"
+    ],
+    "examples": [
+      "RDP là gì?",
+      "điều khiển máy từ xa thế nào?",
+      "SSH là gì?"
+    ],
+    "related_intents": [
+      "vps",
+      "vm"
+    ],
+    "response_id": "remote_desktop",
+    "confidence_threshold": 0.5
+  },
+  {
+    "id": "networking_ports",
+    "description": "Port / mạng",
+    "topic": "cloud",
+    "patterns": [
+      "port là gì",
+      "cổng mạng là gì",
+      "what is a network port",
+      "port forwarding là gì",
+      "mở port thế nào",
+      "port 25565 là gì",
+      "port 80 443 là gì",
+      "kiểm tra port mở chưa thế nào",
+      "port forwarding",
+      "port"
+    ],
+    "keywords": [
+      "port",
+      "port forwarding",
+      "cổng"
+    ],
+    "aliases": [
+      "port"
+    ],
+    "examples": [
+      "Port là gì?",
+      "port forwarding là gì?",
+      "mở port làm sao?"
+    ],
+    "related_intents": [
+      "firewall",
+      "vps",
+      "server_properties"
+    ],
+    "response_id": "networking_ports",
+    "confidence_threshold": 0.5
+  },
+  {
+    "id": "firewall",
+    "description": "Firewall là gì",
+    "topic": "cloud",
+    "patterns": [
+      "firewall là gì",
+      "tường lửa là gì",
+      "what is a firewall",
+      "ufw là gì",
+      "giải thích firewall",
+      "firewall chặn port thế nào",
+      "tường lửa làm gì",
+      "iptables là gì",
+      "firewall",
+      "tường lửa",
+      "ufw"
+    ],
+    "keywords": [
+      "firewall",
+      "tường lửa",
+      "ufw",
+      "iptables"
+    ],
+    "aliases": [
+      "firewall",
+      "ufw"
+    ],
+    "examples": [
+      "Firewall là gì?",
+      "UFW là gì?",
+      "tường lửa dùng để làm gì?"
+    ],
+    "related_intents": [
+      "networking_ports",
+      "vps"
+    ],
+    "response_id": "firewall",
+    "confidence_threshold": 0.5
+  }
+]

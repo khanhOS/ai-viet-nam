@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "Đúng, đây là **panel thành công** với **dấu tích xanh** và hiệu ứng **hạt bay (particles)** trên nền.\n\n**Nội dung trên màn hình:**\n*   **Panel trắng:** Hiển thị \"KhanhOS AI\" - Nền tảng AI thế hệ mới (có icon dấu tích xanh).\n*   **Nền phía sau:** Chữ \"KhanhOS AI\" lớn, slogan \"Tạo, viết, code, khám phá\".\n*   **Góc phải:** Avatar \"AT\", tên \"Anim Test\" và thông báo chào mừng \"Chào mừng Anim Test đến KhanhOS AI!\".\n*   **Góc trái:** Menu hamburger và avatar \"N\".",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1789103621,
+  "id": "2026091113133778be9f3b29f24c88",
+  "model": "glm-5v-turbo",
+  "object": "chat.completion",
+  "request_id": "2026091113133778be9f3b29f24c88",
+  "usage": {
+    "completion_tokens": 154,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 925,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 1079
+  }
+}
